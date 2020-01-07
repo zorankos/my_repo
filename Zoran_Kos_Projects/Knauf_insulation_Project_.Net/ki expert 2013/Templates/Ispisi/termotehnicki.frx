@@ -1,0 +1,2234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="02/19/2014 14:00:12" ReportInfo.Modified="02/26/2014 15:11:08" ReportInfo.CreatorVersion="2013.4.1.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="termotehnickiSustav" ReferenceName="termotehnickiSustav" DataType="System.Collections.Generic.List`1[[PrintingCommons.TermotehnickiSustaviTemplateValue, PrintingCommons, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" Enabled="true">
+      <Column Name="Predaja_Q_em_out_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_out_UnutarSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_out_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_out_IzvanSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_out_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_out_Ukupno" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_ls_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_ls_UnutarSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_ls_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_ls_IzvanSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_ls_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_ls_Ukupno" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_aux_rvd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_aux_rvd_UnutarSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_aux_rvd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_aux_rvd_IzvanSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_aux_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_aux_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_aux_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_aux_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_aux_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_aux_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_aux_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_aux_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_in_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_in_UnutarSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_in_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_in_IzvanSezone" DataType="System.String"/>
+      <Column Name="Predaja_Q_em_in_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPredaja_Q_em_in_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_out_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_out_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_out_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_out_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_out_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_out_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_ls_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_ls_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_ls_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_ls_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_ls_Ukupno" DataType="System.Double"/>
+      <Column Name="RazvodQ_H_dis_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodW_H_dis_aux_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodW_H_dis_aux_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodW_H_dis_aux_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodW_H_dis_aux_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodW_H_dis_aux_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodW_H_dis_aux_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_aux_rvd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_aux_rvd_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_aux_rvd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_aux_rvd_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_aux_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_aux_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_aux_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_aux_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_aux_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_aux_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_aux_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_aux_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_in_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_in_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_in_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_in_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodQ_H_dis_in_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodQ_H_dis_in_Ukupno" DataType="System.String"/>
+      <Column Name="StrRazvodQ_H_dis_ls_Ukupno" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_H_gen_out_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_H_gen_out_UnutarSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_H_gen_out_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_H_gen_out_IzvanSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_H_gen_out_Ukupno" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_H_gen_out_Ukupno" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_ls_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_H_gen_ls_UnutarSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_ls_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_H_gen_ls_IzvanSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_ls_Ukupno" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_H_gen_ls_Ukupno" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_H_gen_ls_env_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_H_gen_ls_env_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_H_gen_ls_env_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_H_gen_ls_env_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_H_gen_ls_env_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_H_gen_ls_env_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="ProizvodnjaW_HW_gen_aux_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaW_HW_gen_aux_UnutarSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaW_HW_gen_aux_IzvanSezone" DataType="System.Double"/>
+      <Column Name="ProizvodnjaW_HW_gen_aux_Ukupno" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaW_HW_gen_aux_Ukupno" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_aux_rvd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_HW_gen_aux_rvd_UnutarSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_aux_rvd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_HW_gen_aux_rvd_IzvanSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_aux_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_HW_gen_aux_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_aux_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_HW_gen_aux_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_aux_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_HW_gen_aux_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_aux_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_HW_gen_aux_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_in_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_HW_gen_in_UnutarSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_in_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_HW_gen_in_IzvanSezone" DataType="System.String"/>
+      <Column Name="ProizvodnjaQ_HW_gen_in_Ukupno" DataType="System.Double"/>
+      <Column Name="StrProizvodnjaQ_HW_gen_in_Ukupno" DataType="System.String"/>
+      <Column Name="StrProizvodnjaW_HW_gen_aux_IzvanSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_H_ls_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_H_ls_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_H_ls_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_H_ls_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_H_ls_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_H_ls_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_W_ls_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_W_ls_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_W_ls_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_W_ls_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_W_ls_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_W_ls_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_H_aux_ls_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_H_aux_ls_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_H_aux_ls_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_H_aux_ls_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_H_aux_ls_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_H_aux_ls_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_W_aux_ls_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_W_aux_ls_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_W_aux_ls_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_W_aux_ls_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciQ_W_aux_ls_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciQ_W_aux_ls_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciUkupno_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciUkupno_UnutarSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciUkupno_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciUkupno_IzvanSezone" DataType="System.String"/>
+      <Column Name="IskoristiviGubiciUkupno_Ukupno" DataType="System.Double"/>
+      <Column Name="StrIskoristiviGubiciUkupno_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusQ_H_nd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_H_nd_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_H_nd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_H_nd_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_H_nd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_H_nd_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusQ_W_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_W_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_W_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_W_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_W_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_W_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusQ_H_nd_Q_W_Ukupno_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_H_nd_Q_W_Ukupno_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_H_nd_Q_W_Ukupno_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_H_nd_Q_W_Ukupno_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_H_nd_Q_W_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_H_nd_Q_W_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusQ_H_gen_in_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_H_gen_in_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_H_gen_in_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_H_gen_in_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_H_gen_in_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_H_gen_in_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusQ_W_gen_in_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_W_gen_in_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_W_gen_in_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_W_gen_in_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusQ_W_gen_in_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusQ_W_gen_in_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusE_del_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_del_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_del_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_del_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_del_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_del_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusE_del_ukupno_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_del_ukupno_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_del_ukupno_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_del_ukupno_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_del_ukupno_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_del_ukupno_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusE_H_prim_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_H_prim_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_H_prim_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_H_prim_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_H_prim_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_H_prim_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusE_W_prim_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_W_prim_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_W_prim_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_W_prim_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_W_prim_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_W_prim_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusE_prim_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_prim_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_prim_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_prim_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_prim_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_prim_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusE_prim_ukupno_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_prim_ukupno_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_prim_ukupno_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_prim_ukupno_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_prim_ukupno_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_prim_ukupno_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusE_prim_m2_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_prim_m2_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_prim_m2_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_prim_m2_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusE_prim_m2_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusE_prim_m2_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusSigma_Q_ls_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusSigma_Q_ls_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusSigma_Q_ls_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusSigma_Q_ls_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusSigma_Q_ls_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusSigma_Q_ls_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusSigma_Q_ls_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusSigma_Q_ls_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusSigma_Q_ls_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusSigma_Q_ls_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusSigma_Q_ls_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusSigma_Q_ls_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="TermotehSusSigma_Q_ls_rvd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusSigma_Q_ls_rvd_UnutarSezone" DataType="System.String"/>
+      <Column Name="TermotehSusSigma_Q_ls_rvd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTermotehSusSigma_Q_ls_rvd_IzvanSezone" DataType="System.String"/>
+      <Column Name="TermotehSusSigma_Q_ls_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTermotehSusSigma_Q_ls_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="TemotehSusSigma_Q_ls_nrvd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrTemotehSusSigma_Q_ls_nrvd_UnutarSezone" DataType="System.String"/>
+      <Column Name="TemotehSusSigma_Q_ls_nrvd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrTemotehSusSigma_Q_ls_nrvd_IzvanSezone" DataType="System.String"/>
+      <Column Name="TemotehSusSigma_Q_ls_nrvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrTemotehSusSigma_Q_ls_nrvd_Ukupno" DataType="System.String"/>
+      <Column Name="Predaja_W_em_aux_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_W_em_aux_UnutarSezone" DataType="System.String"/>
+      <Column Name="Predaja_W_em_aux_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPredaja_W_em_aux_IzvanSezone" DataType="System.String"/>
+      <Column Name="Predaja_W_em_aux_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPredaja_W_em_aux_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezoneQ_H_nd_Q_W_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneQ_H_nd_Q_W_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneQ_H_nd_Q_W_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneQ_H_nd_Q_W_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneQ_H_nd_Q_W_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneQ_H_nd_Q_W_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_ls_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_ls_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_ls_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_ls_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_ls_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_ls_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_aux_rvd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_aux_rvd_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_aux_rvd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_aux_rvd_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_aux_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_aux_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_aux_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_aux_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_aux_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_aux_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_aux_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_aux_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_ls_rvd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_ls_rvd_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_ls_rvd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_ls_rvd_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_Q_ls_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_Q_ls_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_W_aux_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_W_aux_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_W_aux_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_W_aux_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneSigma_W_aux_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneSigma_W_aux_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezoneQ_gen_in_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneQ_gen_in_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneQ_gen_in_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneQ_gen_in_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneQ_gen_in_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneQ_gen_in_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezoneE_del_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneE_del_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneE_del_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneE_del_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneE_del_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneE_del_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSustaviQ_H_nd" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviQ_H_nd" DataType="System.String"/>
+      <Column Name="PregledSustaviQ_W" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviQ_W" DataType="System.String"/>
+      <Column Name="PregledSustaviQ_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviQ_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_ls_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_ls_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_ls_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_ls_PTV" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_ls_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_ls_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_rbl_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_rbl_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_rbl_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_rbl_PTV" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_aux_rvd_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_aux_rvd_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_aux_rvd_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_aux_rvd_PTV" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_aux_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_aux_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_aux_rbl_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_aux_rbl_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_aux_rbl_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_aux_rbl_PTV" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_aux_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_aux_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_ls_rvd_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_ls_rvd_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_ls_rvd_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_ls_rvd_PTV" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_Q_ls_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_Q_ls_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_W_aux_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_W_aux_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_W_aux_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_W_aux_PTV" DataType="System.String"/>
+      <Column Name="PregledSustaviSigma_W_aux_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviSigma_W_aux_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSustaviQ_gen_in_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviQ_gen_in_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustaviQ_gen_in_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviQ_gen_in_PTV" DataType="System.String"/>
+      <Column Name="PregledSustaviQ_gen_in_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviQ_gen_in_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSustaviE_del_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviE_del_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustaviE_del_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviE_del_PTV" DataType="System.String"/>
+      <Column Name="PregledSustaviE_del_GrijanjeIPTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviE_del_GrijanjeIPTV" DataType="System.String"/>
+      <Column Name="PregledSustaviE_prim_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviE_prim_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustaviE_prim_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviE_prim_PTV" DataType="System.String"/>
+      <Column Name="PregledSustaviE_prim_GrijanjeIPTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustaviE_prim_GrijanjeIPTV" DataType="System.String"/>
+      <Column Name="PregledSustavi_ep_Grijanje" DataType="System.Double"/>
+      <Column Name="StrPregledSustavi_ep_Grijanje" DataType="System.String"/>
+      <Column Name="PregledSustavi_ep_PTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustavi_ep_PTV" DataType="System.String"/>
+      <Column Name="PregledSustavi_ep_GrijanjeIPTV" DataType="System.Double"/>
+      <Column Name="StrPregledSustavi_ep_GrijanjeIPTV" DataType="System.String"/>
+      <Column Name="EkstraLakoLakoLozivoUlje_FaktorPrimarneEnergije" DataType="System.Double"/>
+      <Column Name="StrEkstraLakoLakoLozivoUlje_FaktorPrimarneEnergije" DataType="System.String"/>
+      <Column Name="EkstraLakoLakoLozivoUlje_JedinicnaEmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrEkstraLakoLakoLozivoUlje_JedinicnaEmisijaCO2" DataType="System.String"/>
+      <Column Name="EkstraLakoLakoLozivoUlje_OgrjevnaMoc" DataType="System.Double"/>
+      <Column Name="StrEkstraLakoLakoLozivoUlje_OgrjevnaMoc" DataType="System.String"/>
+      <Column Name="SrednjeITeskoLozivoUlje_FaktorPrimarneEnergije" DataType="System.Double"/>
+      <Column Name="StrSrednjeITeskoLozivoUlje_FaktorPrimarneEnergije" DataType="System.String"/>
+      <Column Name="SrednjeITeskoLozivoUlje_JedinicnaEmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrSrednjeITeskoLozivoUlje_JedinicnaEmisijaCO2" DataType="System.String"/>
+      <Column Name="SrednjeITeskoLozivoUlje_OgrjevnaMocGoriva" DataType="System.Double"/>
+      <Column Name="StrSrednjeITeskoLozivoUlje_OgrjevnaMocGoriva" DataType="System.String"/>
+      <Column Name="KameniUgljen_FaktorPrimarneEnergije" DataType="System.Double"/>
+      <Column Name="StrKameniUgljen_FaktorPrimarneEnergije" DataType="System.String"/>
+      <Column Name="KameniUgljen_JedinicnaEmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrKameniUgljen_JedinicnaEmisijaCO2" DataType="System.String"/>
+      <Column Name="KameniUgljen_OgrjevnaMocGoriva" DataType="System.Double"/>
+      <Column Name="StrKameniUgljen_OgrjevnaMovGoriva" DataType="System.String"/>
+      <Column Name="MrkiUgljen_FaktorPrimarneEnergije" DataType="System.Double"/>
+      <Column Name="StrMrkiUgljen_FaktorPrimarneEnergije" DataType="System.String"/>
+      <Column Name="MrkiUgljen_JedinicnaEmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrMrkiUgljen_JedinicnaEmisijaCO2" DataType="System.String"/>
+      <Column Name="MrkiUgljen_OgrjevnaMocGoriva" DataType="System.Double"/>
+      <Column Name="StrMrkiUgljen_OgrjevnaMocGoriva" DataType="System.String"/>
+      <Column Name="Lignit_FaktorPrimarneEnergije" DataType="System.Double"/>
+      <Column Name="StrLignit_FaktorPrimarneEnergije" DataType="System.String"/>
+      <Column Name="Lignit_JedinicnaEmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrLignit_JedinicnaEmisijaCO2" DataType="System.String"/>
+      <Column Name="Lignit_OgrjevnaMocGoriva" DataType="System.Double"/>
+      <Column Name="StrLignit_OgrjevnaMocGoriva" DataType="System.String"/>
+      <Column Name="PrirodniPlin_FaktorPrimarneEnergije" DataType="System.Double"/>
+      <Column Name="StrPrirodniPlin_FaktorPrimarneEnergije" DataType="System.String"/>
+      <Column Name="PrirodniPlin_JedinicnaEmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrPrirodniPlin_JedinicnaEmisijaCO2" DataType="System.String"/>
+      <Column Name="PrirodniPlin_OgrjevnaMocGoriva" DataType="System.Double"/>
+      <Column Name="StrPrirodniPlin_OgrjevnaMocGoriva" DataType="System.String"/>
+      <Column Name="UkapljeniNaftniPlin_FaktorPrimarneEnergije" DataType="System.Double"/>
+      <Column Name="StrUkapljeniNaftniPlin_FaktorPrimarneEnergije" DataType="System.String"/>
+      <Column Name="UkapljeniNaftniPlin_JedinicnaEmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrUkapljeniNaftniPlin_JedinicnaEmisijaCO2" DataType="System.String"/>
+      <Column Name="UkapljeniNaftniPlin_OgrjevnaMocGoriva" DataType="System.Double"/>
+      <Column Name="StrUkapljeniNaftniPlin_OgrjevnaMocGoriva" DataType="System.String"/>
+      <Column Name="Biomasa_FaktorPrimarneEnergije" DataType="System.Double"/>
+      <Column Name="StrBiomasa_FaktorPrimarneEnergije" DataType="System.String"/>
+      <Column Name="Biomasa_JedinicnaEmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrBiomasa_JedinicnaEmisijaCO2" DataType="System.String"/>
+      <Column Name="Biomasa_OgrjevnaMocGoriva" DataType="System.Double"/>
+      <Column Name="StrBiomasa_OgrjevnaMocGoriva" DataType="System.String"/>
+      <Column Name="ElektricnaEnergija_FaktorPrimarneEnergije" DataType="System.Double"/>
+      <Column Name="StrElektricnaEnergija_FaktorPrimarneEnergije" DataType="System.String"/>
+      <Column Name="ElektricnaEnergija_JedinicnaEmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrElektricnaEnergija_JedinicnaEmisijaCO2" DataType="System.String"/>
+      <Column Name="ElektricnaEnergija_OgrjevnaMocGoriva" DataType="System.Double"/>
+      <Column Name="StrElektricnaEnergija_OgrjevnaMocGoriva" DataType="System.String"/>
+      <Column Name="EkstraLakoLakoLozivoUlje_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrEkstraLakoLakoLozivoUlje_UnutarSezone" DataType="System.String"/>
+      <Column Name="EkstraLakoLakoLozivoUlje_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrEkstraLakoLakoLozivoUlje_IzvanSezone" DataType="System.String"/>
+      <Column Name="EkstraLakoLakoLozivoUlje_Ukupno" DataType="System.Double"/>
+      <Column Name="StrEkstraLakoLakoLozivoUlje_Ukupno" DataType="System.String"/>
+      <Column Name="EkstraLakoLakoLozivoUlje_Potrosnja" DataType="System.Double"/>
+      <Column Name="StrEkstraLakoLakoLozivoUlje_Potrosnja" DataType="System.String"/>
+      <Column Name="SrednjeITeskoLozivoUlje_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrSrednjeITeskoLozivoUlje_UnutarSezone" DataType="System.String"/>
+      <Column Name="SrednjeITeskoLozivoUlje_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrSrednjeITeskoLozivoUlje_IzvanSezone" DataType="System.String"/>
+      <Column Name="SrednjeITeskoLozivoUlje_Ukupno" DataType="System.Double"/>
+      <Column Name="StrSrednjeITeskoLozivoUlje_Ukupno" DataType="System.String"/>
+      <Column Name="SrednjeITeskoLozivoUlje_Potrosnja" DataType="System.Double"/>
+      <Column Name="StrSrednjeITeskoLozivoUlje_Potrosnja" DataType="System.String"/>
+      <Column Name="KameniUgljen_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrKameniUgljen_UnutarSezone" DataType="System.String"/>
+      <Column Name="KameniUgljen_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrKameniUgljen_IzvanSezone" DataType="System.String"/>
+      <Column Name="KameniUgljen_Ukupno" DataType="System.Double"/>
+      <Column Name="StrKameniUgljen_Ukupno" DataType="System.String"/>
+      <Column Name="KameniUgljen_Potrošnja" DataType="System.Double"/>
+      <Column Name="StrKameniUgljen_Potrošnja" DataType="System.String"/>
+      <Column Name="MrkiUgljen_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrMrkiUgljen_UnutarSezone" DataType="System.String"/>
+      <Column Name="MrkiUgljen_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrMrkiUgljen_IzvanSezone" DataType="System.String"/>
+      <Column Name="MrkiUgljen_Ukupno" DataType="System.Double"/>
+      <Column Name="StrMrkiUgljen_Ukupno" DataType="System.String"/>
+      <Column Name="MrkiUgljen_Potrosnja" DataType="System.Double"/>
+      <Column Name="StrMrkiUgljen_Potrosnja" DataType="System.String"/>
+      <Column Name="Lignit_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrLignit_UnutarSezone" DataType="System.String"/>
+      <Column Name="Lignit_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrLignit_IzvanSezone" DataType="System.String"/>
+      <Column Name="Lignit_Ukupno" DataType="System.Double"/>
+      <Column Name="StrLignit_Ukupno" DataType="System.String"/>
+      <Column Name="Lignit_Potrosnja" DataType="System.Double"/>
+      <Column Name="StrLignit_Potrosnja" DataType="System.String"/>
+      <Column Name="PrirodniPlin_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPrirodniPlin_UnutarSezone" DataType="System.String"/>
+      <Column Name="PrirodniPlin_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPrirodniPlin_IzvanSezone" DataType="System.String"/>
+      <Column Name="PrirodniPlin_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPrirodniPlin_Ukupno" DataType="System.String"/>
+      <Column Name="PrirodniPlin_Potrosnja" DataType="System.Double"/>
+      <Column Name="StrPrirodniPlin_Potrosnja" DataType="System.String"/>
+      <Column Name="UkapljeniNaftniPlin_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrUkapljeniNaftniPlin_UnutarSezone" DataType="System.String"/>
+      <Column Name="UkapljeniNaftniPlin_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrUkapljeniNaftniPlin_IzvanSezone" DataType="System.String"/>
+      <Column Name="UkapljeniNaftniPlin_Ukupno" DataType="System.Double"/>
+      <Column Name="StrUkapljeniNaftniPlin_Ukupno" DataType="System.String"/>
+      <Column Name="UkapljeniNaftniPlin_Potrosnja" DataType="System.Double"/>
+      <Column Name="StrUkapljeniNaftniPlin_Potrosnja" DataType="System.String"/>
+      <Column Name="Biomasa_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrBiomasa_UnutarSezone" DataType="System.String"/>
+      <Column Name="Biomasa_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrBiomasa_IzvanSezone" DataType="System.String"/>
+      <Column Name="Biomasa_Ukupno" DataType="System.Double"/>
+      <Column Name="StrBiomasa_Ukupno" DataType="System.String"/>
+      <Column Name="Biomasa_Potrosnja" DataType="System.Double"/>
+      <Column Name="StrBiomasa_Potrosnja" DataType="System.String"/>
+      <Column Name="KonacnaEnergijaUkupno_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrKonacnaEnergijaUkupno_UnutarSezone" DataType="System.String"/>
+      <Column Name="KonacnaEnergijaUkupno_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrKonacnaEnergijaUkupno_IzvanSezone" DataType="System.String"/>
+      <Column Name="KonacnaEnergijaUkupno_Ukupno" DataType="System.Double"/>
+      <Column Name="StrKonacnaEnergijaUkupno_Ukupno" DataType="System.String"/>
+      <Column Name="UkupnaPotrosnjaEnergenata" DataType="System.Double"/>
+      <Column Name="StrUkupnaPotrosnjaEnergenata" DataType="System.String"/>
+      <Column Name="PrimEkstraLakoLakoLozivoUlje_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPrimEkstraLakoLakoLozivoUlje_UnutarSezone" DataType="System.String"/>
+      <Column Name="PrimEkstraLakoLakoLozivoUlje_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPrimEkstraLakoLakoLozivoUlje_IzvanSezone" DataType="System.String"/>
+      <Column Name="PrimEkstraLakoLakoLozivoUlje_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPrimEkstraLakoLakoLozivoUlje_Ukupno" DataType="System.String"/>
+      <Column Name="EkstraLakoLakoLozivoUlje_EmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrEkstraLakoLakoLozivoUlje_EmisijaCO2" DataType="System.String"/>
+      <Column Name="PrimSrednjeITeskoLozivoUlje_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPrimSrednjeITeskoLozivoUlje_UnutarSezone" DataType="System.String"/>
+      <Column Name="PrimSrednjeITeskoLozivoUlje_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPrimSrednjeITeskoLozivoUlje_IzvanSezone" DataType="System.String"/>
+      <Column Name="PrimSrednjeITeskoLozivoUlje_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPrimSrednjeITeskoLozivoUlje_Ukupno" DataType="System.String"/>
+      <Column Name="SrednjeITeskoLozivoUlje_EmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrSrednjeITeskoLozivoUlje_EmisijaCO2" DataType="System.String"/>
+      <Column Name="PrimKameniUgljen_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPrimKameniUgljen_UnutarSezone" DataType="System.String"/>
+      <Column Name="PrimKameniUgljen_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPrimKameniUgljen_IzvanSezone" DataType="System.String"/>
+      <Column Name="PrimKameniUgljen_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPrimKameniUgljen_Ukupno" DataType="System.String"/>
+      <Column Name="KameniUgljen_EmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrKameniUgljen_EmisijaCO2" DataType="System.String"/>
+      <Column Name="PrimMrkiUgljen_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPrimMrkiUgljen_UnutarSezone" DataType="System.String"/>
+      <Column Name="PrimMrkiUgljen_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPrimMrkiUgljen_IzvanSezone" DataType="System.String"/>
+      <Column Name="PrimMrkiUgljen_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPrimMrkiUgljen_Ukupno" DataType="System.String"/>
+      <Column Name="PrimMrkiUgljen_EmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrPrimMrkiUgljen_EmisijaCO2" DataType="System.String"/>
+      <Column Name="PrimLignit_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPrimLignit_UnutarSezone" DataType="System.String"/>
+      <Column Name="PrimLignit_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPrimLignit_IzvanSezone" DataType="System.String"/>
+      <Column Name="PrimLignit_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPrimLignit_Ukupno" DataType="System.String"/>
+      <Column Name="PrimLignit_EmisijaCO2" DataType="System.Double"/>
+      <Column Name="PrimPrirodniPlin_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPrimPrirodniPlin_UnutarSezone" DataType="System.String"/>
+      <Column Name="PrimPrirodniPlin_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPrimPrirodniPlin_IzvanSezone" DataType="System.String"/>
+      <Column Name="PrimPrirodniPlin_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPrimPrirodniPlin_Ukupno" DataType="System.String"/>
+      <Column Name="PrimPrirodniPlin_EmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrPrimPrirodniPlin_EmisijaCO2" DataType="System.String"/>
+      <Column Name="PrimUkapljeniNaftniPlin_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPrimUkapljeniNaftniPlin_UnutarSezone" DataType="System.String"/>
+      <Column Name="PrimUkapljeniNaftniPlin_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPrimUkapljeniNaftniPlin_IzvanSezone" DataType="System.String"/>
+      <Column Name="PrimUkapljeniNaftniPlin_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPrimUkapljeniNaftniPlin_Ukupno" DataType="System.String"/>
+      <Column Name="PrimUkapljeniNaftniPlin_EmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrPrimUkapljeniNaftniPlin_EmisijaCO2" DataType="System.String"/>
+      <Column Name="PrimBiomasa_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPrimBiomasa_UnutarSezone" DataType="System.String"/>
+      <Column Name="PrimBiomasa_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPrimBiomasa_IzvanSezone" DataType="System.String"/>
+      <Column Name="PrimBiomasa_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPrimBiomasa_Ukupno" DataType="System.String"/>
+      <Column Name="PrimBiomasa_EmisijaCO2" DataType="System.Double"/>
+      <Column Name="StrPrimBiomasa_EmisijaCO2" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_nd_Ukupno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_nd_Ukupno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_nd_Specificno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_nd_Specificno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_nd_Ukupno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_nd_Ukupno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_nd_Specificno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_nd_Specificno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertQ_W_Ukupno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_W_Ukupno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_W_Specificna_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_W_Specificna_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_W_Ukupno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_W_Ukupno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertQ_W_Specificno_Stv" DataType="System.Double"/>
+      <Column Name="EnrgCertQ_H_ls_Ukupno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_ls_Ukupno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_ls_Specificno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_ls_Specificno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_ls_Ukupno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_ls_Ukupno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_ls_Specificno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_ls_Specificno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertQ_W_ls_Ukupno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_W_ls_Ukupno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_W_ls_Specificno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_W_ls_Specificno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_W_ls_Ukupno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_W_ls_Ukupno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertQ_W_ls_Specificno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_W_ls_Specificno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_Ukupno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_Ukupno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_Specificno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_Specificno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_Ukupno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_Ukupno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertQ_H_Specificno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertQ_H_Specificno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertE_del_Ukupno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertE_del_Ukupno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertE_del_Specificno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertE_del_Specificno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertE_del_Ukupno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertE_del_Ukupno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertE_del_Specificno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertE_del_Specificno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertE_prim_Ukupno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertE_prim_Ukupno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertE_prim_Specificno_Ref" DataType="System.Double"/>
+      <Column Name="StrEnrgCertE_prim_Specificno_Ref" DataType="System.String"/>
+      <Column Name="EnrgCertE_prim_Ukupno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertE_prim_Ukupno_Stv" DataType="System.String"/>
+      <Column Name="EnrgCertE_prim_Specificno_Stv" DataType="System.Double"/>
+      <Column Name="StrEnrgCertE_prim_Specificno_Stv" DataType="System.String"/>
+      <Column Name="PregledSezoneE_prim_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneE_prim_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneE_prim_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneE_prim_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezoneE_prim_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezoneE_prim_Ukupno" DataType="System.String"/>
+      <Column Name="PregledSezone_ep_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezone_ep_UnutarSezone" DataType="System.String"/>
+      <Column Name="PregledSezone_ep_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPregledSezone_ep_IzvanSezone" DataType="System.String"/>
+      <Column Name="PregledSezone_ep_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPregledSezone_ep_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_ls_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_ls_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_ls_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_ls_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_ls_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_ls_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodPTV_W_W_dis_aux_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_W_W_dis_aux_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_W_W_dis_aux_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_W_W_dis_aux_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_W_W_dis_aux_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_W_W_dis_aux_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_aux_rvd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_aux_rvd_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_aux_rvd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_aux_rvd_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_aux_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_aux_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_aux_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_aux_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_aux_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_aux_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_aux_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_aux_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_in_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_in_UnutarSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_in_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_in_IzvanSezone" DataType="System.String"/>
+      <Column Name="RazvodPTV_Q_W_dis_in_Ukupno" DataType="System.Double"/>
+      <Column Name="StrRazvodPTV_Q_W_dis_in_Ukupno" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_out_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_out_UnutarSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_out_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_out_IzvanSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_out_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_out_Ukupno" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_ls_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_ls_UnutarSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_ls_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_ls_IzvanSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_ls_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_ls_Ukupno" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="PodsProPTV_W_W_gen_aux_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_W_W_gen_aux_UnutarSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_W_W_gen_aux_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_W_W_gen_aux_IzvanSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_W_W_gen_aux_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_W_W_gen_aux_Ukupno" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_aux_rvd_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_aux_rvd_UnutarSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_aux_rvd_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_aux_rvd_IzvanSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_aux_rvd_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_aux_rvd_Ukupno" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_aux_rbl_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_aux_rbl_UnutarSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_aux_rbl_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_aux_rbl_IzvanSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_aux_rbl_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_aux_rbl_Ukupno" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_in_UnutarSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_in_UnutarSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_in_IzvanSezone" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_in_IzvanSezone" DataType="System.String"/>
+      <Column Name="PodsProPTV_Q_W_gen_in_Ukupno" DataType="System.Double"/>
+      <Column Name="StrPodsProPTV_Q_W_gen_in_Ukupno" DataType="System.String"/>
+      <Column Name="StrPrimLignit_EmisijaCO2" DataType="System.String"/>
+      <Column Name="StrEnrgCertQ_W_Specificno_Stv" DataType="System.String"/>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="PodsustavPredajeTopline">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8" Guides="0"/>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="5537.7">
+      <TableObject Name="Table1" Left="9.45" Top="822.15" Width="689.85" Height="283.5" Border.Lines="All">
+        <TableColumn Name="Column1" Width="279.72"/>
+        <TableColumn Name="Column2" Width="119.07"/>
+        <TableColumn Name="Column3" Width="100.17"/>
+        <TableColumn Name="Column4" Width="100.17"/>
+        <TableColumn Name="Column5" Width="90.72"/>
+        <TableRow Name="Row1" Height="37.8">
+          <TableCell Name="Cell1" Border.Lines="All">
+            <TextObject Name="TxtPodsPredPotrebniPodaci" Left="9.45" Top="9.45" Width="236.25" Height="18.9" Text="Potrebni podaci"/>
+          </TableCell>
+          <TableCell Name="Cell2" Border.Lines="All">
+            <TextObject Name="TxtPodsPredOznaka" Left="9.45" Top="9.45" Width="56.7" Height="18.9" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell3" Border.Lines="All">
+            <TextObject Name="TxtPodsPredUnutarSezone" Width="94.5" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell4" Border.Lines="All">
+            <TextObject Name="TxtPodsPredIzvanSezone" Width="103.95" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell5" Border.Lines="All">
+            <TextObject Name="TxtPodsPredUkupno" Width="85.05" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row2" Height="37.8">
+          <TableCell Name="Cell6" Border.Lines="All">
+            <TextObject Name="TxtPodsPredEnrgNaIzlazu" Left="9.45" Width="274.05" Height="37.8" Text="Energija na izlazu podsustava predaje"/>
+          </TableCell>
+          <TableCell Name="Cell7" Border.Lines="All">
+            <TextObject Name="TxtPodsPredQ_em_out" Width="113.4" Height="28.35" Text="Q em,out = QH,nd-∑Qls,rvd "/>
+          </TableCell>
+          <TableCell Name="Cell8" Border.Lines="All" Text="[termotehnickiSustav.strPredaja_Q_em_out_UnutarSezone]"/>
+          <TableCell Name="Cell9" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_out_IzvanSezone]"/>
+          <TableCell Name="Cell10" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_out_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row3" Height="28.35">
+          <TableCell Name="Cell11" Border.Lines="All">
+            <TextObject Name="TxtPodsPredTopGub" Left="9.45" Width="274.05" Height="37.8" Text="Toplinski gubici podsustava predaje"/>
+          </TableCell>
+          <TableCell Name="Cell12" Border.Lines="All">
+            <TextObject Name="TxtPodsPredQ_em_ls" Width="66.15" Height="18.9" Text="Q em,ls"/>
+          </TableCell>
+          <TableCell Name="Cell13" Border.Lines="All" Text="[termotehnickiSustav.strPredaja_Q_em_ls_UnutarSezone]"/>
+          <TableCell Name="Cell14" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_ls_IzvanSezone]"/>
+          <TableCell Name="Cell15" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_ls_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row4" Height="28.35">
+          <TableCell Name="Cell16" Border.Lines="All">
+            <TextObject Name="TxtPodsPredIskorToplGub" Left="9.45" Width="274.05" Height="37.8" Text="Iskoristivi toplinski gubici"/>
+          </TableCell>
+          <TableCell Name="Cell17" Border.Lines="All">
+            <TextObject Name="TxtPodsPredQ_em_rbl" Width="66.15" Height="18.9" Text="Q em,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell18" Border.Lines="All" Text="[termotehnickiSustav.strPredaja_Q_em_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell19" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell20" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row5" Height="28.35">
+          <TableCell Name="Cell21" Border.Lines="All">
+            <TextObject Name="TxtPodsPredPomEnerg" Left="9.45" Width="274.05" Height="37.8" Text="Pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell22" Border.Lines="All">
+            <TextObject Name="TxtPodsPredW_em_aux" Width="75.6" Height="18.9" Text="W em,aux"/>
+          </TableCell>
+          <TableCell Name="Cell23" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_W_em_aux_UnutarSezone]"/>
+          <TableCell Name="Cell24" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_W_em_aux_IzvanSezone]"/>
+          <TableCell Name="Cell25" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_W_em_aux_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row6" Height="28.35">
+          <TableCell Name="Cell26" Border.Lines="All">
+            <TextObject Name="TxtPodsPredVracPomEnrg" Left="9.45" Width="274.05" Height="37.8" Text="Vraćena pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell27" Border.Lines="All">
+            <TextObject Name="TxtPodsPredQ_em_aux_rvd" Width="94.5" Height="18.9" Text="Q em,aux,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell28" Border.Lines="All" Text="[termotehnickiSustav.strPredaja_Q_em_aux_rvd_UnutarSezone]"/>
+          <TableCell Name="Cell29" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_aux_rvd_IzvanSezone]"/>
+          <TableCell Name="Cell30" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_aux_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row7" Height="28.35">
+          <TableCell Name="Cell31" Border.Lines="All">
+            <TextObject Name="TxtPodsPredIskorPomEnrg" Left="9.45" Width="217.35" Height="28.35" Text="Iskoristiva pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell32" Border.Lines="All">
+            <TextObject Name="TxtPodsPredQ_em_aux_rbl" Width="94.5" Height="18.9" Text="Q em,aux,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell33" Border.Lines="All" Text="[termotehnickiSustav.strPredaja_Q_em_aux_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell34" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_aux_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell35" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_aux_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row8" Height="66.15">
+          <TableCell Name="Cell36" Border.Lines="All">
+            <TextObject Name="TxtPodsPredEnrgNaUlazu" Left="9.45" Width="217.35" Height="37.8" Text="Energija na ulazu podsustava predaje"/>
+          </TableCell>
+          <TableCell Name="Cell37" Border.Lines="All">
+            <TextObject Name="TxtPodsPredQ_em_in" Width="113.4" Height="66.15" Text="Q em,in = Qem,out - Qem,aux,rvd + Qem,ls"/>
+          </TableCell>
+          <TableCell Name="Cell38" Border.Lines="All" Text="[termotehnickiSustav.strPredaja_Q_em_in_UnutarSezone]"/>
+          <TableCell Name="Cell39" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_in_IzvanSezone]"/>
+          <TableCell Name="Cell40" Border.Lines="All" Text="[termotehnickiSustav.StrPredaja_Q_em_in_Ukupno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtPodsRazvGrijNaslov" Left="9.45" Top="1181.25" Width="396.9" Height="18.9" Text="Podsustav razvoda grijanja"/>
+      <TableObject Name="Table2" Left="9.45" Top="1209.6" Width="689.85" Height="302.4">
+        <TableColumn Name="Column6" Width="275.94"/>
+        <TableColumn Name="Column7" Width="124.74"/>
+        <TableColumn Name="Column8" Width="96.39"/>
+        <TableColumn Name="Column9" Width="105.84"/>
+        <TableColumn Name="Column10" Width="86.94"/>
+        <TableRow Name="Row9" Height="37.8">
+          <TableCell Name="Cell41" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvPotrebniPodaci" Left="9.45" Top="9.45" Width="132.3" Height="18.9" Text="Potrebni podaci"/>
+          </TableCell>
+          <TableCell Name="Cell42" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvOznaka" Top="9.45" Width="94.5" Height="18.9" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell43" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvSezonaGrijanja" Width="94.5" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell44" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvIzvanSezone" Width="94.5" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell45" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvUkupno" Width="56.7" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row10" Height="37.8">
+          <TableCell Name="Cell46" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvEnrgNaIzl" Top="9.45" Width="274.05" Height="28.35" Text="Energija na izlazu podsustava razvoda"/>
+          </TableCell>
+          <TableCell Name="Cell47" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvQ_H_dis_out" Width="113.4" Height="37.8" Text="Q H,dis,out = Qem,in"/>
+          </TableCell>
+          <TableCell Name="Cell48" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_out_UnutarSezone]"/>
+          <TableCell Name="Cell49" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_out_IzvanSezone]"/>
+          <TableCell Name="Cell50" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_out_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row11" Height="37.8">
+          <TableCell Name="Cell51" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvToplGub" Top="9.45" Width="274.05" Height="28.35" Text="Toplinski gubici podsustava razvoda"/>
+          </TableCell>
+          <TableCell Name="Cell52" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvQ_H_dis_ls" Top="9.45" Width="94.5" Height="18.9" Text="Q H,dis,ls"/>
+          </TableCell>
+          <TableCell Name="Cell53" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_ls_UnutarSezone]"/>
+          <TableCell Name="Cell54" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_ls_IzvanSezone]"/>
+          <TableCell Name="Cell55" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_ls_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row12" Height="37.8">
+          <TableCell Name="Cell56" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvIskorToplGub" Top="9.45" Width="274.05" Height="28.35" Text="Iskoristivi toplinski gubici"/>
+          </TableCell>
+          <TableCell Name="Cell57" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvQ_H_dis_rbl" Top="9.45" Width="94.5" Height="18.9" Text="Q H,dis,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell58" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell59" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell60" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row13" Height="37.8">
+          <TableCell Name="Cell61" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvPomEnrg" Top="9.45" Width="274.05" Height="28.35" Text="Pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell62" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvW_H_dis_aux" Top="9.45" Width="94.5" Height="18.9" Text="W H,dis,aux"/>
+          </TableCell>
+          <TableCell Name="Cell63" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodW_H_dis_aux_UnutarSezone]"/>
+          <TableCell Name="Cell64" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodW_H_dis_aux_IzvanSezone]"/>
+          <TableCell Name="Cell65" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodW_H_dis_aux_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row14" Height="37.8">
+          <TableCell Name="Cell66" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvVracPomEnrg" Top="9.45" Width="274.05" Height="28.35" Text="Vraćena pomoćna energija"/>
+            <TextObject Name="TxtPodsRazvQ_H_dis_aux_rvd" Left="274.05" Top="9.45" Width="103.95" Height="28.35" Text="Q H,dis,aux,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell67" Border.Lines="All"/>
+          <TableCell Name="Cell68" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_aux_rvd_UnutarSezone]"/>
+          <TableCell Name="Cell69" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_aux_rvd_IzvanSezone]"/>
+          <TableCell Name="Cell70" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_aux_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row15" Height="37.8">
+          <TableCell Name="Cell71" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvIskorPomEnrg" Top="9.45" Width="274.05" Height="28.35" Text="Iskoristiva pomoćna energija"/>
+            <TextObject Name="TxtPodsRazvQ_H_dis_aux_rbl" Left="274.05" Top="9.45" Width="103.95" Height="28.35" Text="Q H,dis,aux,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell72" Border.Lines="All"/>
+          <TableCell Name="Cell73" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_aux_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell74" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_aux_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell75" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_aux_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row16" Height="37.8">
+          <TableCell Name="Cell76" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvEnergNaUlazu" Top="9.45" Width="274.05" Height="28.35" Text="Energija na ulazu podsustava razvoda"/>
+          </TableCell>
+          <TableCell Name="Cell77" Border.Lines="All">
+            <TextObject Name="TxtPodsRazvQ_H_dis_in" Top="9.45" Width="94.5" Height="18.9" Text="Q H,dis,in"/>
+          </TableCell>
+          <TableCell Name="Cell78" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_in_UnutarSezone]"/>
+          <TableCell Name="Cell79" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_in_IzvanSezone]"/>
+          <TableCell Name="Cell80" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodQ_H_dis_in_Ukupno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtPodsProNaslov" Left="9.45" Top="1984.5" Width="614.25" Height="18.9" Text="Podsustav proizvodnje topline za grijanje"/>
+      <TableObject Name="Table3" Left="9.45" Top="2012.85" Width="689.85" Height="292.95">
+        <TableColumn Name="Column11" Width="274.05"/>
+        <TableColumn Name="Column12" Width="132.3"/>
+        <TableColumn Name="Column13" Width="94.5"/>
+        <TableColumn Name="Column14" Width="103.95"/>
+        <TableColumn Name="Column15" Width="85.05"/>
+        <TableRow Name="Row17" Height="37.8">
+          <TableCell Name="Cell81" Border.Lines="All">
+            <TextObject Name="TxtPodsProizPotrebniPodaci" Top="9.45" Width="103.95" Height="18.9" Text="Potrebni podaci"/>
+          </TableCell>
+          <TableCell Name="Cell82" Border.Lines="All">
+            <TextObject Name="TxtPodsProizOznaka" Left="9.45" Top="9.45" Width="66.15" Height="18.9" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell83" Border.Lines="All">
+            <TextObject Name="TxtPodsProizSezonaGrijanja" Width="94.5" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell84" Border.Lines="All">
+            <TextObject Name="TxtPodsProizIzvanSezone" Width="94.5" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell85" Border.Lines="All">
+            <TextObject Name="TxtPodsProizUkupno" Width="66.15" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row18" Height="37.8">
+          <TableCell Name="Cell86" Border.Lines="All">
+            <TextObject Name="TxtPodsProizEnergijaNaIzlazu" Width="236.25" Height="37.8" Text="Energija na izlazu iz podsustava proizvodnje"/>
+          </TableCell>
+          <TableCell Name="Cell87" Border.Lines="All">
+            <TextObject Name="TxtPodsProizQ_H_gen_out" Width="132.3" Height="37.8" Text="Q H,gen,out = QH,dis,in"/>
+          </TableCell>
+          <TableCell Name="Cell88" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_H_gen_out_UnutarSezone]"/>
+          <TableCell Name="Cell89" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_H_gen_out_IzvanSezone]"/>
+          <TableCell Name="Cell90" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_H_gen_out_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row19" Height="37.8">
+          <TableCell Name="Cell91" Border.Lines="All">
+            <TextObject Name="TxtPodsProizToplGub" Width="236.25" Height="37.8" Text="Toplinski gubici podsustava proizvodnje"/>
+          </TableCell>
+          <TableCell Name="Cell92" Border.Lines="All">
+            <TextObject Name="TxtPodsProizQ_H_gen_ls" Top="9.45" Width="94.5" Height="18.9" Text="Q H,gen,ls"/>
+          </TableCell>
+          <TableCell Name="Cell93" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_H_gen_ls_UnutarSezone]"/>
+          <TableCell Name="Cell94" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_H_gen_ls_IzvanSezone]"/>
+          <TableCell Name="Cell95" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_H_gen_ls_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row20" Height="28.35">
+          <TableCell Name="Cell96" Border.Lines="All">
+            <TextObject Name="TxtPodsProizIskorToplGub" Width="236.25" Height="18.9" Text="Iskoristivi toplinski gubici"/>
+          </TableCell>
+          <TableCell Name="Cell97" Border.Lines="All">
+            <TextObject Name="TxtPodsProizQ_H_gen_ls_env_rbl" Width="122.85" Height="18.9" Text="Q H,gen,ls,env,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell98" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_H_gen_ls_env_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell99" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_H_gen_ls_env_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell100" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_H_gen_ls_env_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row21" Height="28.35">
+          <TableCell Name="Cell101" Border.Lines="All">
+            <TextObject Name="TxtPodsProizPomocEnerg" Width="236.25" Height="18.9" Text="Pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell102" Border.Lines="All">
+            <TextObject Name="TxtPodsProizW_H_gen_aux" Width="113.4" Height="18.9" Text="W H,gen,aux"/>
+          </TableCell>
+          <TableCell Name="Cell103" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaW_HW_gen_aux_UnutarSezone]"/>
+          <TableCell Name="Cell104" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaW_HW_gen_aux_izvanSezone]"/>
+          <TableCell Name="Cell105" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaW_HW_gen_aux_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row22" Height="28.35">
+          <TableCell Name="Cell106" Border.Lines="All">
+            <TextObject Name="TxtPodsProizVracPomEnerg" Width="236.25" Height="18.9" Text="Vraćena pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell107" Border.Lines="All">
+            <TextObject Name="TxtPodsProizQ_H_gen_aux_rvd" Width="122.85" Height="18.9" Text="Q H,gen,aux,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell108" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_HW_gen_aux_rvd_UnutarSezone]"/>
+          <TableCell Name="Cell109" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_HW_gen_aux_rvd_IzvanSezone]"/>
+          <TableCell Name="Cell110" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_HW_gen_aux_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row23" Height="28.35">
+          <TableCell Name="Cell111" Border.Lines="All">
+            <TextObject Name="TxtPodsProizIskorPomEnrg" Width="236.25" Height="18.9" Text="Iskoristiva pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell112" Border.Lines="All">
+            <TextObject Name="TxtPodsProizQ_H_gen_aux_rbl" Width="122.85" Height="18.9" Text="Q H,gen,aux,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell113" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_HW_gen_aux_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell114" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_HW_gen_aux_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell115" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_HW_gen_aux_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row24" Height="66.15">
+          <TableCell Name="Cell116" Border.Lines="All">
+            <TextObject Name="TxtPodsProizEnrgNaUlazu" Top="9.45" Width="236.25" Height="37.8" Text="Energija na ulazu podsustava proizvodnje"/>
+          </TableCell>
+          <TableCell Name="Cell117" Border.Lines="All">
+            <TextObject Name="TxtPodsProizQ_H_gen_in" Width="132.3" Height="66.15" Text="Q H,gen,in = QH,gen,out - QH,gen,aux,rvd + QH,gen,ls"/>
+          </TableCell>
+          <TableCell Name="Cell118" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_HW_gen_in_UnutarSezone]"/>
+          <TableCell Name="Cell119" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_HW_gen_in_IzvanSezone]"/>
+          <TableCell Name="Cell120" Border.Lines="All" Text="[termotehnickiSustav.StrProizvodnjaQ_HW_gen_in_Ukupno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtIskGubNaslov" Left="9.45" Top="2749.95" Width="292.95" Height="18.9" Text="Iskoristivi gubici"/>
+      <TableObject Name="Table4" Left="9.45" Top="2778.3" Width="689.85" Height="198.45">
+        <TableColumn Name="Column16" Width="274.05"/>
+        <TableColumn Name="Column17" Width="132.3"/>
+        <TableColumn Name="Column18" Width="94.5"/>
+        <TableColumn Name="Column19" Width="103.95"/>
+        <TableColumn Name="Column20" Width="85.05"/>
+        <TableRow Name="Row25" Height="37.8">
+          <TableCell Name="Cell121" Border.Lines="All">
+            <TextObject Name="TxtIskGubPortebniPodaci" Top="9.45" Width="103.95" Height="18.9" Text="Potrebni podaci"/>
+          </TableCell>
+          <TableCell Name="Cell122" Border.Lines="All">
+            <TextObject Name="TxtIskGubOznaka" Top="9.45" Width="94.5" Height="18.9" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell123" Border.Lines="All">
+            <TextObject Name="TxtIskGubUnutarSezone" Width="94.5" Height="37.8" Text="Unutar sezone [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell124" Border.Lines="All">
+            <TextObject Name="TxtIskGubIzvanSezone" Width="94.5" Height="37.8" Text="Izvan sezone [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell125" Border.Lines="All">
+            <TextObject Name="TxtIskGubUkupnoZaStavku" Width="75.6" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row26" Height="28.35">
+          <TableCell Name="Cell126" Border.Lines="All">
+            <TextObject Name="TxtIskGubSusGrij" Width="226.8" Height="18.9" Text="Iskoristivi gubici sustava grijanja"/>
+          </TableCell>
+          <TableCell Name="Cell127" Border.Lines="All">
+            <TextObject Name="TxtIskGubQ_H_ls_rbl" Left="9.45" Width="103.95" Height="18.9" Text="Q H,ls,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell128" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_H_ls_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell129" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_H_ls_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell130" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_H_ls_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row27" Height="28.35">
+          <TableCell Name="Cell131" Border.Lines="All">
+            <TextObject Name="TxtIskGubSusPTV" Width="226.8" Height="18.9" Text="Iskoristivi gubici sustava PTV"/>
+          </TableCell>
+          <TableCell Name="Cell132" Border.Lines="All">
+            <TextObject Name="TxtIskGubQ_W_ls_rbl" Left="9.45" Width="103.95" Height="18.9" Text="Q W,ls,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell133" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_W_ls_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell134" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_W_ls_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell135" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_W_ls_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row28" Height="37.8">
+          <TableCell Name="Cell136" Border.Lines="All">
+            <TextObject Name="TxtIskPomEnrgGrijanje" Width="226.8" Height="37.8" Text="Iskoristiva pomoćna energija sustava grijanja"/>
+          </TableCell>
+          <TableCell Name="Cell137" Border.Lines="All">
+            <TextObject Name="TxtIskGubQ_H_aux_ls_rbl" Left="9.45" Top="9.45" Width="103.95" Height="18.9" Text="Q H,aux,ls,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell138" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_H_aux_ls_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell139" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_H_aux_ls_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell140" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_H_aux_ls_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row29" Height="37.8">
+          <TableCell Name="Cell141" Border.Lines="All">
+            <TextObject Name="TxtIskPomEnrgPTV" Width="226.8" Height="37.8" Text="Iskoristiva pomoćna energija sustava PTV"/>
+          </TableCell>
+          <TableCell Name="Cell142" Border.Lines="All">
+            <TextObject Name="TxtIskGubQ_W_aux_ls_rbl" Left="9.45" Top="9.45" Width="103.95" Height="18.9" Text="Q W,aux,ls,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell143" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_W_aux_ls_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell144" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_W_aux_ls_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell145" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciQ_W_aux_ls_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row30" Height="28.35">
+          <TableCell Name="Cell146" Border.Lines="All">
+            <TextObject Name="TxtIskGubUkupnoUSezoni" Width="94.5" Height="18.9" Text="Ukupno"/>
+          </TableCell>
+          <TableCell Name="Cell147" Border.Lines="All">
+            <TextObject Name="TxtIskGubSigma_Q_ls_rbl" Left="9.45" Width="94.5" Height="18.9" Text="ΣQ_ls_rbl"/>
+          </TableCell>
+          <TableCell Name="Cell148" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciUkupno_UnutarSezone]"/>
+          <TableCell Name="Cell149" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciUkupno_IzvanSezone]"/>
+          <TableCell Name="Cell150" Border.Lines="All" Text="[termotehnickiSustav.StrIskoristiviGubiciUkupno_Ukupno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtPodsPredNaslov" Left="9.45" Top="793.8" Width="396.9" Height="18.9" Text="Podsustav predaje topline u prostoru (emisije)"/>
+      <TextObject Name="TxtRekapGlNaslov" Left="9.45" Top="28.35" Width="274.05" Height="18.9" Text="Rekaputulacija glavnih energetskih tokova"/>
+      <TableObject Name="Table5" Left="9.45" Top="66.15" Width="689.85" Height="415.8" Border.Lines="All">
+        <TableColumn Name="Column21" Width="245.7"/>
+        <TableColumn Name="Column22" Width="113.4"/>
+        <TableColumn Name="Column23" Width="113.4"/>
+        <TableColumn Name="Column24" Width="113.4"/>
+        <TableColumn Name="Column25" Width="103.95"/>
+        <TableRow Name="Row31" Height="37.8">
+          <TableCell Name="Cell151" Border.Lines="All">
+            <TextObject Name="TxtRekapGlPotrebniPodatak" Left="56.7" Top="9.45" Width="113.4" Height="18.9" Text="Potrebni podatak"/>
+          </TableCell>
+          <TableCell Name="Cell152" Border.Lines="All">
+            <TextObject Name="TxtRekapGlOznaka" Width="103.95" Height="37.8" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell153" Border.Lines="All">
+            <TextObject Name="TxtRekapGlSezonaGrijanja" Width="94.5" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell154" Border.Lines="All">
+            <TextObject Name="TxtRekapGlIzvanSezone" Left="9.45" Width="94.5" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell155" Border.Lines="All">
+            <TextObject Name="TxtRekapGlUkupno" Top="9.45" Width="103.95" Height="28.35" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row32" Height="28.35">
+          <TableCell Name="Cell156" Border.Lines="All">
+            <TextObject Name="TxtRekapGlKorisnaEnergijaZaGrijanje" Left="9.45" Width="207.9" Height="18.9" Text="Korisna energija za grijanje"/>
+          </TableCell>
+          <TableCell Name="Cell157" Border.Lines="All">
+            <TextObject Name="TxtRekapGlQ_H_nd" Top="9.45" Width="94.5" Height="18.9" Text="Q H,nd"/>
+          </TableCell>
+          <TableCell Name="Cell158" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_H_nd_UnutarSezone]"/>
+          <TableCell Name="Cell159" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_H_nd_IzvanSezone]"/>
+          <TableCell Name="Cell160" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_H_nd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row33" Height="28.35">
+          <TableCell Name="Cell161" Border.Lines="All">
+            <TextObject Name="TxtRekapGlKorisnaEnergijaZaPTV" Left="9.45" Width="207.9" Height="18.9" Text="Korisna energija za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell162" Border.Lines="All">
+            <TextObject Name="TxtRekapGlQ_W" Top="9.45" Width="94.5" Height="18.9" Text="Q W"/>
+          </TableCell>
+          <TableCell Name="Cell163" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_W_UnutarSezone]"/>
+          <TableCell Name="Cell164" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_W_IzvanSezone]"/>
+          <TableCell Name="Cell165" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_W_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row34" Height="37.8">
+          <TableCell Name="Cell166" Border.Lines="All">
+            <TextObject Name="TxtRekapGlUkupnaKorisnaEnrg" Left="9.45" Width="207.9" Height="37.8" Text="Ukupna korisna energija za grijanje i PTV"/>
+          </TableCell>
+          <TableCell Name="Cell167" Border.Lines="All">
+            <TextObject Name="TxtRekapGlQ_H_nd_Q_W" Top="9.45" Width="103.95" Height="28.35" Text="Q H,nd + Q W"/>
+          </TableCell>
+          <TableCell Name="Cell168" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_H_nd_Q_W_Ukupno_UnutarSezone]"/>
+          <TableCell Name="Cell169" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_H_nd_Q_W_Ukupno_IzvanSezone]"/>
+          <TableCell Name="Cell170" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_H_nd_Q_W_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row35" Height="28.35">
+          <TableCell Name="Cell171" Border.Lines="All">
+            <TextObject Name="TxtRekapGlKonacnaEnergijaZaGrijanje" Left="9.45" Width="207.9" Height="28.35" Text="Konačna energija za grijanje"/>
+          </TableCell>
+          <TableCell Name="Cell172" Border.Lines="All">
+            <TextObject Name="TxtRekapGlQ_H_gen_in" Top="9.45" Width="103.95" Height="18.9" Text="Q H,gen,in"/>
+          </TableCell>
+          <TableCell Name="Cell173" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_H_gen_in_UnutarSezone]"/>
+          <TableCell Name="Cell174" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_H_gen_in_IzvanSezone]"/>
+          <TableCell Name="Cell175" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_H_gen_in_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row36" Height="28.35">
+          <TableCell Name="Cell176" Border.Lines="All">
+            <TextObject Name="TxtRekapGlKonacnaEnergPTV" Left="9.45" Width="207.9" Height="28.35" Text="Konačna energija za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell177" Border.Lines="All">
+            <TextObject Name="TxtRekapGlQ_W_gen_in" Top="9.45" Width="103.95" Height="18.9" Text="Q W,gen,in"/>
+          </TableCell>
+          <TableCell Name="Cell178" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_W_gen_in_UnutarSezone]"/>
+          <TableCell Name="Cell179" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_W_gen_in_IzvanSezone]"/>
+          <TableCell Name="Cell180" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusQ_W_gen_in_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row37" Height="37.8">
+          <TableCell Name="Cell181" Border.Lines="All">
+            <TextObject Name="TxtRekapGlKonacnaEnergijaOstalo" Left="9.45" Width="207.9" Height="37.8" Text="Konačna energija za ostale potrebe (rasvjeta i sl.)"/>
+          </TableCell>
+          <TableCell Name="Cell182" Border.Lines="All">
+            <TextObject Name="TxtRekapGlE_del" Top="9.45" Width="103.95" Height="18.9" Text="E_del"/>
+          </TableCell>
+          <TableCell Name="Cell183" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_del_UnutarSezone]"/>
+          <TableCell Name="Cell184" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_del_IzvanSezone]"/>
+          <TableCell Name="Cell185" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_del_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row38" Height="28.35">
+          <TableCell Name="Cell186" Border.Lines="All">
+            <TextObject Name="TxtRekapGlUkupnaKonacnaEnergija" Left="9.45" Width="207.9" Height="28.35" Text="Ukupna konačna energija"/>
+          </TableCell>
+          <TableCell Name="Cell187" Border.Lines="All">
+            <TextObject Name="TxtRekapGlE_del_ukupno" Width="103.95" Height="18.9" Text="E del,ukupno"/>
+          </TableCell>
+          <TableCell Name="Cell188" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_del_ukupno_UnutarSezone]"/>
+          <TableCell Name="Cell189" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_del_ukupno_IzvanSezone]"/>
+          <TableCell Name="Cell190" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_del_ukupno_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row39" Height="28.35">
+          <TableCell Name="Cell191" Border.Lines="All">
+            <TextObject Name="TxtRekapGlPrimarnaEnergijaZaGrijanje" Left="9.45" Width="207.9" Height="18.9" Text="Primarna energija za gijanje"/>
+          </TableCell>
+          <TableCell Name="Cell192" Border.Lines="All">
+            <TextObject Name="TxtRekapGlE_H_prim" Width="103.95" Height="18.9" Text="E H,prim"/>
+          </TableCell>
+          <TableCell Name="Cell193" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_H_prim_UnutarSezone]"/>
+          <TableCell Name="Cell194" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_H_prim_IzvanSezone]"/>
+          <TableCell Name="Cell195" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_H_prim_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row40" Height="28.35">
+          <TableCell Name="Cell196" Border.Lines="All">
+            <TextObject Name="TxtRekapGlPrimarnaEnergijaPTV" Left="9.45" Width="207.9" Height="18.9" Text="Primarna energija za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell197" Border.Lines="All">
+            <TextObject Name="TxtRekapGlE_W_prim" Width="103.95" Height="18.9" Text="E W,prim"/>
+          </TableCell>
+          <TableCell Name="Cell198" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_W_prim_UnutarSezone]"/>
+          <TableCell Name="Cell199" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_W_prim_IzvanSezone]"/>
+          <TableCell Name="Cell200" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_W_prim_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row41" Height="37.8">
+          <TableCell Name="Cell201" Border.Lines="All">
+            <TextObject Name="TxtRekapGlPrimarnaEnergijaOstalo" Left="9.45" Width="207.9" Height="37.8" Text="Primarna energija za ostale potrebe (rasvjeta i sl.)"/>
+          </TableCell>
+          <TableCell Name="Cell202" Border.Lines="All">
+            <TextObject Name="TxtRekapGlE_prim" Top="9.45" Width="103.95" Height="18.9" Text="E prim"/>
+          </TableCell>
+          <TableCell Name="Cell203" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_prim_UnutarSezone]"/>
+          <TableCell Name="Cell204" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_prim_IzvanSezone]"/>
+          <TableCell Name="Cell205" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_prim_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row42" Height="28.35">
+          <TableCell Name="Cell206" Border.Lines="All">
+            <TextObject Name="TxtRekapGlUkupnaPrimarnaEnergija" Left="9.45" Width="207.9" Height="18.9" Text="Ukupna primarna energija"/>
+          </TableCell>
+          <TableCell Name="Cell207" Border.Lines="All">
+            <TextObject Name="TxtRekapGlE_prim_ukupno" Width="103.95" Height="18.9" Text="E prim,ukupno"/>
+          </TableCell>
+          <TableCell Name="Cell208" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_prim_ukupno_UnutarSezone]"/>
+          <TableCell Name="Cell209" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_prim_ukupno_IzvanSezone]"/>
+          <TableCell Name="Cell210" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_prim_ukupno_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row43" Height="37.8">
+          <TableCell Name="Cell211" Border.Lines="All">
+            <TextObject Name="TxtRekapGlSpecificnaUkupnaPrimEnergija" Left="9.45" Width="207.9" Height="37.8" Text="Specifična ukupna primarna energija"/>
+          </TableCell>
+          <TableCell Name="Cell212" Border.Lines="All">
+            <TextObject Name="TxtRekapGlE_prim_Ak" Top="9.45" Width="103.95" Height="28.35" Text="E prim / Ak"/>
+          </TableCell>
+          <TableCell Name="Cell213" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_prim_m2_UnutarSezone]"/>
+          <TableCell Name="Cell214" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_prim_m2_IzvanSezone]"/>
+          <TableCell Name="Cell215" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusE_prim_m2_Ukupno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtRekapGubNaslov" Left="9.45" Top="576.45" Width="444.15" Height="18.9" Text="Rekaputulacija gubitaka termotehničkog sustava za grijanje i PTV"/>
+      <TableObject Name="Table6" Left="9.45" Top="604.8" Width="689.85" Height="160.65">
+        <TableColumn Name="Column26" Width="245.7"/>
+        <TableColumn Name="Column27" Width="122.85"/>
+        <TableColumn Name="Column28" Width="103.95"/>
+        <TableColumn Name="Column29" Width="113.4"/>
+        <TableColumn Name="Column30" Width="103.95"/>
+        <TableRow Name="Row44" Height="37.8">
+          <TableCell Name="Cell216" Border.Lines="All">
+            <TextObject Name="TxtRekapGubPotrebniPodatak" Left="47.25" Top="9.45" Width="132.3" Height="18.9" Text="Potrebni podatak"/>
+          </TableCell>
+          <TableCell Name="Cell217" Border.Lines="All">
+            <TextObject Name="TxtRekapGubOznaka" Left="28.35" Top="9.45" Width="66.15" Height="18.9" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell218" Border.Lines="All">
+            <TextObject Name="TxtSezonaGrijanja" Width="94.5" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell219" Border.Lines="All">
+            <TextObject Name="TxtRekapGubIzvanSezone" Width="103.95" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell220" Border.Lines="All">
+            <TextObject Name="TxtRekapGubUkupno" Top="9.45" Width="103.95" Height="18.9" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row45" Height="28.35">
+          <TableCell Name="Cell221" Border.Lines="All">
+            <TextObject Name="TxtRekapGubUkupniGubici" Top="9.45" Width="217.35" Height="18.9" Text="Ukupni gubici"/>
+          </TableCell>
+          <TableCell Name="Cell222" Border.Lines="All">
+            <TextObject Name="TxtRekapGub_sigma_Q_ls" Left="9.45" Top="9.45" Width="103.95" Height="28.35" Text="∑Q ls"/>
+          </TableCell>
+          <TableCell Name="Cell223" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusSigma_Q_ls_UnutarSezone]"/>
+          <TableCell Name="Cell224" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusSigma_Q_ls_IzvanSezone]"/>
+          <TableCell Name="Cell225" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusSigma_Q_ls_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row46" Height="28.35">
+          <TableCell Name="Cell226" Border.Lines="All">
+            <TextObject Name="TxtRekapGubIskoristiviGubici" Top="9.45" Width="217.35" Height="18.9" Text="Iskoristivi gubici"/>
+          </TableCell>
+          <TableCell Name="Cell227" Border.Lines="All">
+            <TextObject Name="TxtRekapGub_sigma_Q_ls_rbl" Left="9.45" Top="9.45" Width="103.95" Height="18.9" Text="∑Q ls,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell228" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusSigma_Q_ls_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell229" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusSigma_Q_ls_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell230" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusSigma_Q_ls_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row47" Height="37.8">
+          <TableCell Name="Cell231" Border.Lines="All">
+            <TextObject Name="TxtRekapGubIskoristeniGubici" Width="217.35" Height="37.8" Text="Iskorišteni gubici sustava za grijanje"/>
+          </TableCell>
+          <TableCell Name="Cell232" Border.Lines="All">
+            <TextObject Name="TxtRekapGub_sigma_Q_ls_rvd" Left="9.45" Top="9.45" Width="103.95" Height="18.9" Text="∑Q ls,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell233" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusSigma_Q_ls_rvd_UnutarSezone]"/>
+          <TableCell Name="Cell234" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusSigma_Q_ls_rvd_IzvanSezone]"/>
+          <TableCell Name="Cell235" Border.Lines="All" Text="[termotehnickiSustav.StrTermotehSusSigma_Q_ls_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row48" Height="28.35">
+          <TableCell Name="Cell236" Border.Lines="All">
+            <TextObject Name="TxtRekapGubNeiskoristeniGubici" Top="9.45" Width="217.35" Height="18.9" Text="Neiskorišteni gubici"/>
+          </TableCell>
+          <TableCell Name="Cell237" Border.Lines="All">
+            <TextObject Name="TxtRekapGub_sigma_Q_ls_nrvd" Left="9.45" Width="103.95" Height="18.9" Text="∑Q ls,nrvd"/>
+          </TableCell>
+          <TableCell Name="Cell238" Border.Lines="All" Text="[termotehnickiSustav.StrTemotehSusSigma_Q_ls_nrvd_UnutarSezone]"/>
+          <TableCell Name="Cell239" Border.Lines="All" Text="[termotehnickiSustav.StrTemotehSusSigma_Q_ls_nrvd_IzvanSezone]"/>
+          <TableCell Name="Cell240" Border.Lines="All" Text="[termotehnickiSustav.StrTemotehSusSigma_Q_ls_nrvd_Ukupno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtPregledSezonaNaslov" Left="9.45" Top="3033.45" Width="633.15" Height="18.9" Text="Pregled izračunatih energija za sezonu grijanja i izvan sezone grijanja"/>
+      <TableObject Name="Table7" Left="9.45" Top="3061.8" Width="689.85" Height="359.49">
+        <TableColumn Name="Column31" Width="258.93"/>
+        <TableColumn Name="Column32" Width="117.18"/>
+        <TableColumn Name="Column33" Width="107.73"/>
+        <TableColumn Name="Column34" Width="107.73"/>
+        <TableColumn Name="Column35" Width="98.28"/>
+        <TableRow Name="Row49" Height="38.62">
+          <TableCell Name="Cell241" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaPotrebniPodaci" Left="85.05" Top="9.45" Width="122.85" Height="18.9" Text="Potrebni podaci"/>
+          </TableCell>
+          <TableCell Name="Cell242" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaOznaka" Left="18.9" Top="9.45" Width="94.5" Height="18.9" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell243" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaSezonaGrijanja" Width="113.4" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell244" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaIzvanSezone" Width="103.95" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell245" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaUkupno" Left="9.45" Width="75.6" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row50" Height="29.17">
+          <TableCell Name="Cell246" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaUkupnaToplinskaPotreba" Left="9.45" Width="170.1" Height="18.9" Text="Ukupna toplinska potreba"/>
+          </TableCell>
+          <TableCell Name="Cell247" Border.Lines="All">
+            <TextObject Name="TxtPregledSezoneQ_H_nd_Q_W" Left="9.45" Width="103.95" Height="18.9" Text="Q H,nd + Q W"/>
+          </TableCell>
+          <TableCell Name="Cell248" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneQ_H_nd_Q_W_UnutarSezone]"/>
+          <TableCell Name="Cell249" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneQ_H_nd_Q_W_IzvanSezone]"/>
+          <TableCell Name="Cell250" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneQ_H_nd_Q_W_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row51" Height="29.17">
+          <TableCell Name="Cell251" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaUkupniToplinskiGubici" Left="9.45" Width="170.1" Height="18.9" Text="Ukupni topl. gubici"/>
+          </TableCell>
+          <TableCell Name="Cell252" Border.Lines="All">
+            <TextObject Name="TxtPregledSezoneSigma_Q_ls" Left="9.45" Width="94.5" Height="18.9" Text="∑Q ls"/>
+          </TableCell>
+          <TableCell Name="Cell253" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_ls_UnutarSezone]"/>
+          <TableCell Name="Cell254" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_ls_IzvanSezone]"/>
+          <TableCell Name="Cell255" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_ls_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row52" Height="29.17">
+          <TableCell Name="Cell256" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaIskoristiviToplGubici" Left="9.45" Width="170.1" Height="18.9" Text="Iskoristivi toplinski gubici"/>
+          </TableCell>
+          <TableCell Name="Cell257" Border.Lines="All">
+            <TextObject Name="TxtPregledSezona_sigma_Q_rbl" Left="9.45" Width="94.5" Height="18.9" Text="∑Q rbl"/>
+          </TableCell>
+          <TableCell Name="Cell258" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell259" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell260" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row53" Height="29.17">
+          <TableCell Name="Cell261" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaVracenaPomocnaEnergija" Left="9.45" Width="179.55" Height="18.9" Text="Vraćena pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell262" Border.Lines="All">
+            <TextObject Name="TxtPregledSezona_sigma_Q_aux_rvd" Left="9.45" Width="94.5" Height="18.9" Text="∑Q aux,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell263" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_aux_rvd_UnutarSezone]"/>
+          <TableCell Name="Cell264" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_aux_rvd_IzvanSezone]"/>
+          <TableCell Name="Cell265" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_aux_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row54" Height="29.17">
+          <TableCell Name="Cell266" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaIskorToplGubOstalihUredaja" Left="9.45" Top="9.45" Width="255.15" Height="18.9" Text="Iskoristivi toplinski gubici ostalih uređaja"/>
+          </TableCell>
+          <TableCell Name="Cell267" Border.Lines="All">
+            <TextObject Name="TxtPregledSezona_sigma_q_aux_rbl" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="∑Q aux,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell268" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_aux_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell269" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_aux_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell270" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_aux_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row55" Height="29.17">
+          <TableCell Name="Cell271" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaIskoristeniToplinskiGubici" Left="9.45" Width="255.15" Height="18.9" Text="Iskorišteni toplinski gubici"/>
+          </TableCell>
+          <TableCell Name="Cell272" Border.Lines="All">
+            <TextObject Name="TxtPregledSezona_sigma_ls_rvd" Left="9.45" Width="94.5" Height="18.9" Text="∑Q ls,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell273" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_ls_rvd_UnutarSezone]"/>
+          <TableCell Name="Cell274" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_ls_rvd_IzvanSezone]"/>
+          <TableCell Name="Cell275" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_Q_ls_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row56" Height="29.17">
+          <TableCell Name="Cell276" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaPomocnaEnergija" Left="9.45" Width="151.2" Height="18.9" Text="Pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell277" Border.Lines="All">
+            <TextObject Name="TxtPregledSezona_sigma_W_aux" Width="94.5" Height="18.9" Text="∑W aux"/>
+          </TableCell>
+          <TableCell Name="Cell278" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_W_aux_UnutarSezone]"/>
+          <TableCell Name="Cell279" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_W_aux_IzvanSezone]"/>
+          <TableCell Name="Cell280" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneSigma_W_aux_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row57" Height="29.17">
+          <TableCell Name="Cell281" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaIsporucenaToplEnrgGeneratorima" Left="9.45" Width="255.15" Height="18.9" Text="Isporučena toplinska energija generatorima"/>
+          </TableCell>
+          <TableCell Name="Cell282" Border.Lines="All">
+            <TextObject Name="TxtPregledSezona_Q_gen_in" Width="94.5" Height="18.9" Text="Q gen,in"/>
+          </TableCell>
+          <TableCell Name="Cell283" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneQ_gen_in_UnutarSezone]"/>
+          <TableCell Name="Cell284" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneQ_gen_in_IzvanSezone]"/>
+          <TableCell Name="Cell285" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneQ_gen_in_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row58" Height="29.17">
+          <TableCell Name="Cell286" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaIsporucenaEnergija" Left="9.45" Width="189" Height="18.9" Text="Isporučena energija"/>
+          </TableCell>
+          <TableCell Name="Cell287" Border.Lines="All">
+            <TextObject Name="TxtPregledSezona_E_del" Width="94.5" Height="18.9" Text="E del"/>
+          </TableCell>
+          <TableCell Name="Cell288" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneE_del_UnutarSezone]"/>
+          <TableCell Name="Cell289" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneE_del_IzvanSezone]"/>
+          <TableCell Name="Cell290" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneE_del_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row59" Height="29.17">
+          <TableCell Name="Cell291" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaPrimarnaEnergija" Left="9.45" Width="179.55" Height="18.9" Text="Primarna energija"/>
+          </TableCell>
+          <TableCell Name="Cell292" Border.Lines="All">
+            <TextObject Name="TxtPregledSezona_E_prim" Width="94.5" Height="18.9" Text="E prim"/>
+          </TableCell>
+          <TableCell Name="Cell293" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneE_prim_UnutarSezone]"/>
+          <TableCell Name="Cell294" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneE_prim_IzvanSezone]"/>
+          <TableCell Name="Cell295" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezoneE_prim_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row60" Height="29.17">
+          <TableCell Name="Cell296" Border.Lines="All">
+            <TextObject Name="TxtPregledSezonaKoeficijent" Left="9.45" Width="255.15" Height="18.9" Text="Koeficijent utrošaka primarne energije"/>
+          </TableCell>
+          <TableCell Name="Cell297" Border.Lines="All">
+            <TextObject Name="TxtPregledSezona_ep" Width="94.5" Height="18.9" Text="ep"/>
+          </TableCell>
+          <TableCell Name="Cell298" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezone_ep_UnutarSezone]"/>
+          <TableCell Name="Cell299" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezone_ep_IzvanSezone]"/>
+          <TableCell Name="Cell300" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSezone_ep_Ukupno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtRazvodPTVNaslov" Left="9.45" Top="1597.05" Width="406.35" Height="18.9" Text="Podsustav razvoda PTV"/>
+      <TableObject Name="Table8" Left="9.45" Top="1625.4" Width="689.85" Height="283.5">
+        <TableColumn Name="Column36" Width="283.5"/>
+        <TableColumn Name="Column37" Width="122.85"/>
+        <TableColumn Name="Column38" Width="103.95"/>
+        <TableColumn Name="Column39" Width="94.5"/>
+        <TableColumn Name="Column40" Width="85.05"/>
+        <TableRow Name="Row61" Height="37.8">
+          <TableCell Name="Cell301" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVPotrebniPodaci" Left="66.15" Top="9.45" Width="122.85" Height="18.9" Text="Potrebni podaci"/>
+            <TextObject Name="TxtRazvodPTVEnrgNaIzlazu" Top="37.8" Width="274.05" Height="37.8" Text="Energija na izlazu podsustava razvoda PTV"/>
+          </TableCell>
+          <TableCell Name="Cell302" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVOznaka" Left="18.9" Top="9.45" Width="94.5" Height="18.9" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell303" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVSezonaGrijanja" Width="103.95" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell304" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVIzvanSezone" Width="94.5" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell305" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVUkupno" Width="66.15" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row62" Height="37.8">
+          <TableCell Name="Cell306" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVTopGub" Top="37.8" Width="274.05" Height="37.8" Text="Toplinski gubici podsustava razvoda PTV"/>
+          </TableCell>
+          <TableCell Name="Cell307" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTV_Q_W" Left="9.45" Width="94.5" Height="18.9" Text="Q W"/>
+          </TableCell>
+          <TableCell Name="Cell308" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_UnutarSezone]"/>
+          <TableCell Name="Cell309" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_IzvanSezone]"/>
+          <TableCell Name="Cell310" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row63" Height="28.35">
+          <TableCell Name="Cell311" Border.Lines="All"/>
+          <TableCell Name="Cell312" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVQ_W_dis_ls" Left="9.45" Width="94.5" Height="18.9" Text="Q W dis ls"/>
+          </TableCell>
+          <TableCell Name="Cell313" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_ls_UnutarSezone]"/>
+          <TableCell Name="Cell314" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_ls_IzvanSezone]"/>
+          <TableCell Name="Cell315" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_ls_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row64" Height="37.8">
+          <TableCell Name="Cell316" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVIskorTopGub" Width="274.05" Height="37.8" Text="Iskoristivi topl. gubici podsustava razvoda PTV"/>
+          </TableCell>
+          <TableCell Name="Cell317" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTV_Q_W_dis_rbl" Left="9.45" Width="94.5" Height="18.9" Text="Q W,dis,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell318" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell319" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell320" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row65" Height="28.35">
+          <TableCell Name="Cell321" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVPomocnaEnergija" Width="274.05" Height="18.9" Text="Pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell322" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTV_W_W_dis_aux" Left="9.45" Width="94.5" Height="18.9" Text="W W,dis,aux"/>
+          </TableCell>
+          <TableCell Name="Cell323" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_W_W_dis_aux_UnutarSezone]"/>
+          <TableCell Name="Cell324" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_W_W_dis_aux_IzvanSezone]"/>
+          <TableCell Name="Cell325" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_W_W_dis_aux_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row66" Height="28.35">
+          <TableCell Name="Cell326" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVVracPomocnaEnergija" Width="274.05" Height="18.9" Text="Vraćena pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell327" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTV_Q_W_dis_aux_rvd" Left="9.45" Width="113.4" Height="18.9" Text="Q W,dis,aux,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell328" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_aux_rvd_UnutarSezone]"/>
+          <TableCell Name="Cell329" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_aux_rvd_IzvanSezone]"/>
+          <TableCell Name="Cell330" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_aux_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row67" Height="28.35">
+          <TableCell Name="Cell331" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVIskorPomEnergija" Width="274.05" Height="18.9" Text="Iskoristiva pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell332" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTV_Q_W_dis_aux_rbl" Left="9.45" Width="113.4" Height="18.9" Text="Q W,dis,aux,rbl"/>
+            <TextObject Name="TxtRazvodPTV_Q_W_dis_in" Top="37.8" Width="122.85" Height="56.7" Text="Q W,dis,in = Q W - Q W,dis,aux,rvd + Q W,dis,ls"/>
+          </TableCell>
+          <TableCell Name="Cell333" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_aux_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell334" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_aux_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell335" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_aux_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row68" Height="56.7">
+          <TableCell Name="Cell336" Border.Lines="All">
+            <TextObject Name="TxtRazvodPTVEnergijaNaUlazu" Top="9.45" Width="274.05" Height="28.35" Text="Energija na ulazu u podsustav razvoda PTV"/>
+          </TableCell>
+          <TableCell Name="Cell337" Border.Lines="All"/>
+          <TableCell Name="Cell338" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_in_UnutarSezone]"/>
+          <TableCell Name="Cell339" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_in_IzvanSezone]"/>
+          <TableCell Name="Cell340" Border.Lines="All" Text="[termotehnickiSustav.StrRazvodPTV_Q_W_dis_in_Ukupno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtPodsProPTVNaslov" Left="9.45" Top="2371.95" Width="614.25" Height="18.9" Text="Podsustav proizvodnje topline za PTV"/>
+      <TableObject Name="Table9" Left="9.45" Top="2400.3" Width="680.4" Height="330.75">
+        <TableColumn Name="Column41" Width="264.6"/>
+        <TableColumn Name="Column42" Width="132.3"/>
+        <TableColumn Name="Column43" Width="94.5"/>
+        <TableColumn Name="Column44" Width="103.95"/>
+        <TableColumn Name="Column45" Width="85.05"/>
+        <TableRow Name="Row69" Height="37.8">
+          <TableCell Name="Cell341" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVPotrebniPodaci" Left="56.7" Top="9.45" Width="122.85" Height="18.9" Text="Potrebni podaci"/>
+            <TextObject Name="TxtPodProPTVEnergijaNaIzlazu" Left="9.45" Top="37.8" Width="255.15" Height="37.8" Text="Energija na izlazu iz podsustava proizvodnje topline za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell342" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVOznaka" Left="28.35" Top="9.45" Width="94.5" Height="18.9" Text="Oznaka"/>
+            <TextObject Name="TxtPodsProPTV_Q_W_gen_out" Left="9.45" Top="37.8" Width="103.95" Height="37.8" Text="Q W,gen,out = Q W,dis,in"/>
+          </TableCell>
+          <TableCell Name="Cell343" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVUnutarSezone" Width="94.5" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell344" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVIzvanSezone" Width="94.5" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell345" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVUkupno" Width="75.6" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row70" Height="37.8">
+          <TableCell Name="Cell346" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVToplinskiGubici" Left="9.45" Top="37.8" Width="255.15" Height="37.8" Text="Toplinski gubici podsustava proizvodnje topline za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell347" Border.Lines="All"/>
+          <TableCell Name="Cell348" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_out_UnutarSezone]"/>
+          <TableCell Name="Cell349" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_out_IzvanSezone]"/>
+          <TableCell Name="Cell350" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_out_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row71" Height="37.8">
+          <TableCell Name="Cell351" Border.Lines="All"/>
+          <TableCell Name="Cell352" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTV_Q_W_gen_ls" Left="9.45" Top="9.45" Width="113.4" Height="18.9" Text="Q W,gen,ls"/>
+          </TableCell>
+          <TableCell Name="Cell353" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_ls_UnutarSezone]"/>
+          <TableCell Name="Cell354" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_ls_IzvanSezone]"/>
+          <TableCell Name="Cell355" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_ls_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row72" Height="37.8">
+          <TableCell Name="Cell356" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVIskoristiviToplGub" Left="9.45" Width="255.15" Height="37.8" Text="Iskoristivi toplinski gubici podsustava proizvodnje topline za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell357" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTV_Q_W_gen_rbl" Left="9.45" Top="9.45" Width="113.4" Height="18.9" Text="Q W,gen,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell358" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell359" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell360" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row73" Height="37.8">
+          <TableCell Name="Cell361" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVPomocnaEnergija" Left="9.45" Width="255.15" Height="37.8" Text="Pomoćna energija podsustava proizvodnje topline za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell362" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTV_W_w_gen_aux" Left="9.45" Top="9.45" Width="113.4" Height="18.9" Text="W W,gen,aux"/>
+          </TableCell>
+          <TableCell Name="Cell363" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_W_W_gen_aux_UnutarSezone]"/>
+          <TableCell Name="Cell364" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_W_W_gen_aux_IzvanSezone]"/>
+          <TableCell Name="Cell365" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_W_W_gen_aux_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row74" Height="37.8">
+          <TableCell Name="Cell366" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVVracenaPomocnaEnergija" Left="9.45" Width="255.15" Height="37.8" Text="Vraćena pomoćna energija podsustava priozvodnje topline za PTV "/>
+          </TableCell>
+          <TableCell Name="Cell367" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTV_Q_W_gen_aux_rvd" Top="9.45" Width="113.4" Height="18.9" Text="Q W,gen,aux,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell368" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_aux_rvd_UnutarSezone]"/>
+          <TableCell Name="Cell369" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_aux_rvd_IzvanSezone]"/>
+          <TableCell Name="Cell370" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_aux_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row75" Height="37.8">
+          <TableCell Name="Cell371" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVIskoristivaPomocnaEnergija" Left="9.45" Width="255.15" Height="37.8" Text="Iskoristiva pomoćna energija podsustava proizvodnje topline za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell372" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTV_Q_W_gen_aux_rbl" Top="9.45" Width="113.4" Height="18.9" Text="Q W,gen,aux,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell373" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_aux_rbl_UnutarSezone]"/>
+          <TableCell Name="Cell374" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_aux_rbl_IzvanSezone]"/>
+          <TableCell Name="Cell375" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_aux_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row76" Height="66.15">
+          <TableCell Name="Cell376" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTVEnergijaNaUlazu" Left="9.45" Width="255.15" Height="37.8" Text="Energija na ulazu podsutava proizvodnje topline za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell377" Border.Lines="All">
+            <TextObject Name="TxtPodsProPTV_Q_W_gen_in" Width="113.4" Height="66.15" Text="Q W,gen,in = Q W,gen,out - Q W,gen,aux,rvd + Q W,gen,ls"/>
+          </TableCell>
+          <TableCell Name="Cell378" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_in_UnutarSezone]"/>
+          <TableCell Name="Cell379" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_in_IzvanSezone]"/>
+          <TableCell Name="Cell380" Border.Lines="All" Text="[termotehnickiSustav.StrPodsProPTV_Q_W_gen_in_Ukupno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtPregledSustavaNaslov" Left="18.9" Top="3449.25" Width="595.35" Height="18.9" Text="Pregled izračunatih energija za sustav grijanja i sustav pripreme PTV-a"/>
+      <TableObject Name="Table10" Left="9.45" Top="3496.5" Width="689.85" Height="472.56">
+        <TableColumn Name="Column46" Width="249.48"/>
+        <TableColumn Name="Column47" Width="117.18"/>
+        <TableColumn Name="Column48" Width="107.73"/>
+        <TableColumn Name="Column49" Width="117.18"/>
+        <TableColumn Name="Column50" Width="98.28"/>
+        <TableRow Name="Row77" Height="39.38">
+          <TableCell Name="Cell381" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviPotrebniPodaci" Left="56.7" Top="9.45" Width="132.3" Height="18.9" Text="Potrebni podaci"/>
+          </TableCell>
+          <TableCell Name="Cell382" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviOznaka" Top="9.45" Width="94.5" Height="18.9" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell383" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviGrijanje" Width="94.5" Height="37.8" Text="Sustav grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell384" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviSustavPTV" Width="94.5" Height="37.8" Text="Sustav PTV [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell385" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviUkupno" Width="85.05" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row78" Height="39.38">
+          <TableCell Name="Cell386" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviUkupnaToplinskaPotreba" Top="9.45" Width="236.25" Height="28.35" Text="Ukupna toplinska potreba"/>
+          </TableCell>
+          <TableCell Name="Cell387" Border.Lines="All">
+            <TextObject Name="TxtPregledSustavi_Q_H_nd_Q_W" Top="9.45" Width="103.95" Height="28.35" Text="Q H,nd + Q W"/>
+          </TableCell>
+          <TableCell Name="Cell388" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviQ_H_nd]"/>
+          <TableCell Name="Cell389" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviQ_W]"/>
+          <TableCell Name="Cell390" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviQ_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row79" Height="39.38">
+          <TableCell Name="Cell391" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviUkupniToplGubici" Top="9.45" Width="217.35" Height="28.35" Text="Ukupni topl. gubici"/>
+          </TableCell>
+          <TableCell Name="Cell392" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviSigma_Q_ls" Top="9.45" Width="75.6" Height="28.35" Text="∑Q ls"/>
+          </TableCell>
+          <TableCell Name="Cell393" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_ls_Grijanje]"/>
+          <TableCell Name="Cell394" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_ls_PTV]"/>
+          <TableCell Name="Cell395" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_ls_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row80" Height="39.38">
+          <TableCell Name="Cell396" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviIskoristiviToplGubici" Top="9.45" Width="236.25" Height="28.35" Text="Iskoristivi toplinski gubici"/>
+          </TableCell>
+          <TableCell Name="Cell397" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviSigma_Q_rbl" Top="9.45" Width="103.95" Height="18.9" Text="∑Q rbl"/>
+          </TableCell>
+          <TableCell Name="Cell398" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_rbl_Grijanje]"/>
+          <TableCell Name="Cell399" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_rbl_PTV]"/>
+          <TableCell Name="Cell400" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row81" Height="39.38">
+          <TableCell Name="Cell401" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviVracenaPomEnergija" Top="9.45" Width="245.7" Height="28.35" Text="Vraćena pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell402" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviSigma_Q_aux_Rvd" Top="9.45" Width="103.95" Height="28.35" Text="∑Q aux,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell403" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_aux_rvd_Grijanje]"/>
+          <TableCell Name="Cell404" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_aux_rvd_PTV]"/>
+          <TableCell Name="Cell405" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_aux_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row82" Height="39.38">
+          <TableCell Name="Cell406" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviIskToplGubPomUredaja" Width="245.7" Height="37.8" Text="Iskoristivi topl. gubici pomoćnih uređaja"/>
+          </TableCell>
+          <TableCell Name="Cell407" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviSigma_Q_aux_rbl" Top="9.45" Width="103.95" Height="18.9" Text="∑ Q aux,rbl"/>
+          </TableCell>
+          <TableCell Name="Cell408" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_aux_rbl_Grijanje]"/>
+          <TableCell Name="Cell409" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_aux_rbl_PTV]"/>
+          <TableCell Name="Cell410" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_aux_rbl_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row83" Height="39.38">
+          <TableCell Name="Cell411" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviIskorTopGubici" Width="245.7" Height="28.35" Text="Iskoristivi topl. gubici"/>
+          </TableCell>
+          <TableCell Name="Cell412" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviSigma_Q_ls_rvd" Top="9.45" Width="103.95" Height="18.9" Text="∑Q ls,rvd"/>
+          </TableCell>
+          <TableCell Name="Cell413" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_ls_rvd_Grijanje]"/>
+          <TableCell Name="Cell414" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_ls_rvd_PTV]"/>
+          <TableCell Name="Cell415" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_Q_ls_rvd_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row84" Height="39.38">
+          <TableCell Name="Cell416" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviPomocnaEnergija" Top="9.45" Width="245.7" Height="18.9" Text="Pomoćna energija"/>
+          </TableCell>
+          <TableCell Name="Cell417" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviSigma_W_aux" Top="9.45" Width="103.95" Height="18.9" Text="∑ W aux"/>
+          </TableCell>
+          <TableCell Name="Cell418" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_W_aux_Grijanje]"/>
+          <TableCell Name="Cell419" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_W_aux_PTV]"/>
+          <TableCell Name="Cell420" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviSigma_W_aux_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row85" Height="39.38">
+          <TableCell Name="Cell421" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviIsporucenaToplEnergija" Width="245.7" Height="37.8" Text="Isporučena toplinska energija generatorima"/>
+          </TableCell>
+          <TableCell Name="Cell422" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviQ_gen_in" Top="9.45" Width="94.5" Height="18.9" Text="Q gen,in"/>
+          </TableCell>
+          <TableCell Name="Cell423" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviQ_gen_in_Grijanje]"/>
+          <TableCell Name="Cell424" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviQ_gen_in_PTV]"/>
+          <TableCell Name="Cell425" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviQ_gen_in_Ukupno]"/>
+        </TableRow>
+        <TableRow Name="Row86" Height="39.38">
+          <TableCell Name="Cell426" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviIsporucenaEnergija" Top="9.45" Width="245.7" Height="28.35" Text="Isporučena energija"/>
+          </TableCell>
+          <TableCell Name="Cell427" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviE_del" Top="9.45" Width="94.5" Height="18.9" Text="E del"/>
+          </TableCell>
+          <TableCell Name="Cell428" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviE_del_Grijanje]"/>
+          <TableCell Name="Cell429" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviE_del_PTV]"/>
+          <TableCell Name="Cell430" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviE_del_GrijanjeIPTV]"/>
+        </TableRow>
+        <TableRow Name="Row87" Height="39.38">
+          <TableCell Name="Cell431" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviPrimarnaEnergija" Top="9.45" Width="245.7" Height="18.9" Text="Primarna energija"/>
+          </TableCell>
+          <TableCell Name="Cell432" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviE_prim" Top="9.45" Width="94.5" Height="18.9" Text="E prim"/>
+          </TableCell>
+          <TableCell Name="Cell433" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviE_prim_Grijanje]"/>
+          <TableCell Name="Cell434" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviE_prim_PTV]"/>
+          <TableCell Name="Cell435" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustaviE_prim_GrijanjeIPTV]"/>
+        </TableRow>
+        <TableRow Name="Row88" Height="39.38">
+          <TableCell Name="Cell436" Border.Lines="All">
+            <TextObject Name="TxtPregledSustaviKoefUtrosPrimEnergije" Top="9.45" Width="245.7" Height="28.35" Text="Koeficijent utrošaka primarne energije"/>
+          </TableCell>
+          <TableCell Name="Cell437" Border.Lines="All">
+            <TextObject Name="TxtPregledSustavi_ep" Top="9.45" Width="94.5" Height="18.9" Text="ep"/>
+          </TableCell>
+          <TableCell Name="Cell438" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustavi_ep_Grijanje]"/>
+          <TableCell Name="Cell439" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustavi_ep_PTV]"/>
+          <TableCell Name="Cell440" Border.Lines="All" Text="[termotehnickiSustav.StrPregledSustavi_ep_GrijanjeIPTV]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtFaktoriPrimEnergijeNaslov" Left="9.45" Top="4016.25" Width="463.05" Height="18.9" Text="Faktori primarne energije, emisije i ogrjevne moći"/>
+      <TableObject Name="Table11" Left="9.45" Top="4044.6" Width="689.84" Height="283.5">
+        <TableColumn Name="Column51" Width="229.16"/>
+        <TableColumn Name="Column52" Width="153.56"/>
+        <TableColumn Name="Column53" Width="125.21"/>
+        <TableColumn Name="Column54" Width="181.91"/>
+        <TableRow Name="Row89" Height="56.7">
+          <TableCell Name="Cell441" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeVrstaEner" Left="56.7" Top="9.45" Width="132.3" Height="18.9" Text="Vrsta energenta"/>
+          </TableCell>
+          <TableCell Name="Cell442" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeFaktorPrimarneEnergije" Width="122.85" Height="37.8" Text="Faktor primarne energije"/>
+          </TableCell>
+          <TableCell Name="Cell443" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeEmisija" Width="113.4" Height="37.8" Text="Jedinična emisija CO2 [kg/kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell444" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeOgrjevna" Width="179.55" Height="66.15" Text="Ogrjevna moć goriva [kWh/kg], [kWh/l], [kWh/m^2]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row90" Height="28.35">
+          <TableCell Name="Cell446" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeEkstraLakoILako" Left="9.45" Width="236.25" Height="18.9" Text="Ekstra lako i lako loživo ulje"/>
+          </TableCell>
+          <TableCell Name="Cell447" Border.Lines="All" Text="[termotehnickiSustav.StrEkstraLakoLakoLozivoUlje_FaktorPrimarneEnergije]"/>
+          <TableCell Name="Cell448" Border.Lines="All" Text="[termotehnickiSustav.StrEkstraLakoLakoLozivoUlje_JedinicnaEmisijaCO2]"/>
+          <TableCell Name="Cell449" Border.Lines="All" Text="[termotehnickiSustav.StrEkstraLakoLakoLozivoUlje_OgrjevnaMoc]"/>
+        </TableRow>
+        <TableRow Name="Row91" Height="28.35">
+          <TableCell Name="Cell451" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeSrednjeITeško" Left="9.45" Width="236.25" Height="18.9" Text="Srednje i teško loživo ulje"/>
+          </TableCell>
+          <TableCell Name="Cell452" Border.Lines="All" Text="[termotehnickiSustav.StrSrednjeITeskoLozivoUlje_FaktorPrimarneEnergije]"/>
+          <TableCell Name="Cell453" Border.Lines="All" Text="[termotehnickiSustav.StrSrednjeITeskoLozivoUlje_JedinicnaEmisijaCO2]"/>
+          <TableCell Name="Cell454" Border.Lines="All" Text="[termotehnickiSustav.StrSrednjeITeskoLozivoUlje_OgrjevnaMocGoriva]"/>
+        </TableRow>
+        <TableRow Name="Row92" Height="28.35">
+          <TableCell Name="Cell456" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeKameniUgljen" Left="9.45" Width="236.25" Height="18.9" Text="Kameni ugljen"/>
+          </TableCell>
+          <TableCell Name="Cell457" Border.Lines="All" Text="[termotehnickiSustav.StrKameniUgljen_FaktorPrimarneEnergije]"/>
+          <TableCell Name="Cell458" Border.Lines="All" Text="[termotehnickiSustav.StrKameniUgljen_JedinicnaEmisijaCO2]"/>
+          <TableCell Name="Cell459" Border.Lines="All" Text="[termotehnickiSustav.StrKameniUgljen_OgrjevnaMovGoriva]"/>
+        </TableRow>
+        <TableRow Name="Row93" Height="28.35">
+          <TableCell Name="Cell461" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeMrkiUgljen" Left="9.45" Width="236.25" Height="18.9" Text="Mrki ugljen"/>
+          </TableCell>
+          <TableCell Name="Cell462" Border.Lines="All" Text="[termotehnickiSustav.StrMrkiUgljen_FaktorPrimarneEnergije]"/>
+          <TableCell Name="Cell463" Border.Lines="All" Text="[termotehnickiSustav.StrMrkiUgljen_JedinicnaEmisijaCO2]"/>
+          <TableCell Name="Cell464" Border.Lines="All" Text="[termotehnickiSustav.StrMrkiUgljen_OgrjevnaMocGoriva]"/>
+        </TableRow>
+        <TableRow Name="Row94" Height="28.35">
+          <TableCell Name="Cell466" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeLignit" Left="9.45" Width="236.25" Height="18.9" Text="Lignit"/>
+          </TableCell>
+          <TableCell Name="Cell467" Border.Lines="All" Text="[termotehnickiSustav.StrLignit_FaktorPrimarneEnergije]"/>
+          <TableCell Name="Cell468" Border.Lines="All" Text="[termotehnickiSustav.StrLignit_JedinicnaEmisijaCO2]"/>
+          <TableCell Name="Cell469" Border.Lines="All" Text="[termotehnickiSustav.StrLignit_OgrjevnaMocGoriva]"/>
+        </TableRow>
+        <TableRow Name="Row95" Height="28.35">
+          <TableCell Name="Cell471" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijePrirodniPlin" Left="9.45" Width="236.25" Height="18.9" Text="Prirodni plin"/>
+          </TableCell>
+          <TableCell Name="Cell472" Border.Lines="All" Text="[termotehnickiSustav.StrPrirodniPlin_FaktorPrimarneEnergije]"/>
+          <TableCell Name="Cell473" Border.Lines="All" Text="[termotehnickiSustav.StrPrirodniPlin_JedinicnaEmisijaCO2]"/>
+          <TableCell Name="Cell474" Border.Lines="All" Text="[termotehnickiSustav.StrPrirodniPlin_OgrjevnaMocGoriva]"/>
+        </TableRow>
+        <TableRow Name="Row96" Height="28.35">
+          <TableCell Name="Cell476" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeUkapljNaftPlin" Left="9.45" Width="236.25" Height="18.9" Text="Ukapljeni naftni plin"/>
+          </TableCell>
+          <TableCell Name="Cell477" Border.Lines="All" Text="[termotehnickiSustav.StrUkapljeniNaftniPlin_FaktorPrimarneEnergije]"/>
+          <TableCell Name="Cell478" Border.Lines="All" Text="[termotehnickiSustav.StrUkapljeniNaftniPlin_JedinicnaEmisijaCO2]"/>
+          <TableCell Name="Cell479" Border.Lines="All" Text="[termotehnickiSustav.StrUkapljeniNaftniPlin_OgrjevnaMocGoriva]"/>
+        </TableRow>
+        <TableRow Name="Row97" Height="28.35">
+          <TableCell Name="Cell481" Border.Lines="All">
+            <TextObject Name="TxtFaktoriPrimEnergijeBiomasa" Left="9.45" Width="236.25" Height="18.9" Text="Biomasa"/>
+          </TableCell>
+          <TableCell Name="Cell482" Border.Lines="All" Text="[termotehnickiSustav.StrBiomasa_FaktorPrimarneEnergije]"/>
+          <TableCell Name="Cell483" Border.Lines="All" Text="[termotehnickiSustav.StrBiomasa_JedinicnaEmisijaCO2]"/>
+          <TableCell Name="Cell484" Border.Lines="All" Text="[termotehnickiSustav.StrBiomasa_OgrjevnaMocGoriva]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtKonacnaKonacEnergPoEnergNaslov" Left="9.45" Top="4403.7" Width="614.25" Height="18.9" Text="Konačna (isporučena) energija po energentima i potrošnja energenata"/>
+      <TableObject Name="Table12" Left="9.45" Top="4432.05" Width="689.85" Height="264.6">
+        <TableColumn Name="Column55" Width="255.15"/>
+        <TableColumn Name="Column56" Width="113.4"/>
+        <TableColumn Name="Column57" Width="103.95"/>
+        <TableColumn Name="Column58" Width="113.4"/>
+        <TableColumn Name="Column59" Width="103.95"/>
+        <TableRow Name="Row99" Height="37.8">
+          <TableCell Name="Cell490" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergPotrebniPodatak" Left="9.45" Width="132.3" Height="18.9" Text="Potrebni podatak"/>
+          </TableCell>
+          <TableCell Name="Cell491" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergUnutarSezone" Left="9.45" Width="94.5" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell492" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergIzvanSezone" Width="103.95" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell493" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergUkupno" Left="9.45" Width="103.95" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell494" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergPotrosnja" Width="103.95" Height="37.8" Text="Potrošnja [kg],[l],[m^3]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row100" Height="28.35">
+          <TableCell Name="Cell495" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergEkstraLakoILakoLozivoUlje" Left="9.45" Width="236.25" Height="18.9" Text="Ekstra lako i lako loživo ulje"/>
+          </TableCell>
+          <TableCell Name="Cell496" Border.Lines="All" Text="[termotehnickiSustav.StrEkstraLakoLakoLozivoUlje_UnutarSezone]"/>
+          <TableCell Name="Cell497" Border.Lines="All" Text="[termotehnickiSustav.StrEkstraLakoLakoLozivoUlje_IzvanSezone]"/>
+          <TableCell Name="Cell498" Border.Lines="All" Text="[termotehnickiSustav.StrEkstraLakoLakoLozivoUlje_Ukupno]"/>
+          <TableCell Name="Cell499" Border.Lines="All" Text="[termotehnickiSustav.StrEkstraLakoLakoLozivoUlje_Potrosnja]"/>
+        </TableRow>
+        <TableRow Name="Row101" Height="28.35">
+          <TableCell Name="Cell500" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergSrednjeITeskoLozivoUlje" Left="9.45" Width="236.25" Height="18.9" Text="Srednje i teško loživo ulje"/>
+          </TableCell>
+          <TableCell Name="Cell501" Border.Lines="All" Text="[termotehnickiSustav.StrSrednjeITeskoLozivoUlje_UnutarSezone]"/>
+          <TableCell Name="Cell502" Border.Lines="All" Text="[termotehnickiSustav.StrSrednjeITeskoLozivoUlje_IzvanSezone]"/>
+          <TableCell Name="Cell503" Border.Lines="All" Text="[termotehnickiSustav.StrSrednjeITeskoLozivoUlje_Ukupno]"/>
+          <TableCell Name="Cell504" Border.Lines="All" Text="[termotehnickiSustav.StrSrednjeITeskoLozivoUlje_Potrosnja]"/>
+        </TableRow>
+        <TableRow Name="Row102" Height="28.35">
+          <TableCell Name="Cell505" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergKameniUgljen" Left="9.45" Width="236.25" Height="18.9" Text="Kameni ugljen"/>
+          </TableCell>
+          <TableCell Name="Cell506" Border.Lines="All" Text="[termotehnickiSustav.StrKameniUgljen_UnutarSezone]"/>
+          <TableCell Name="Cell507" Border.Lines="All" Text="[termotehnickiSustav.StrKameniUgljen_IzvanSezone]"/>
+          <TableCell Name="Cell508" Border.Lines="All" Text="[termotehnickiSustav.StrKameniUgljen_Ukupno]"/>
+          <TableCell Name="Cell509" Border.Lines="All" Text="[termotehnickiSustav.StrKameniUgljen_Potrošnja]"/>
+        </TableRow>
+        <TableRow Name="Row103" Height="28.35">
+          <TableCell Name="Cell510" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergMrkiUgljen" Left="9.45" Width="236.25" Height="18.9" Text="Mrki ugljen"/>
+          </TableCell>
+          <TableCell Name="Cell511" Border.Lines="All" Text="[termotehnickiSustav.StrMrkiUgljen_UnutarSezone]"/>
+          <TableCell Name="Cell512" Border.Lines="All" Text="[termotehnickiSustav.StrMrkiUgljen_IzvanSezone]"/>
+          <TableCell Name="Cell513" Border.Lines="All" Text="[termotehnickiSustav.StrMrkiUgljen_Ukupno]"/>
+          <TableCell Name="Cell514" Border.Lines="All" Text="[termotehnickiSustav.StrMrkiUgljen_Potrosnja]"/>
+        </TableRow>
+        <TableRow Name="Row104" Height="28.35">
+          <TableCell Name="Cell515" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergLignit" Left="9.45" Width="236.25" Height="18.9" Text="Lignit"/>
+          </TableCell>
+          <TableCell Name="Cell516" Border.Lines="All" Text="[termotehnickiSustav.StrLignit_UnutarSezone]"/>
+          <TableCell Name="Cell517" Border.Lines="All" Text="[termotehnickiSustav.StrLignit_IzvanSezone]"/>
+          <TableCell Name="Cell518" Border.Lines="All" Text="[termotehnickiSustav.StrLignit_Ukupno]"/>
+          <TableCell Name="Cell519" Border.Lines="All" Text="[termotehnickiSustav.StrLignit_Potrosnja]"/>
+        </TableRow>
+        <TableRow Name="Row105" Height="28.35">
+          <TableCell Name="Cell520" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergPrirodniPlin" Left="9.45" Width="236.25" Height="18.9" Text="Prirodni plin"/>
+          </TableCell>
+          <TableCell Name="Cell521" Border.Lines="All" Text="[termotehnickiSustav.StrPrirodniPlin_UnutarSezone]"/>
+          <TableCell Name="Cell522" Border.Lines="All" Text="[termotehnickiSustav.StrPrirodniPlin_IzvanSezone]"/>
+          <TableCell Name="Cell523" Border.Lines="All" Text="[termotehnickiSustav.StrPrirodniPlin_Ukupno]"/>
+          <TableCell Name="Cell524" Border.Lines="All" Text="[termotehnickiSustav.StrPrirodniPlin_Potrosnja]"/>
+        </TableRow>
+        <TableRow Name="Row106" Height="28.35">
+          <TableCell Name="Cell525" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergUkapljeniNaftniPlin" Left="9.45" Width="236.25" Height="18.9" Text="Ukapljeni naftni plin"/>
+          </TableCell>
+          <TableCell Name="Cell526" Border.Lines="All" Text="[termotehnickiSustav.StrUkapljeniNaftniPlin_UnutarSezone]"/>
+          <TableCell Name="Cell527" Border.Lines="All" Text="[termotehnickiSustav.StrUkapljeniNaftniPlin_IzvanSezone]"/>
+          <TableCell Name="Cell528" Border.Lines="All" Text="[termotehnickiSustav.StrUkapljeniNaftniPlin_Ukupno]"/>
+          <TableCell Name="Cell529" Border.Lines="All" Text="[termotehnickiSustav.StrUkapljeniNaftniPlin_Potrosnja]"/>
+        </TableRow>
+        <TableRow Name="Row107" Height="28.35">
+          <TableCell Name="Cell530" Border.Lines="All">
+            <TextObject Name="TxtKonacnaKonacEnergPoEnergBiomasa" Left="9.45" Width="236.25" Height="18.9" Text="Biomasa"/>
+          </TableCell>
+          <TableCell Name="Cell531" Border.Lines="All" Text="[termotehnickiSustav.StrBiomasa_UnutarSezone]"/>
+          <TableCell Name="Cell532" Border.Lines="All" Text="[termotehnickiSustav.StrBiomasa_IzvanSezone]"/>
+          <TableCell Name="Cell533" Border.Lines="All" Text="[termotehnickiSustav.StrBiomasa_Ukupno]"/>
+          <TableCell Name="Cell534" Border.Lines="All" Text="[termotehnickiSustav.StrBiomasa_Potrosnja]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtPrimarnaEnrgEmisijaNaslov" Left="9.45" Top="4734.45" Width="595.35" Height="18.9" Text="Primarna energija i emisija CO2 po energentima"/>
+      <TableObject Name="Table13" Left="9.45" Top="4772.25" Width="689.85" Height="340.2">
+        <TableColumn Name="Column60" Width="245.7"/>
+        <TableColumn Name="Column61" Width="122.85"/>
+        <TableColumn Name="Column62" Width="113.4"/>
+        <TableColumn Name="Column63" Width="103.95"/>
+        <TableColumn Name="Column64" Width="103.95"/>
+        <TableRow Name="Row108" Height="37.8">
+          <TableCell Name="Cell535" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaPotrebniPodatak" Left="9.45" Top="9.45" Width="132.3" Height="18.9" Text="Potrebni podatak"/>
+          </TableCell>
+          <TableCell Name="Cell536" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaSezonaGrijanja" Left="9.45" Width="94.5" Height="37.8" Text="Sezona grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell537" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaIzvanSezone" Width="103.95" Height="37.8" Text="Izvan sezone grijanja [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell538" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaUkupno" Width="103.95" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell539" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaemisijaCO2" Width="103.95" Height="37.8" Text="Emisija CO2 [t]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row109" Height="37.8">
+          <TableCell Name="Cell540" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaEkstraLakoILakoLozivoUlje" Top="9.45" Width="236.25" Height="18.9" Text="Ekstra lako i lako loživo ulje"/>
+          </TableCell>
+          <TableCell Name="Cell541" Border.Lines="All" Text="[termotehnickiSustav.StrPrimEkstraLakoLakoLozivoUlje_UnutarSezone]"/>
+          <TableCell Name="Cell542" Border.Lines="All" Text="[termotehnickiSustav.StrPrimEkstraLakoLakoLozivoUlje_IzvanSezone]"/>
+          <TableCell Name="Cell543" Border.Lines="All" Text="[termotehnickiSustav.StrPrimEkstraLakoLakoLozivoUlje_Ukupno]"/>
+          <TableCell Name="Cell544" Border.Lines="All" Text="[termotehnickiSustav.StrEkstraLakoLakoLozivoUlje_EmisijaCO2]"/>
+        </TableRow>
+        <TableRow Name="Row110" Height="37.8">
+          <TableCell Name="Cell545" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaSrednjeITeskoLozivoUlje" Top="9.45" Width="236.25" Height="18.9" Text="Srednje i teško loživo ulje"/>
+          </TableCell>
+          <TableCell Name="Cell546" Border.Lines="All" Text="[termotehnickiSustav.StrPrimSrednjeITeskoLozivoUlje_UnutarSezone]"/>
+          <TableCell Name="Cell547" Border.Lines="All" Text="[termotehnickiSustav.StrPrimSrednjeITeskoLozivoUlje_IzvanSezone]"/>
+          <TableCell Name="Cell548" Border.Lines="All" Text="[termotehnickiSustav.StrPrimSrednjeITeskoLozivoUlje_Ukupno]"/>
+          <TableCell Name="Cell549" Border.Lines="All" Text="[termotehnickiSustav.StrSrednjeITeskoLozivoUlje_EmisijaCO2]"/>
+        </TableRow>
+        <TableRow Name="Row111" Height="37.8">
+          <TableCell Name="Cell550" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaKameniUgljen" Top="9.45" Width="236.25" Height="18.9" Text="Kameni ugljen"/>
+          </TableCell>
+          <TableCell Name="Cell551" Border.Lines="All" Text="[termotehnickiSustav.StrPrimKameniUgljen_UnutarSezone]"/>
+          <TableCell Name="Cell552" Border.Lines="All" Text="[termotehnickiSustav.StrPrimKameniUgljen_IzvanSezone]"/>
+          <TableCell Name="Cell553" Border.Lines="All" Text="[termotehnickiSustav.StrPrimKameniUgljen_Ukupno]"/>
+          <TableCell Name="Cell554" Border.Lines="All" Text="[termotehnickiSustav.StrKameniUgljen_EmisijaCO2]"/>
+        </TableRow>
+        <TableRow Name="Row112" Height="37.8">
+          <TableCell Name="Cell555" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaMrkiUgljen" Top="9.45" Width="236.25" Height="18.9" Text="Mrki ugljen"/>
+          </TableCell>
+          <TableCell Name="Cell556" Border.Lines="All" Text="[termotehnickiSustav.StrPrimMrkiUgljen_UnutarSezone]"/>
+          <TableCell Name="Cell557" Border.Lines="All" Text="[termotehnickiSustav.StrPrimMrkiUgljen_IzvanSezone]"/>
+          <TableCell Name="Cell558" Border.Lines="All" Text="[termotehnickiSustav.StrPrimMrkiUgljen_Ukupno]"/>
+          <TableCell Name="Cell559" Border.Lines="All" Text="[termotehnickiSustav.StrPrimMrkiUgljen_EmisijaCO2]"/>
+        </TableRow>
+        <TableRow Name="Row113" Height="37.8">
+          <TableCell Name="Cell560" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaLignit" Top="9.45" Width="236.25" Height="18.9" Text="Lignit"/>
+          </TableCell>
+          <TableCell Name="Cell561" Border.Lines="All" Text="[termotehnickiSustav.StrPrimLignit_UnutarSezone]"/>
+          <TableCell Name="Cell562" Border.Lines="All" Text="[termotehnickiSustav.StrPrimLignit_IzvanSezone]"/>
+          <TableCell Name="Cell563" Border.Lines="All" Text="[termotehnickiSustav.StrPrimLignit_Ukupno]"/>
+          <TableCell Name="Cell564" Border.Lines="All" Text="[termotehnickiSustav.StrPrimLignit_EmisijaCO2]"/>
+        </TableRow>
+        <TableRow Name="Row114" Height="37.8">
+          <TableCell Name="Cell565" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaPrirodniPlin" Top="9.45" Width="236.25" Height="18.9" Text="Prirodni plin"/>
+          </TableCell>
+          <TableCell Name="Cell566" Border.Lines="All" Text="[termotehnickiSustav.StrPrimPrirodniPlin_UnutarSezone]"/>
+          <TableCell Name="Cell567" Border.Lines="All" Text="[termotehnickiSustav.StrPrimPrirodniPlin_IzvanSezone]"/>
+          <TableCell Name="Cell568" Border.Lines="All" Text="[termotehnickiSustav.StrPrimPrirodniPlin_Ukupno]"/>
+          <TableCell Name="Cell569" Border.Lines="All" Text="[termotehnickiSustav.StrPrimPrirodniPlin_EmisijaCO2]"/>
+        </TableRow>
+        <TableRow Name="Row115" Height="37.8">
+          <TableCell Name="Cell570" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaUkapljeniNaftniPlin" Top="9.45" Width="236.25" Height="18.9" Text="Ukapljeni naftni plin"/>
+          </TableCell>
+          <TableCell Name="Cell571" Border.Lines="All" Text="[termotehnickiSustav.StrPrimUkapljeniNaftniPlin_UnutarSezone]"/>
+          <TableCell Name="Cell572" Border.Lines="All" Text="[termotehnickiSustav.StrPrimUkapljeniNaftniPlin_IzvanSezone]"/>
+          <TableCell Name="Cell573" Border.Lines="All" Text="[termotehnickiSustav.StrPrimUkapljeniNaftniPlin_Ukupno]"/>
+          <TableCell Name="Cell574" Border.Lines="All" Text="[termotehnickiSustav.StrPrimUkapljeniNaftniPlin_EmisijaCO2]"/>
+        </TableRow>
+        <TableRow Name="Row116" Height="37.8">
+          <TableCell Name="Cell575" Border.Lines="All">
+            <TextObject Name="TxtPrimarnaEnrgEmisijaBiomasa" Top="9.45" Width="236.25" Height="18.9" Text="Biomasa"/>
+          </TableCell>
+          <TableCell Name="Cell576" Border.Lines="All" Text="[termotehnickiSustav.StrPrimBiomasa_UnutarSezone]"/>
+          <TableCell Name="Cell577" Border.Lines="All" Text="[termotehnickiSustav.StrPrimBiomasa_IzvanSezone]"/>
+          <TableCell Name="Cell578" Border.Lines="All" Text="[termotehnickiSustav.StrPrimBiomasa_Ukupno]"/>
+          <TableCell Name="Cell579" Border.Lines="All" Text="[termotehnickiSustav.StrPrimBiomasa_EmisijaCO2]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="TxtCertifikatNaslov" Left="18.9" Top="5150.25" Width="311.85" Height="18.9" Text="Podaci za upis u energetski certifikat"/>
+      <TableObject Name="Table14" Left="9.45" Top="5178.6" Width="689.85" Height="330.75">
+        <TableColumn Name="Column65" Width="226.8"/>
+        <TableColumn Name="Column66" Width="113.4"/>
+        <TableColumn Name="Column67" Width="94.5"/>
+        <TableColumn Name="Column68" Width="85.05"/>
+        <TableColumn Name="Column69" Width="85.05"/>
+        <TableColumn Name="Column70" Width="85.05"/>
+        <TableRow Name="Row117" Height="37.8">
+          <TableCell Name="Cell580" Border.Lines="All" ColSpan="2"/>
+          <TableCell Name="Cell581" Border.Lines="All"/>
+          <TableCell Name="Cell582" Border.Lines="All" ColSpan="2">
+            <TextObject Name="TxtCertifikatZaRefKlim" Left="9.45" Width="170.1" Height="37.8" Text="Za referentne klimatske podatke"/>
+          </TableCell>
+          <TableCell Name="Cell583" Border.Lines="All"/>
+          <TableCell Name="Cell584" Border.Lines="All" ColSpan="2">
+            <TextObject Name="TxtCertifikatZaStvarKlim" Left="9.45" Width="160.65" Height="37.8" Text="Za stvarne klimatske podatke"/>
+          </TableCell>
+          <TableCell Name="Cell625" Border.Lines="All"/>
+        </TableRow>
+        <TableRow Name="Row118" Height="37.8">
+          <TableCell Name="Cell585" Border.Lines="All">
+            <TextObject Name="TxtCertifikatPotrebniPodaci" Left="28.35" Top="9.45" Width="132.3" Height="18.9" Text="Potrebni podaci"/>
+          </TableCell>
+          <TableCell Name="Cell586" Border.Lines="All">
+            <TextObject Name="TxtCertifikatOznaka" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="Oznaka"/>
+          </TableCell>
+          <TableCell Name="Cell587" Border.Lines="All">
+            <TextObject Name="TxtCertifikatUkupnoRef" Left="9.45" Width="94.5" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell588" Border.Lines="All">
+            <TextObject Name="TxtCertifikatSpecificnoRef" Left="9.45" Width="75.6" Height="37.8" Text="Specificno [kWh/m^2]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell589" Border.Lines="All">
+            <TextObject Name="TxtCertifikatUkupnoStv" Left="9.45" Width="56.7" Height="37.8" Text="Ukupno [kWh]" Brackets="{,}"/>
+          </TableCell>
+          <TableCell Name="Cell626" Border.Lines="All">
+            <TextObject Name="TxtCertifikatSpecificnoStv" Width="75.6" Height="37.8" Text="Specificno [kWh/m^2]" Brackets="{,}"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row119" Height="28.35">
+          <TableCell Name="Cell590" Border.Lines="All">
+            <TextObject Name="TxtCertifikatKorisnaEnrgZaGrijanje" Left="9.45" Width="189" Height="18.9" Text="Korisna energija za grijanje"/>
+          </TableCell>
+          <TableCell Name="Cell591" Border.Lines="All">
+            <TextObject Name="TxtCertifikat_Q_H_nd" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="Q H,nd"/>
+          </TableCell>
+          <TableCell Name="Cell592" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_nd_Ukupno_Ref]"/>
+          <TableCell Name="Cell593" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_nd_Specificno_Ref]"/>
+          <TableCell Name="Cell594" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_nd_Ukupno_Stv]"/>
+          <TableCell Name="Cell627" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_nd_Specificno_Stv]"/>
+        </TableRow>
+        <TableRow Name="Row120" Height="37.8">
+          <TableCell Name="Cell595" Border.Lines="All">
+            <TextObject Name="TxtCertifikatkorisEnrgPTV" Left="9.45" Top="9.45" Width="198.45" Height="28.35" Text="Korisna energija za PTV"/>
+          </TableCell>
+          <TableCell Name="Cell596" Border.Lines="All">
+            <TextObject Name="TxtCertifikat_Q_w" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="Q_W"/>
+          </TableCell>
+          <TableCell Name="Cell597" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_W_Ukupno_Ref]"/>
+          <TableCell Name="Cell598" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_W_Specificna_Ref]"/>
+          <TableCell Name="Cell599" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_W_Ukupno_Stv]"/>
+          <TableCell Name="Cell628" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_W_Specificno_Stv]"/>
+        </TableRow>
+        <TableRow Name="Row121" Height="37.8">
+          <TableCell Name="Cell600" Border.Lines="All">
+            <TextObject Name="TxtCertifikatTopGubGrij" Left="9.45" Top="9.45" Width="198.45" Height="28.35" Text="Toplinski gubici kod grijanja"/>
+          </TableCell>
+          <TableCell Name="Cell601" Border.Lines="All">
+            <TextObject Name="TxtCertifikat_Q_H_ls" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="Q H,ls"/>
+          </TableCell>
+          <TableCell Name="Cell602" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_ls_Ukupno_Ref]"/>
+          <TableCell Name="Cell603" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_ls_Specificno_Ref]"/>
+          <TableCell Name="Cell604" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_ls_Ukupno_Stv]"/>
+          <TableCell Name="Cell629" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_ls_Specificno_Stv]"/>
+        </TableRow>
+        <TableRow Name="Row122" Height="37.8">
+          <TableCell Name="Cell605" Border.Lines="All">
+            <TextObject Name="TxtCertifikatTopGubPTV" Left="9.45" Top="9.45" Width="198.45" Height="28.35" Text="Toplinski gubici kod PTV"/>
+          </TableCell>
+          <TableCell Name="Cell606" Border.Lines="All">
+            <TextObject Name="TxtCertifikat_Q_W_ls" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="Q W,ls"/>
+          </TableCell>
+          <TableCell Name="Cell607" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_W_ls_Ukupno_Ref]"/>
+          <TableCell Name="Cell608" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_W_ls_Specificno_Ref]"/>
+          <TableCell Name="Cell609" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_W_ls_Ukupno_Stv]"/>
+          <TableCell Name="Cell630" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_W_ls_Specificno_Stv]"/>
+        </TableRow>
+        <TableRow Name="Row123" Height="37.8">
+          <TableCell Name="Cell610" Border.Lines="All">
+            <TextObject Name="TxtCertifikatHuh" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="????"/>
+          </TableCell>
+          <TableCell Name="Cell611" Border.Lines="All">
+            <TextObject Name="TxtCertifikat_Q_H" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="Q H"/>
+          </TableCell>
+          <TableCell Name="Cell612" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_Ukupno_Ref]"/>
+          <TableCell Name="Cell613" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_Specificno_Ref]"/>
+          <TableCell Name="Cell614" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_Ukupno_Stv]"/>
+          <TableCell Name="Cell631" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertQ_H_Specificno_Stv]"/>
+        </TableRow>
+        <TableRow Name="Row124" Height="37.8">
+          <TableCell Name="Cell615" Border.Lines="All">
+            <TextObject Name="TxtCertifikatIspor" Left="9.45" Top="9.45" Width="198.45" Height="28.35" Text="Isporučena energija"/>
+          </TableCell>
+          <TableCell Name="Cell616" Border.Lines="All">
+            <TextObject Name="TxtCertifikat_E_del" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="E del"/>
+          </TableCell>
+          <TableCell Name="Cell617" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertE_del_Ukupno_Ref]"/>
+          <TableCell Name="Cell618" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertE_del_Specificno_Ref]"/>
+          <TableCell Name="Cell619" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertE_del_Ukupno_Stv]"/>
+          <TableCell Name="Cell632" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertE_del_Specificno_Stv]"/>
+        </TableRow>
+        <TableRow Name="Row125" Height="37.8">
+          <TableCell Name="Cell620" Border.Lines="All">
+            <TextObject Name="TxtCertifikatPrimlj" Left="9.45" Top="9.45" Width="198.45" Height="28.35" Text="Primljena energija"/>
+          </TableCell>
+          <TableCell Name="Cell621" Border.Lines="All">
+            <TextObject Name="TxtCertifikat_E_prim" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="E prim"/>
+          </TableCell>
+          <TableCell Name="Cell622" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertE_prim_Ukupno_Ref]"/>
+          <TableCell Name="Cell623" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertE_prim_Specificno_Ref]"/>
+          <TableCell Name="Cell624" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertE_prim_Ukupno_Stv]"/>
+          <TableCell Name="Cell633" Border.Lines="All" Text="[termotehnickiSustav.StrEnrgCertE_prim_Specificno_Stv]"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="5615.85" Width="718.2" Height="472.5"/>
+  </ReportPage>
+</Report>

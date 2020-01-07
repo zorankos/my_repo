@@ -1,0 +1,224 @@
+###############################################################################  
+##  
+## render.vm - this velocity script defines the render part of a widget   
+##  Created by Zoran Kos
+
+###############################################################################  
+##  
+## Velocity Context - following objects are in the velocity context  
+##  
+## java.util.Map $parameters  
+## com.polarion.alm.shared.api.model.rp.parameter.ParameterFactory $factory  
+## com.polarion.alm.shared.api.transaction.ReadOnlyTransaction $transaction  
+## com.polarion.alm.shared.api.model.rp.widget.RichPageWidgetRenderingContext $widgetContext  
+## com.polarion.alm.shared.api.utils.velocity.ObjectFactory $objectFactory  
+##  
+
+###############################################################################
+## CSS
+###############################################################################
+<style>
+table {
+    border-collapse: collapse;
+}
+
+#navi {
+    background-color:silver;
+    border: 1px solid black;
+	border-collapse: collapse;
+    float:left;
+	width:100%
+}
+
+table#navi td{
+    background-color:white;
+    border: 1px solid black;
+}
+</style>
+
+############ PREPARE PARAMETERS ###########
+#set($myHeight = $parameters.myHeight.value)
+#set($myWidth = $parameters.myWidth.value) 
+#set($dataLabels = $parameters.dataLabels.value)   
+#set($userXaxis = $parameters.myTimeAxis)
+#set($selectedScale = $parameters.scale.value)
+#set($selectedScaleNum = $math.toInteger($selectedScale).intValue())
+
+############ VALIDATE PARAMETERS ###########
+#if(!$parameters.workItems.prototype().name().equals("WorkItem"))  
+	<div class="polarion-rp-widget-warningMessage">
+	This widget supports only items of type "Work Item"</div>  
+#end 
+
+########### PREPARE DATA FOR Y-AXIS ###########  
+#set($maxSize = $parameters.workItems.getFor().revision($null).size())
+#set($dataSpecified = [])
+#set($dataImplemented = [])
+#set($dataParametrisiert = [])
+#set($dataVerified = [])
+
+########### GET DATES FOR X-AXIS ###########  
+#set($dateArray = [])
+#foreach($point in $userXaxis.points())   
+	#set($myDate = $point.date()) ##.toLocaleString()
+	#set($toDateRegDate = $date.format('dd-MM-yyyy', $myDate))
+	#set($dummy = $dateArray.add($toDateRegDate))
+#end 
+
+########### MACRO ##########
+##macro(tablerows $color $somelist)
+##end  
+
+########### GET DATA FOR Y-AXIS ###########  
+#foreach($point in $userXaxis.points())  
+	<b> Date: $point.date() </b> <br/> 
+	<b> Revision: $point.revision() </b> <br/>
+	
+	#set($dataSetQuery = $parameters.workItems.getFor().sort("id").revision($point.revision()))
+	#set($workItemsQuery = $trackerService.queryWorkItemsInBaseline($dataSetQuery.queryToShow(), "id", $point.revision()))
+	#set($dataSetItems = $dataSetQuery.items())
+	#set($counter = 0)
+	
+	#set($totalSpecified = 0)
+	#set($totalImplemented = 0)
+	#set($totalParametrisiert = 0)
+	#set($totalVerified = 0)
+	
+	#foreach($item in $dataSetItems)
+		#set($workItemStatus = $workItemsQuery.get($counter).getStatus())
+		Item Nr.: $counter <br/>	
+		Item: $item.render.withTitle.withLinks <br/>
+		
+		#foreach($field in $item.fields())
+			#if($field.id == "status")
+				#set($number = $math.toInteger($workItemStatus.getProperty("weight")).intValue())
+				Specification Weight: $number <br/>				
+				#if($number >= $selectedScaleNum)
+					#set($totalSpecified = $totalSpecified + 1)
+				#end
+			#elseif($field.id == "ParameterizationStatus")
+				Parameterization Status: $field.render <br/>
+				#if($math.toInteger($field.render.withText).intValue() >= $selectedScaleNum)
+					#set($totalParametrisiert = $totalParametrisiert + 1)
+				#end
+			#elseif($field.id == "ImplementationStatus")
+				Implementation Status:  $field.render <br/>
+				#if($math.toInteger($field.render.withText).intValue() >= $selectedScaleNum)
+					#set($totalImplemented = $totalImplemented + 1)
+				#end
+			#elseif($field.id == "VerificationStatus")
+				Verification Status:  $field.render 		
+				#if($math.toInteger($field.render.withText).intValue() >= $selectedScaleNum)
+					#set($totalVerified = $totalVerified + 1)
+				#end
+				<br/> <br/>
+			#else
+			#end
+		#end
+		#set($counter = $counter + 1)
+	#end
+	
+		#set($dummy = $dataSpecified.add($totalSpecified))
+		TOTAL SPECIFIED: $totalSpecified <br/>
+		#set($dummy = $dataImplemented.add($totalImplemented))
+		TOTAL IMPLEMENTED: $totalImplemented  <br/>
+		#set($dummy = $dataParametrisiert.add($totalParametrisiert))
+		TOTAL PARAMETRISIERT: $totalParametrisiert  <br/>
+		#set($dummy = $dataVerified.add($totalVerified))
+		TOTAL VERIFIED: $totalVerified  <br/> <br/>
+#end
+
+########### COLUMN DIAGRAM ###########  
+<div class="polarion-rp-widget-part" data-widget="com.polarion.scriptedChart">
+  <span class="polarion-rp-widget-parameters">
+    <sub id="script">
+      <sub id="script">
+	  {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Maturity status Overview (Included elements from $selectedScale%)'
+        },
+		subtitle: {
+			text: 'PEEC System'
+		},
+        xAxis: {
+            categories: [
+			#foreach($point in $dateArray)
+				"$point" ,
+			#end ],
+			crosshair: true
+        },
+        yAxis: {
+			min: 0,
+			max: $maxSize,
+            title: {
+                text: 'Maturity status total'
+            }
+        },
+		plotOptions: {
+			column: {
+				pointPadding: 0.2,
+				borderWidth: 0
+				}
+		},
+		tooltip: {
+			pointFormat: 	'<span style="font-size:10px">{point.key}</span><br/>' +
+							'<span style="color:{series.color};padding:0">{series.name}: </span><br/>'  +
+							'<span style="padding:0"> {point.y} </span><br/>',
+			shared: true,
+			useHTML: true
+			},
+        series: [{
+            name: 'Specified',
+            data: $dataSpecified
+        }, 
+		{
+            name: 'Implemented',
+            data: $dataImplemented
+        },
+		{
+            name: 'Parametrisiert',
+            data: $dataParametrisiert
+        },
+		{
+            name: 'Verified',
+            data: $dataVerified
+        },],
+		exporting: {
+			enabled: true,
+			csv: {
+				dateFormat: '%Y-%m-%d'
+			}
+		}
+	  }
+        </sub>      
+    </sub>
+    
+    <sub id="advanced">
+      <sub id="height">$myHeight</sub>
+	  <sub id="width">$myWidth</sub>
+    </sub>   
+  </span>
+</div>
+
+
+<table id="navi">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table> 
+

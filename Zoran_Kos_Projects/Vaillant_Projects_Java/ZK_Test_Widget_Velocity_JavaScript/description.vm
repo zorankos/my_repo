@@ -1,0 +1,14 @@
+###############################################################################  
+##  
+## description.vm - this velocity script is executed to render the Maturirt Statsu widget extended tooltip  
+##  
+  
+<b>Parameters:</b>  
+<ul>  
+	<li><b>Work Item</b> - Select a query type. </li>  
+	<li><b>Scope</b> - Select the target Project or Repository. The current project is selected by default. </li>  
+	<li><b>Scale</b> - Insert Description ... </li>  
+	<li><b>Aditional Query(s)</b> (Lucene, Lucene + Velocity, SQL or SQL + Velocity.) </li>  
+	<li><b>Date from</b> - Insert Description ... </li>  
+	<li><b>Date to</b> - Insert Description ... </li>  
+</ul>   

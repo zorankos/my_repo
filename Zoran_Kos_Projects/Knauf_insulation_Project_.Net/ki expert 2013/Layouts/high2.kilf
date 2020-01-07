@@ -1,0 +1,40 @@
+<dotnetbarlayout version="6" zorder="7,0,1,2">
+  <docksite size="0" dockingside="Top" originaldocksitesize="0" />
+  <docksite size="396" dockingside="Bottom" originaldocksitesize="0">
+    <dockcontainer orientation="1" w="0" h="0">
+      <barcontainer w="1033" h="271">
+        <bar name="barInsert" dockline="-1" layout="2" dockoffset="0" state="2" dockside="4" fpos="553,516,128,128" visible="true">
+          <items>
+            <item name="dcInsert" origBar="" origPos="-1" pos="0" />
+          </items>
+        </bar>
+      </barcontainer>
+      <barcontainer w="1033" h="119">
+        <bar name="barStatus" dockline="999" layout="2" dockoffset="0" state="2" dockside="4" fpos="560,939,128,128" visible="true" seldocktab="1">
+          <items>
+            <item name="dcStatus" origBar="" origPos="-1" pos="0" />
+            <item name="dcHelp" origBar="" origPos="-1" pos="1" />
+            <item name="dcErrorsProject" origBar="" origPos="-1" pos="2" />
+            <item name="dcErrorsProracun" origBar="" origPos="-1" pos="3" />
+          </items>
+        </bar>
+      </barcontainer>
+    </dockcontainer>
+  </docksite>
+  <docksite size="0" dockingside="Left" originaldocksitesize="0" />
+  <docksite size="647" dockingside="Right" originaldocksitesize="0">
+    <dockcontainer orientation="0" w="0" h="0">
+      <barcontainer w="326" h="830">
+        <bar name="barAdditionals" dockline="-1" layout="2" dockoffset="0" state="2" dockside="2" visible="true" />
+      </barcontainer>
+      <barcontainer w="315" h="830">
+        <bar name="barProperties" dockline="0" layout="2" dockoffset="0" state="2" dockside="2" visible="true">
+          <items>
+            <item name="dcProperties" origBar="" origPos="-1" pos="0" />
+          </items>
+        </bar>
+      </barcontainer>
+    </dockcontainer>
+  </docksite>
+  <bars />
+</dotnetbarlayout>

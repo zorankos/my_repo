@@ -1,0 +1,34 @@
+1. Introduction about my self
+2. Projects
+	WINDHOFF SOFTWARE SERVICES
+	  Vaillant Projects
+		  -- Virtual MOCK API app - Gateway VR920 - MQTT Protocol
+		  -- Polarion Test Reporting Form Extension
+		  -- Maturity Widget
+		  -- Test Visualiser Macro
+	  Another Monday
+		  -- RPA Development
+		  -- Project Development Tecniques 
+	Perfion Software
+		-- Show Program
+		-- Show API/Word
+	Perfion Mapping
+		-- Description
+		-- Examples ETL tools
+		-- Show PerfionMappingTestApp
+	Knauf Insulation
+		-- Show Program - reference
+		-- Show Document - output
+	Android OS Work
+		Tria d.o.o. Internship	
+		Diploma work ISO 14000 (Tehnologies)
+		Show Images
+	College work (Java EE)
+		-- Java EE and Web applications
+		-- Design patterns
+2. Why Vaillant IOT?
+	Connected projects
+	Possibilities to grow
+3. Interests	
+	Certificates, Competitions, Articles
+4. Hobbys

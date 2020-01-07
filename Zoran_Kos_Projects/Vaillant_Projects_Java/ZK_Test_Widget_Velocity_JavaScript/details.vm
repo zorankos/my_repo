@@ -1,0 +1,6 @@
+###############################################################################  
+##  
+## details.vm - this velocity script defines the widget details which will appear as a hover action over icon. 
+##  
+
+Added by Zoran Kos - This widget displays work items maturity status in a column chart grouped by time interval.

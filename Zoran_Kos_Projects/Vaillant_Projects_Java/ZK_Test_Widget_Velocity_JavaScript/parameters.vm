@@ -1,0 +1,16 @@
+###############################################################################  
+##  
+## parameters.vm - this velocity script defines the widget parameters  
+##  Created by Zoran Kos
+
+$parameters.put("workItems", $factory.dataSet("Work Items").build())  
+$parameters.put("scale", $factory.integer("Scale in %").value(100).build())  
+$parameters.put("additionalQuery", $factory.string("Additional Query").build())
+$!parameters.put("myTimeAxis", $factory.timeAxis("Time Axis").build())
+$parameters.put("myWidth", $factory.string("Width").value("500px").build())
+$parameters.put("myHeight", $factory.string("Height").value("500px").build())
+
+## TODO: Check This part
+##$parameters.put("DisplayNumber", $factory.bool("Display Builds by #").value(true).build())  
+##$parameters.put("DisplayPercentage", $factory.bool("Display Builds by %").value(true).build())  
+

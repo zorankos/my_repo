@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@layout/border"
+            android:gravity="center"
+            android:text="@string/zapis"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@layout/border"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/zapisGrupe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="@string/odaberiGrupu" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/zapisGrupe"
+                android:layout_toRightOf="@+id/zapisGrupe"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/spinner1"
+                android:layout_below="@+id/spinner1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/buttonNovaGrupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unosG"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/buttonEditGrupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/izmijeniGrupu"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/buttonBrisiGrupu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/obrisiGrupu"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@layout/border"
+            android:orientation="horizontal" >
+
+            <DatePicker
+                android:id="@+id/datePicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:spinnersShown="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2.07"
+            android:background="@layout/border"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/opaska" />
+
+            <EditText
+                android:id="@+id/zapis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@id/title"
+                android:lines="2"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@layout/border"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/prihvatiBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="povratak"
+                android:text="@string/dodaj" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

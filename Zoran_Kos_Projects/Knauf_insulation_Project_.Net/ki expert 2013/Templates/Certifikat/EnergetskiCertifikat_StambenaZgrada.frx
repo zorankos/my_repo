@@ -1,0 +1,1655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" StartReportEvent="_StartReport" ReportInfo.Created="10/10/2012 15:27:44" ReportInfo.Modified="03/03/2016 12:59:36" ReportInfo.CreatorVersion="2013.4.1.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    private void Table4_BeforePrint(object sender, EventArgs e)
+    {
+      PostaviEnergetskiRazred();                                                                
+    }
+    
+    private void PostaviEnergetskiRazred()
+    {
+      picRazredAA.Visible = ((String)Report.GetColumnValue(&quot;EnergetskiCertifikat.Energetski razgred&quot;)) == &quot;A+&quot;;
+      picRazredA.Visible = ((String)Report.GetColumnValue(&quot;EnergetskiCertifikat.Energetski razgred&quot;)) == &quot;A&quot;;
+      picRazredB.Visible = ((String)Report.GetColumnValue(&quot;EnergetskiCertifikat.Energetski razgred&quot;)) == &quot;B&quot;;
+      picRazredC.Visible = ((String)Report.GetColumnValue(&quot;EnergetskiCertifikat.Energetski razgred&quot;)) == &quot;C&quot;;
+      picRazredD.Visible = ((String)Report.GetColumnValue(&quot;EnergetskiCertifikat.Energetski razgred&quot;)) == &quot;D&quot;;
+      picRazredE.Visible = ((String)Report.GetColumnValue(&quot;EnergetskiCertifikat.Energetski razgred&quot;)) == &quot;E&quot;;
+      picRazredF.Visible = ((String)Report.GetColumnValue(&quot;EnergetskiCertifikat.Energetski razgred&quot;)) == &quot;F&quot;;
+      picRazredG.Visible = ((String)Report.GetColumnValue(&quot;EnergetskiCertifikat.Energetski razgred&quot;)) == &quot;G&quot;;
+    } 
+
+    private void _StartReport(object sender, EventArgs e)
+    {
+      Stranica3.Visible = !(bool)Report.GetColumnValue(&quot;EnergetskiCertifikat.IspisPrijedloga&quot;);
+      Stranica3a.Visible = (bool)Report.GetColumnValue(&quot;EnergetskiCertifikat.IspisPrijedloga&quot;);
+      
+      Stranica5.Visible = !(bool)Report.GetColumnValue(&quot;EnergetskiCertifikat.IspisNormi&quot;);
+      Stranica5a.Visible = (bool)Report.GetColumnValue(&quot;EnergetskiCertifikat.IspisNormi&quot;);
+      Stranica5b.Visible = (bool)Report.GetColumnValue(&quot;EnergetskiCertifikat.IspisNormi&quot;);
+      Stranica5c.Visible = (bool)Report.GetColumnValue(&quot;EnergetskiCertifikat.IspisNormi&quot;);
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <BusinessObjectDataSource Name="EnergetskiCertifikat" ReferenceName="EnergetskiCertifikat" DataType="System.Collections.Generic.List`1[[EnergetskiCertifikat.EnergetskiCertifikat, EnergetskiCertifikat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" Enabled="true">
+      <Column Name="strZona" Alias="Zona" DataType="System.String"/>
+      <Column Name="strVrstaZgrade" Alias="Vrsta zgrade" DataType="System.String"/>
+      <Column Name="strGrad" Alias="Grad" DataType="System.String"/>
+      <Column Name="LokacijaZgrade" Alias="K.č. k.o." DataType="System.String"/>
+      <Column Name="Adresa" DataType="System.String"/>
+      <Column Name="MjestoGradnje" Alias="Mjesto gradnje" DataType="System.String"/>
+      <Column Name="Investitor" DataType="System.String"/>
+      <Column Name="strIzracun" Alias="Izračun" DataType="System.String"/>
+      <Column Name="StrEnergetskiRazred" Alias="Energetski razgred" DataType="System.String"/>
+      <Column Name="strAk" Alias="Ak" DataType="System.String"/>
+      <Column Name="strVe" Alias="Ve" DataType="System.String"/>
+      <Column Name="strf0" Alias="f0" DataType="System.String"/>
+      <Column Name="strWmK" Alias="WmK" DataType="System.String"/>
+      <Column Name="KWhma" Alias="kWhma" DataType="System.String"/>
+      <Column Name="ReferentnaZona" Alias="Referentna zona" DataType="System.String"/>
+      <Column Name="strSd" Alias="Stupanj dana grijanja" DataType="System.String"/>
+      <Column Name="strZ" Alias="Broj dana sezone grijanja" DataType="System.String"/>
+      <Column Name="strThetaE" Alias="Srednja vanjska temperatura u sezoni grijanja" DataType="System.String"/>
+      <Column Name="strThetaI" Alias="Unutarnja projektna temperatura u sezoni grijanja" DataType="System.String"/>
+      <Column Name="strNacinGrijanja" Alias="Način grijanja zgrade" DataType="System.String"/>
+      <Column Name="VrstaVentilacije" Alias="Vrsta ventilacije" DataType="System.String"/>
+      <Column Name="VrstaObnovljiveEnergije" Alias="Vrste obnovljive energije" DataType="System.String"/>
+      <Column Name="UdioObnovljiveEnergije" Alias="Udio obnovljive energije" DataType="System.String"/>
+      <Column Name="strQWUref" Alias="QW ukupno referentno" DataType="System.String"/>
+      <Column Name="strQcHndD" Alias="Q'H,nd dopušteno" DataType="System.String"/>
+      <Column Name="strQWU" Alias="QW ukupno" DataType="System.String"/>
+      <Column Name="strQCndS" Alias="QC,nd specifično" DataType="System.String"/>
+      <Column Name="strQcHndS" Alias="Q'H,nd specifično" DataType="System.String"/>
+      <Column Name="strZidU" Alias="Zid U" DataType="System.String"/>
+      <Column Name="strZidUmax" Alias="Zid Umax" DataType="System.String"/>
+      <Column Name="ZidI" Alias="Zid ispunjeno" DataType="System.String"/>
+      <Column Name="strKrovU" Alias="Krov U" DataType="System.String"/>
+      <Column Name="strKrovUmax" Alias="Krov Umax" DataType="System.String"/>
+      <Column Name="KrovI" Alias="Krov ispunjeno" DataType="System.String"/>
+      <Column Name="strTloU" Alias="Tlo U" DataType="System.String"/>
+      <Column Name="strTloUmax" Alias="Tlo Umax" DataType="System.String"/>
+      <Column Name="TloI" Alias="Tlo ispunjeno" DataType="System.String"/>
+      <Column Name="strStropU" Alias="Strop U" DataType="System.String"/>
+      <Column Name="strStropUmax" Alias="Strop Umax" DataType="System.String"/>
+      <Column Name="StropI" Alias="Strop ispunjeno" DataType="System.String"/>
+      <Column Name="strNegrijaniU" Alias="Negrijani U" DataType="System.String"/>
+      <Column Name="strNegrijaniUmax" Alias="Negrijani Umax" DataType="System.String"/>
+      <Column Name="NegrijaniI" Alias="Negrijani ispunjeno" DataType="System.String"/>
+      <Column Name="strProzoriU" Alias="Prozori U" DataType="System.String"/>
+      <Column Name="strProzoriUmax" Alias="Prozori Umax" DataType="System.String"/>
+      <Column Name="ProzoriI" Alias="Prozori ispunjeno" DataType="System.String"/>
+      <Column Name="strVrataU" Alias="Vrata U" DataType="System.String"/>
+      <Column Name="strVrataUmax" Alias="Vrata Umax" DataType="System.String"/>
+      <Column Name="VrataI" Alias="Vrata ispunjeno" DataType="System.String"/>
+      <Column Name="KatastarskaOpcina" Alias="K.o." DataType="System.String"/>
+      <Column Name="NazivZgrade" Alias="Naziv zgrade" DataType="System.String"/>
+      <Column Name="GodinaGradnje" Alias="Godina izgradnje" DataType="System.String"/>
+      <Column Name="Izvodjac" Alias="Izvođač" DataType="System.String"/>
+      <Column Name="OznakaCertifikata" Alias="Oznaka certifikata" DataType="System.String"/>
+      <Column Name="ChkCertifikatIspisPrijedlozi" Alias="IspisPrijedloga" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="ChkCertifikatIspisNorme" Alias="IspisNormi" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="StrQCnd_ukupno_referentno" Alias="QC,nd ukupno referentno" DataType="System.String"/>
+      <Column Name="StrQCnd_specificno_referentno" Alias="QC,nd specifično referentno" DataType="System.String"/>
+      <Column Name="StrCO2_ukupno_referentno" Alias="CO2 ukupno referentno" DataType="System.String"/>
+      <Column Name="StrQHnd_crtano_ukupno_referentno" Alias="Q'H,nd ukupno referentno" DataType="System.String"/>
+      <Column Name="StrQHnd_crtano_specificno_referentno" Alias="Q'H,nd specifično referentno" DataType="System.String"/>
+      <Column Name="StrQCnd_ukupno_stvarno" Alias="QC,nd ukupno" DataType="System.String"/>
+      <Column Name="StrCO2_ukupno_stvarno" Alias="CO2 ukupno" DataType="System.String"/>
+      <Column Name="StrQHnd_crtano_ukupno_stvarno" Alias="Q'H,nd ukupno" DataType="System.String"/>
+      <Column Name="QHnd_crtano_ispunjava" Alias="Q'H,nd ispunjeno" DataType="System.String"/>
+      <Column Name="StrQHnd_dvocrtano_ukupno_referentno" Alias="Q''H,nd ukupno referentno" DataType="System.String"/>
+      <Column Name="StrQHnd_dvocrtano_specificno_referentno" Alias="Q''H,nd specifično referentno" DataType="System.String"/>
+      <Column Name="strQHnd_dvocrtano_dopusteno" Alias="Q''H,nd dopušteno" DataType="System.String"/>
+      <Column Name="StrQHnd_dvocrtano_ukupno_stvarno" Alias="Q''H,nd ukupno" DataType="System.String"/>
+      <Column Name="StrQHnd_dvocrtano_specificno_stvarno" Alias="Q''H,nd specifično" DataType="System.String"/>
+      <Column Name="QHnd_dvocrtano_ispunjava" Alias="Q''H,nd ispunjeno" DataType="System.String"/>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="Stranica1" RawPaperSize="9" LeftMargin="15" TopMargin="15">
+    <PageHeaderBand Name="PageHeader1" Width="699.3" Height="24.57"/>
+    <DataBand Name="Data1" Top="28.57" Width="699.3" Height="977.28">
+      <TableObject Name="Table4" Left="15.12" Top="20.79" Width="670.83" Height="937.59" Border.Lines="All" BeforePrintEvent="Table4_BeforePrint">
+        <TableColumn Name="Column10" Width="131.32"/>
+        <TableColumn Name="Column11" Width="85.96"/>
+        <TableColumn Name="Column33" Width="62.37"/>
+        <TableColumn Name="Column31"/>
+        <TableColumn Name="Column12" Width="67.06"/>
+        <TableColumn Name="Column32" Width="42.58"/>
+        <TableColumn Name="Column13" Width="106.75"/>
+        <TableColumn Name="Column14" Width="108.64"/>
+        <TableRow Name="Row65" Height="36.26">
+          <TableCell Name="Cell209" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center" RowSpan="8">
+            <PictureObject Name="Picture4" Left="15.12" Top="28.35" Width="98.28" Height="98.28" Image="iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAIAAADbHrqYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADS0lEQVR4Xu3Zz0vTcRzHcenHgn4e+gPsEpIXo0vSJTtVUEv6cQiCCio1KyxQAw+SF8NSQ9F1CLsKQd/MBE0j52aZYSJR2oJafpW5Zk3BtV9u9gm/YXxOn9fHoWivJ6+Lh73dHl89Lc3LkP541fVePmqssRtrNSZe6B5pM/EqXacX80s/ez9ah5AKO7L0fql41THDZnnVui+Jn/V2qmWra6R1DK/CeVw6pb7cJzaP94N1CCmvfZd0Sn0nWjalxGvbcnht0PXKlE6p72TLZnoBoxc2emGjFzZ6YaMXNnphoxc2emGjFzZ6YaMXNnphoxc2emGjF7bUeNmNdcaXB/2B1+huug5Kp6D1+J5LB1V2rn2HdAea5fXoXW1R594bXfs0dt6ZURUsdURr0BV7cvNfZEnXFHe2Z2ddqFI6qLIrQzmFXXukayq73pld3m23vEZHR62/V7yHYUd9vEpjDdFq149u6wpYQ+yudE1xjmjtoH/AugJmmia9gOiFRS8semHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIX1oKXab73+fr01hSpk96T4sRn7g0a0jXF1cfka4prjFanwGt6Om9uLi2R2KgxI36xMXbnfvQeuobY7U+J3dI1xTXFyxzRGumgysRDGpoYFJ9cI0FmeU1NXRBeeksktvj9T+efANTMTK50Sn3J5PrxcZ3vhxaTIKMXEL2w6IVFLyx6YdELi15Y9MKiFxa9sOiFRS8semHRC4teWPTCohdWarySybTg1+rAcBu68NR+6RS0pfcSWV6BQGModCgUOqyx+GRG5O2ZcO81dDFPTmQ6W7qmvCNjYx7xwJeyBa/FfJ8W6iuLugs0FnZfnRzW+UdergQZvYDohUUvLHph0QuLXlj0wqIXFr2w6IVFLyx6YdELi15Y9MKiF9aC1/irnu9Gs95+OYskCMVF3IUr1StYWjCbbotnbtdYrOJAyFky038L3ptyv+eleBMrJUH216s4P5Fu05sg83c8m38CqztBRi8gemHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIXFr2w6IVFL6x/vEryZ9NtehNkE+2t4taqT5BZXr7HzT8rinVXYg70f/s/sryYal7vb8kkY5YkxY5VAAAAAElFTkSuQmCC"/>
+            <TextObject Name="Text4" Left="11.34" Top="122.85" Width="113.4" Height="47.25" Text="prema Direktivi 2010/31/EU" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell210" Border.Lines="Left, Top, Bottom" Fill.Color="ControlLight" Text="Zgrada" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="3">
+            <ShapeObject Name="Shape8" Left="158.76" Top="9.45" Width="15.12" Height="15.12"/>
+            <TextObject Name="Text7" Left="173.88" Top="5.33" Width="85.05" Height="26.46" Border.Lines="All" Border.Color="ControlLight" Text="nova/veća rekonstrukcija" Font="Arial, 8pt" Wysiwyg="true"/>
+          </TableCell>
+          <TableCell Name="Cell722"/>
+          <TableCell Name="Cell642"/>
+          <TableCell Name="Cell211" Border.Lines="Right, Top, Bottom" Fill.Color="ControlLight" VertAlign="Center" Wysiwyg="true" ColSpan="4">
+            <ShapeObject Name="Shape7" Left="60.48" Top="9.56" Width="15.12" Height="15.12"/>
+            <TextObject Name="Text9" Left="78.05" Top="9.12" Width="64.26" Height="15.12" Border.Lines="All" Border.Color="ControlLight" Text="prodaja" Font="Arial, 8pt" Wysiwyg="true"/>
+            <ShapeObject Name="Shape9" Left="151.2" Top="11.34" Width="15.12" Height="15.12"/>
+            <TextObject Name="Text2" Left="170.1" Top="11.34" Width="151.2" Height="15.12" Text="iznajmljivanje, zakup, leasing" Font="Arial, 8pt"/>
+          </TableCell>
+          <TableCell Name="Cell682"/>
+          <TableCell Name="Cell212" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell213" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row66" Height="21.14">
+          <TableCell Name="Cell214" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell215" Border.Lines="Left, Top, Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight" Text="Vrsta zgrade" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell723"/>
+          <TableCell Name="Cell643"/>
+          <TableCell Name="Cell216" Border.Lines="Right, Top, Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Vrsta zgrade]" VertAlign="Center" Font="Arial, 10pt, style=Bold" ColSpan="4"/>
+          <TableCell Name="Cell683"/>
+          <TableCell Name="Cell217" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell218" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row67" Height="21.14">
+          <TableCell Name="Cell219" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell220" Border.Lines="Left, Bottom" Fill.Color="ControlLight" Text="Naziv zgrade" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell724"/>
+          <TableCell Name="Cell644"/>
+          <TableCell Name="Cell221" Border.Lines="Right, Bottom" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Naziv zgrade]" VertAlign="Center" Font="Arial, 10pt, style=Bold" ColSpan="4"/>
+          <TableCell Name="Cell684"/>
+          <TableCell Name="Cell222" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell223" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row68" Height="21.14">
+          <TableCell Name="Cell224" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell225" Border.Lines="Left, Top, Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight" Text="Adresa" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell725"/>
+          <TableCell Name="Cell645"/>
+          <TableCell Name="Cell226" Border.Lines="Top, Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Adresa]" VertAlign="Center" Font="Arial, 10pt, style=Bold" ColSpan="4"/>
+          <TableCell Name="Cell685"/>
+          <TableCell Name="Cell227" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell228" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row69" Height="21.14">
+          <TableCell Name="Cell229" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell230" Border.Lines="Left, Bottom" Fill.Color="ControlLight" Text="Mjesto" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell726"/>
+          <TableCell Name="Cell646"/>
+          <TableCell Name="Cell231" Border.Lines="Right, Bottom" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Mjesto gradnje]" VertAlign="Center" Font="Arial, 10pt, style=Bold" ColSpan="4"/>
+          <TableCell Name="Cell686"/>
+          <TableCell Name="Cell232" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell233" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row143" Height="19.25">
+          <TableCell Name="Cell615"/>
+          <TableCell Name="Cell616" Border.Lines="Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight" Text="k. č. " VertAlign="Center"/>
+          <TableCell Name="Cell727" Border.Lines="Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight">
+            <TextObject Name="Text25" Top="1.89" Width="120.96" Height="15.12" Text="[EnergetskiCertifikat.K.č. k.o.]" HorzAlign="Right" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell647" Border.Lines="Right, Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight" HorzAlign="Right"/>
+          <TableCell Name="Cell617" Border.Lines="Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight" Text="k. o." VertAlign="Center"/>
+          <TableCell Name="Cell687" Border.Lines="Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.K.o.]" VertAlign="Center" Font="Arial, 10pt, style=Bold" ColSpan="3"/>
+          <TableCell Name="Cell618" Border.Lines="Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight"/>
+          <TableCell Name="Cell619" Border.Lines="Right, Bottom" Border.BottomLine.Style="Dot" Fill.Color="ControlLight"/>
+        </TableRow>
+        <TableRow Name="Row70" Height="21.14">
+          <TableCell Name="Cell234" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell235" Border.Lines="Left, Bottom" Fill.Color="ControlLight" Text="Vlasnik / Investitor" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell728"/>
+          <TableCell Name="Cell648"/>
+          <TableCell Name="Cell236" Border.Lines="Right, Bottom" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Investitor]" VertAlign="Center" Font="Arial, 10pt, style=Bold" ColSpan="4"/>
+          <TableCell Name="Cell688"/>
+          <TableCell Name="Cell237" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell238" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row71" Height="21.14">
+          <TableCell Name="Cell239" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+          <TableCell Name="Cell240" Border.Lines="Left, Top, Bottom" Fill.Color="ControlLight" Text="Godina izgradnje:" VertAlign="Center" ColSpan="2"/>
+          <TableCell Name="Cell729" Fill.Color="ControlLight"/>
+          <TableCell Name="Cell649" Border.Lines="Right" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Godina izgradnje]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell241" Border.Lines="Top, Bottom" Fill.Color="ControlLight" Text="Izvođač" VertAlign="Center" ColSpan="2"/>
+          <TableCell Name="Cell689"/>
+          <TableCell Name="Cell242" Border.Lines="Right, Top, Bottom" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Izvođač]" VertAlign="Center" Font="Arial, 10pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell243" Border.Lines="All" Fill.Color="ControlLight" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row73" Height="26.81">
+          <TableCell Name="Cell249" Border.Lines="All" Fill.Color="192, 255, 255" Text="Energetski  certifikat  za stambene  zgrade" HorzAlign="Center" VertAlign="Center" Angle="270" Font="Arial, 36pt, style=Bold" HtmlTags="true" RowSpan="26"/>
+          <TableCell Name="Cell250" Border.Lines="Left, Top, Bottom" Text="Q''&lt;sub&gt;H,nd,ref&lt;/sub&gt;" Padding="10, 1, 2, 1" VertAlign="Center" Font="Arial, 15.75pt, style=Bold" HtmlTags="true" ColSpan="4" RowSpan="2"/>
+          <TableCell Name="Cell730"/>
+          <TableCell Name="Cell650"/>
+          <TableCell Name="Cell251" Border.Lines="All" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell690" Border.Lines="Bottom" Text="kWh/(m&lt;sup&gt;2&lt;/sup&gt;a)" Brackets="{,}" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold" HtmlTags="true" ColSpan="2" RowSpan="2"/>
+          <TableCell Name="Cell252" Border.Lines="Right, Top, Bottom" HorzAlign="Center" VertAlign="Center" Font="Arial, 15.75pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell253" Border.Lines="All" Text="Izračun" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row74" Height="26.81">
+          <TableCell Name="Cell254" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell255" Border.Lines="All" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell731"/>
+          <TableCell Name="Cell651"/>
+          <TableCell Name="Cell256" Border.Lines="All" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell691" Border.Lines="Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell257" Border.Lines="All" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell258" Border.Lines="All" Text="[EnergetskiCertifikat.Izračun]" HorzAlign="Center" VertAlign="Center" Font="Arial, 15.75pt, style=Bold" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row75" Height="43.06">
+          <TableCell Name="Cell259" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell260" Border.Lines="All" HtmlTags="true" ColSpan="6" RowSpan="8">
+            <PictureObject Name="Picture5" Left="3.78" Top="0.38" Width="415.8" Height="340.2" SizeMode="Normal" Image="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"/>
+          </TableCell>
+          <TableCell Name="Cell732"/>
+          <TableCell Name="Cell652"/>
+          <TableCell Name="Cell261" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell692"/>
+          <TableCell Name="Cell262" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell263" Border.Lines="Left, Right, Top" AfterDataEvent="Cell263_AfterData" HtmlTags="true">
+            <PictureObject Name="picRazredAA" Left="3.78" Top="1.89" Width="94.5" Height="43.06" SizeMode="Normal" Image="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAnCAIAAAAXVFiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADbUlEQVRoQ82ZTUhUURSAz53x+Zc5OqWp/ZlRUU1aESWGIRFkSLlsESi4MMilCgOBq1xMmO1cGYbhopUQGILCQEmBDIJCGJg/EISC4EKyzUgd7jsDj3F6c997587Mx6Dzc9+955tz597z3oO/GaSj4wXAGYACgGDWHhSLZrq7XwpxFqAcoAHAB1mEItJGT89rIc4BBACuAvhp1CxCcWmgv39EiAsApVI1j8bLOhQdKwMDb3y+iwCHAa4BGDRSjkAxMjE4+M7vvwxQIrOKi1PuQZF6ZmjofV5ePcAhmdVC6j0HoXg9MDIyaRi49qIqZrWY+s1ZKGpXjI19zM+/LiVRFaexK/qi1J1JtI/e1wQN45CJidmCghtSFXOL67B7kny1G9MoykxOfiosvClV8ReLu6tHDvjqNqZBFJia+lpc3JhQxZqJgxS+6sato+t0hIMviQ6wZXY2VlJyW6peAThCR3Jg8Y1GLc/VwtcgPDe3VFp6R6qGACroGDasvn1JrxRgFY7FvpeVtSRUj1FrXpINLa/XR1vNNnYwCS8u/ggG78l99RJADbXTwMGMOjT2LLy8vFFRcV/uqFgJH6cWukg1g9MYWwztsfE3G6yt/aqqeiDLfTy/OUmfaSWVbzpjDuHNzZ2amoeyeDgPcJre1U9q3zTGHMItLWH5H1WFfJIZ/u9lZ8w0pSORUcNAYSybMjKZEYuVLTaBI94Wrd7eiM+HazLWFRpXZolyotKIeBNG9vf3OzvDQmCBgRtvFbVgx4GvvYlnYZN4PN7W9lRWy5jqo9SOD6tvqr0Hsc54GxUmYZPd3d9NTY/lRnUCoIxaM6Dgq2rMKmyytbUdCrVh1SUErmoo7xklX+Ucu4A6tWVlZaO21qyra+Vf91h9bU2sxjZfjHOoTwXm55cqK28BFCVul7hA2VefMXWpzPT050CgPpHtnLm8rg55OGR8/ENREVbdeJpxKsv3ipxCBq4YHn5rGDi9sQ7PVInmHYrdA+HwK78fzyWD+s8oOaCoPdPV9VyISgB8aCvRWKB4OcASrb39mUx1tYYLYExQsHzs7f1pbn4if9hYoqF8jkFhcrO9vdPQ8EiWaLiMc5RoXFCAelhd/VlXdxc3bSG8lmhsUGg6WVj4Vl3dKEs01M72TWMKSj8zM1/Ky837qZm7cpYMwD8NWnBLexpc7wAAAABJRU5ErkJggg=="/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row76" Height="43.06">
+          <TableCell Name="Cell264" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell265" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell733"/>
+          <TableCell Name="Cell653"/>
+          <TableCell Name="Cell266" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell693"/>
+          <TableCell Name="Cell267" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell268" Border.Lines="Left, Right" HtmlTags="true">
+            <PictureObject Name="picRazredA" Left="3.78" Top="1.89" Width="94.5" Height="43.06" SizeMode="Normal" Image="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAnCAIAAAAXVFiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADXklEQVRoQ82ZS0hUURjHvzPj9ZX5mNLUXmZUVKYVUWIYEkGGlMsWgYILg1yqMBC4yoVhtnNlGIaLVkJgCAoDJQUigkIYmA8IREFwIdnGwT7O/AeuzqN7555z7/wYdB7nfPf7cc4957v30r6LtLS8IjpHlEUU8OyFXDTT3v5aiPNERUQ1RD7yEGSkjY6Ot0JcICoguk7kx1E9BHlpoLt7UIhLRPlSNQPH8xxkp5Sennc+32Wio0Q3iAwcKU1Ajoro7f3g918lypOjyotT+oFMHdPf/zEjo5roiBzVbERPQ5CvAwYHxwyD115W5VHNRdy0BVmnxPDw58zMm1KSVXkaq6MrhGNECHXhe+cgok1GR6eysm5JVR5bXocVc8hXpTECWmZs7Et29m2pymcs7646iPFVaIx4Fhgf/56bWxtV5ZpJG3F81RkjXFKmpmbz8u5K1WtEx9BTGybfUMj0Xo0xoiVgenohP/+eVK0iKkYfvZh9uw59UgCCxTA7+7OwsCGqegKtXeCwoenz6lBjpI0TEMvE/PyvQOCB3FevEJWjnVvEjqhiY4SSLC6uFRc/lDsqV8In0cJV4s1gtcaRQCsr66Wlj2S5z9c3p/Gb+8TzVWy8sbFdXv5YFg8Xic7iW4+I76vWuKEhKP+zqpBvPCSxl0JjDtHXN2QYLMxlk3eTmTFZJeXA4NsGQfb3Ozv7fD5ek7mucHtlljQOrSKT/+LIGDEk4XC4tTUoBBcYvPGWooU72PB1ZowQJvb29pqanstqmYf6ONppxuyb4Cw1z3gHxogQw87On7q6p3KjOkVUiNa6sOCryhgBErC5uVVV1cRVlxC8qrG8Hiz5KjJG/6QsLa1VVETq6gr5VzEHzt9kJmbjVLcndLfAzMxCSckdopzo4xJVWPZVYozelpmY+FpQUB0d7bS5vW4deNhkZORTTg5X3XyZccbjZ0V2gUFKDAy8Nwye3lyHe1qi2QK5OyAYfOP387VkwKMrSpsga8e0tb0UooSIX+6WaHZBvirgEq25+YUc6jK3boDZB8mqY3f3b339M3lic4nG8mkG0lTN1tZ2Tc0TWaLxMq6tREsBJKiH5eXflZX3edMWQkuJlgpITSdzcz/KymplicbaXj80RlL6mZz8VlQUeZ7q3Z0zon8odl+wTa5GMwAAAABJRU5ErkJggg=="/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row77" Height="43.06">
+          <TableCell Name="Cell269" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell270" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell734"/>
+          <TableCell Name="Cell654"/>
+          <TableCell Name="Cell271" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell694"/>
+          <TableCell Name="Cell272" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell273" Border.Lines="Left, Right" HtmlTags="true">
+            <PictureObject Name="picRazredB" Left="3.78" Top="1.89" Width="94.5" Height="43.06" SizeMode="Normal" Image="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAnCAIAAAAXVFiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADV0lEQVRoQ9WZTUhUURTH/3fG51fmx5Sm9mVGRWVaESWGIRFkSLlsESi4MMilCgOBq1wYZjtXhmG4aCUEhqAglBSICAphYH5AEAqCC8k2Sp3unIHR0Hl37r3vTT8GZ5i577zz99x77v+9h98e0tDwDDgFpAEh316ci2Wam58LcRrIAyqAAHyEM7JGS8tLIc4AOcBlIMhn9RHOywLt7b1CnAOypdQUPp/vcHZG6eh4FQicBw4CVwCHz5QkcI6G6Ox8EwxeBLJkVak5JR+cqTbd3W9TUsqBA7Kq6Rw9CeF8NejtHXIc6r0klaqayXGTFs46Ifr736emXpUiSSpN4/8Bzl2RwcGxtLRrUirVlvqwJrV9Sxx5P5b6anm8BhzLNUNDH9LTr0uptGJpdzWCO8GS8TY+JkE4jAuGhz9nZlZGpZJnMoiCYN1Cc5B9GRubysq6KaVeAg7xkSZREqxXZQ6xBxMTs9nZt6TUMiCfjzFPjOA96rfzX6KhmCP8w9TU19zcmqjUIzzaFvEF75RsVPDMzLdQ6I7cVy8AxTzOLoqCdVYxh5DMzS3n59+VOyo54aM8wgvii2kb598JrUYdCbG4+KOw8J60+3R9c5x/847Y6RoPzX1pZWW9uPi+NA9ngZP8rde4Fawzl5mamrB8J6lCfvAFlQpriqYIXV19jkOCyTZ5P5kjqAgmjDSt1tauQIB6MvkKbzpzLPGb1o6upbOQOYBke3u7sTEsBBkM2ngLeYQXuBBMGOnUfHwMW1tbdXWPpVumUh/mcXbxVXCEjY2fVVUP5UZ1DMjl0bZwIXjXMjcuOMLq6lpZWR25LiGoq5F4S+xSEx8za3gv5ueXS0oivrpE/jWOomAjXTouk5OzBQU3gIzo4xKDKAlOvLp/4SCuGRn5mJNTHq22qdvrbgXraZVwJEUGBt5lZJDrpsuMEz4/K1KFFSRET89rx6HpTT7cL4umDueuQTj8Ihika8mQt1eUicJZa9PU9FSIAoBeXlo0dThfE5BFq69/IktdZPMGmB6crDk2N39VVz+SC5ssGolPMjhN06ytrVdUPJAWjdq4PYumDidoh4WF76Wlt2nTFsKSRVOHU7PJ9PSXoqJKadFItt8PjTkp+4yOfsrLizxP9evOGQD8ATVRNFRShJvzAAAAAElFTkSuQmCC"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row78" Height="43.06">
+          <TableCell Name="Cell274" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell275" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell735"/>
+          <TableCell Name="Cell655"/>
+          <TableCell Name="Cell276" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell695"/>
+          <TableCell Name="Cell277" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell278" Border.Lines="Left, Right" HtmlTags="true">
+            <PictureObject Name="picRazredC" Left="3.78" Top="1.89" Width="94.5" Height="43.06" SizeMode="Normal" Image="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAnCAIAAAAXVFiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADcUlEQVRoQ82ZX0hTcRTHz2/b1bnMP6stZ//MqKjMVUSJYYwIMqR87CFQ8MEgH1UYBD7lg2H25tPCMHzoaRAYgoJQUiAiKISB+QeCUBB8kOxFqdPvntHd3F3X3fPb3Yexje238zvfe347v++9F37nkJaWZwCnAAoB/I49KBfFtLc/F+I0QDlAGMAFDkIZKaOj46UQZwBKAS4DuGlWB6G8FNDdPSjEOYASKdVD8zkOZcdKT88rl+s8wEGAKwAazZQnUI5M9Pa+cbsvAhTLqmJzyj8oU9v097/1eGoBDsiqeil6HkL52mBwMK5p2HtRKlbVR3HzFso6K4aG3hcUXJUiUSou46xpjK1QzH9MdtGXvFD0fTIyMlFYeE1KxdpiH86adFINrMQaaSAXFNgy8fgHr/e6lIr/WNxd7dA1SVEzwltqCmqB0dHPPl9dQip6Jpv8p7ZGOCVTyIxMTMwUF9+UUi8BHKJf2mOP3GRRKbVnXNkU0YSpqfmSkltSag1AgH7DQJKg9HKSDwlbkSneHmZmvpaVRRJSj9BoLox6zaunS2buW/qkRubmvvn9d+S+egGgksaxYiwefx/ODE0rWVhYDQTuyh0VnfBRGqEAY4EVbbem6LMuL/+oqLgn7T6e3xyn75ThpOC1tc3KyvvSPJwFOEmfKsZJwZFIVL6iVCHf5AKHl3RfX0zTUDDaJuWLWcdq09IPDO8hkZP+pbOzz+XCnoy+QklnTsJYYnPFShYCxZPs7u62tkaFQIOBG28FjVCCUYuJZAtDsoECGtjZ2WlqeizdMpb6MI3jJtVaJitKEoswrmqKuIetrZ/19Q/lRnUMoIxGc5Iqyhy+8iIU04T19Y2amiZ0XUJgV0PxvFjSzNzGKWpGFhdXq6p0X10lnxlJXdop8G9aFNgC09PzweANgKLE7RJG0sjml6pD4S0zNvaxtLQ2Ue28ubxuHdKxT4aH3xUVoevG04wTDt8r2i+kICsGBl5rGi5v9OE5smgMUO42iEZfuN14LulXekbJBmVtm7a2p0IEAfCh1KLZhvLlAC1ac/MTWeoQ6wUwVihZPra3fzU0PJJ/bLRoKD7PoDS52djYDIcfSIuGbZzdotmAElTD0tL36urbuGkLwW7RsoVSU8ns7JdQqE5aNJTt9E1jSko94+Ofysv1+6k5unKWBoA/xhtbrRgTFFwAAAAASUVORK5CYII="/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row79" Height="43.06">
+          <TableCell Name="Cell279" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell280" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell736"/>
+          <TableCell Name="Cell656"/>
+          <TableCell Name="Cell281" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell696"/>
+          <TableCell Name="Cell282" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell283" Border.Lines="Left, Right" HtmlTags="true">
+            <PictureObject Name="picRazredD" Left="3.78" Top="1.89" Width="94.5" Height="43.06" SizeMode="Normal" Image="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAnCAIAAAAXVFiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADZUlEQVRoQ9WZTUhUURTHz53x+ZX5MaWpfZlRUZlWRIlhSAQZUi5bBAouDHKpwkDgKheG2c6VYRguWgmBISgIJQUigkIYmB8QiILgQrKNUqf7/iPj18ybufe+N/0YHNH7zju/OXfuPe89+uMidXUviM4QpRAFPHshF8M0Nr4U4ixRDlEZkY88BBkZo6nptRDniLKIrhL5cVYPQV4GaG3tFuICUaZUTcL5PAfZaaWt7Y3Pd5HoMNE1IgtnShCQoyba29/5/ZeJMmRVeXFKPJCpMp2d75OSSokOyaqmInoCgnwV6O4esCxee1mVq5qOuAkLso6L3t6PycnXpSSr8jT+H0DuMdLfP5KSckOqcm15HVahumcBYQ9ioacaY9VBSMcMDHxKTb0pVfkby7urOtGFbUZbcIASCOaAwcGv6enlIVXumRTZLppTYUZDqREpIiMjExkZt6XqFaIjOFIbMQhrUEacAxgbm87MvCNVS4hycYxmwoT30dnzcSjObETZw8TE9+zsqpDqMYw2QmThf+yUVisygoQxNfUjELgn99VLRIUYZ5DowruUlWqMGJKZmcXc3PtyR+VO+DhGGMeJ8A5jpRLbIebnl/LzH8h2n69vTuJ/LuFImFpGMYZRKfHy8lph4UPZPJwnOo2/uoq7wlVVQfnOqkL+4j7uCvPhHR09lsXC3Da5PJltXBe2aW7u8Pl4Tea+woWVORxHwmGDIn0s0UEMydbWVn19UAhuMHjjzccI4zgRDvfVty3ZbG5u1tQ8ld0yl/ooxhnEgXD4fFYr8D7CNuvrvyoqHsuN6gRRNkYbIYrwjuIySvU9WNhmZWW1pKSGuy4heFVjeRPsNoqIWnkZxInI7OxiUZHdVxfJn3qJQVhZ15mwzfj4dF7eLaK00OMSXTgVVpzLAMEcMzT0OSurNFRtLbfXowtrKOw2CBkjfX0f0tK46+bLjFMePyuKFRjERVfXW8vi6c19uCctWlwgdwWCwVd+P19LBly8olQAWSvT0PBciDwifrnWosUF8tUBt2i1tc9kqQuM3QBTBsnqY2Pjd2XlE/nF5haN5RMMpKmb1dW1srJHskXjZdxQixYXSNAMc3M/i4vv8qYthIkWLS6QmkkmJ78VFJTLFo21vX5ojKTMMzz8JSfHfp7qyZ0zCdFfoUzQOUrVaaEAAAAASUVORK5CYII="/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row80" Height="43.06">
+          <TableCell Name="Cell284" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell285" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell737"/>
+          <TableCell Name="Cell657"/>
+          <TableCell Name="Cell286" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell697"/>
+          <TableCell Name="Cell287" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell288" Border.Lines="Left, Right" HtmlTags="true">
+            <PictureObject Name="picRazredE" Left="3.78" Top="1.89" Width="94.5" Height="43.06" SizeMode="Normal" Image="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAnCAIAAAAXVFiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADCklEQVRoQ9WZX0hTURzHf2fbdW6t/autbf1bRkW1XEWUGMaIoGKUjz0ECj4Y5KMKg8CnfFiYve3JMAwfehoEhuBAKCmQISiEgWlCEAoDHyR72ahf5/4Gvgy33XO8Zx8u29jOn99359zf+Z574O8+0tX1HOAUgB3Ab9pFsUimt/cFY6cBfABxAAuYCEUkjb6+V4ydAfAAXAawUq8mQnFJYHAww9g5ADeXaqP+TIeiE8rQ0GuL5TzAQYArABr1pAgUoyCGh99arRcBXHxUMTmpB0VqmJGRdzZbK8ABPqrN1LqCULwGyGSymoa5F6XiqDqpXWWhqOtifPxDU9NVLhKl4jSuhoFZqr0nP8buUR2RUOM1MjmZs9uvcak4tpiHq6fRBGezH5ubr3OpeMfi6lorjSN4auqL09lWloqeqT4aQXAul3e5bnKplwAOUc062SVYjqI9oL4rMDe35Hbf4lJjAAGqYwhVBefz37zeRFnqESotAPUELy5+9/vv8HX1AkCEyglDJcHLy+uBwF2+oqITPkolBFNt0pL1b+itr639CoXuc7uP+5vj9JsUzBa8sbEViTzg5uEswEn6ViJmC04kUvwdpTL+QTYKTOl0ekzTUDDaJqmTWUeZpNXfn7ZYMCejrxCemXejjGCkVCp1d6cYQ4OBC2+ISghGJcE6xWIxmXzC3TIO9WEqJwz1BOtsb/9ub3/EF6pjAF4qLYBqk9Z/ZgeokkCo6QpsbhZisSS6LsYwq6F446gtWGdlZT0a1X11lL8aoREE68zPLwWDNwAc5eOS+mgcwTrT0588ntbyaCvzeL16SEeNTEy8dzjQdeM244TJZ0W1QgrqYnT0jabh9EYfvg8WTRAUuwFSqZdWK+4l/dJ2lEKhqA3T0/OMsSAAXpIsmiAoXhGgRevsfMqHOizoAZgEKFhx7Oz86eh4zG9stGgoXjEoTNEUClvx+ENu0TCNC7FogqAA5bC6+rOl5TYu2owZt2iCoNBksrDwNRxu4xYNZZt9aExByWdm5rPPp5+n7sOTswoA/AMGFb18O/v7twAAAABJRU5ErkJggg=="/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row81" Height="43.06">
+          <TableCell Name="Cell289" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell290" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell738"/>
+          <TableCell Name="Cell658"/>
+          <TableCell Name="Cell291" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell698"/>
+          <TableCell Name="Cell292" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell293" Border.Lines="Left, Right" HtmlTags="true">
+            <PictureObject Name="picRazredF" Left="3.78" Top="1.89" Width="94.5" Height="43.06" SizeMode="Normal" Image="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAnCAIAAAAXVFiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADDUlEQVRoQ9WZX0hTURzHf2fbdX9azq22tvXPjIpquYooMYwRQcUoH3sIFHwwyEcTBoFP+bAwe9uTYRg+9DQIDMFBUFIgQ1AIA9OEQBQGPkj2slE/zv0N5sNw2z1n9+zD2Mbd+fP77pz7O99zD/yrIz09LwBOAdgBfKa9KBbJ9Pe/ZOw0gBcgCmABE6GIpDEw8JqxMwAegMsAVurVRCguCQwNpRg7B9DMpdqoP9Oh6IQyPPzGYjkPcBDgCoBGPSkCxSiIkZF3VutFADcfVUxO6kGRGmZ09L3N1g5wgI+qg1pXEIrXAKlUWtMw96JUHFUXtassFHVNTEx8bGq6ykWiVJzGlfDsE9Xel1/j96iOSKjxKpmaytjt17hUHFvMw5XTaILT6c8Ox3UuFe9YXF2rpXEET09/c7k6ilLRM9VGIwjOZLJu900u9RLAIapZIyWC5SjaB+q7DHNzS83Nt7jUCICf6hhCVcHZ7I+WllhR6hEqLQD1BC8u/vT57vB19QJAmMoJQyXBy8vrfv9dvqKiEz5KJQRTadKS9W/ora+tbQSD97ndx/3NcfpNCmYL3tzcDocfcPNwFuAkXZWI2YJjsQT/RKmMf5GNAlM6mRzXNBSMtknqZNZRJmkNDiYtFszJ6CuEZ+ZSlBGMFAqF3t4EY2gwcOENUgnB7BFM1+oJ9V1CPp+Px59wt4xDfZjKCUM9wTo7O386Ox/xheoYQAuVFsCepEXX6gn1XIatrVwkEkfXxRhmNRRvHLUF66ysrLe26r66lb8boREE68zPLwUCNwCcxeOS2mgcwTozM188nvbiaCvzeL1ySEeVTE5+cDrRdeM244TJZ0XVQgpqYmzsrabh9EYfXgeLJgiK3QCJxCurFfeSPmk7SqFQ1Ibp63vOWAAAX5IsmiAoXhGgRevufsqHOiToAZgEKFhx7O7+7ep6zG9stGgoXjEoTNHkctvR6ENu0TCNC7FogqAA5bC6+rut7TYu2owZt2iCoNBksrDwPRTq4BYNZZt9aExByWd29qvXq5+n1uHJWRkA/gP3BjycSGOI6QAAAABJRU5ErkJggg=="/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row82" Height="41.17">
+          <TableCell Name="Cell294" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell295" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell739"/>
+          <TableCell Name="Cell659"/>
+          <TableCell Name="Cell296" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell699"/>
+          <TableCell Name="Cell297" Border.Lines="All" HtmlTags="true"/>
+          <TableCell Name="Cell298" Border.Lines="Left, Right, Bottom" HtmlTags="true">
+            <PictureObject Name="picRazredG" Left="3.78" Width="94.5" Height="41.17" SizeMode="Normal" Image="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAnCAIAAAAXVFiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADdklEQVRoQ9WZTUhUURTHz51x/Mr8mNLUvsyoqEwrosQwJIIMKZctAgUXBrlUYSBwlQvDbOfKMAwXrYTAEBSEkgIRQSEMzA8IQkFwIdlGqdOd/8SbT9+8OdeZfjxUnPvOPf859537f+/R732kqekZ0SmiDCJv2LEnIeOdHsjFMK2tz5U6TVRAVEXkgoSkgIyM0db2UqkzRHlEl4ncmDWJIC8DdHb2K3WOKFdLTcN8SQfZidLV9crlOk90kOgKkQczpQjIUYju7jdu90WiHF1Vbk6pBzJNmN7et2lplUQHdFUzET0FQb4J0N8/4vFw72WpXNVsxI2HjkmEsjLZgU+FQXhHDA6+T0+/qkWyVF7GcRNRqhV52QgcJ8PDExkZ17RUri33YQfsKRasDNTjDBEQ1TYjIx8yM69rqXzF8u7qjPqBFQS0gahkxLTB6Ojn7OzqgFT2TM4JkxsqKbT6gisbEWMyMTGTk3NTS71EdAhnOidYThQxwV+KnGIEjMLU1Hxu7i0ttYKoEOckSJDeGEogWbhv6VkjMDPzNT+/LiD1CEZLYNUr3JDsgJktzM1983rv6H31AlEpxslhFSxcPTtgZs3Cwmph4V29o7ITPooRwlivzfACh3arf4h9Nf5wy8s/iovvabvP9zfH8ZkRki14bW2ztPS+Ng9niU7ivyaJuaTNC66r8+nfLFXpP4wTs8T7sqR7egY8HhbMtsnoYg4QJCqWEOtXIynYT3t7j8vFPZl9hXxnDia4jNG3JrOCmd3d3eZmn1JsMHjjLcYIA1iV+AnVEzbCiGA/Ozs7DQ2PtVvmUh/GOGHCJcdGzqEgYBhbWz9rah7qjeoYUT5GSxK1P4UhVt2/IGYU1tc3Kioa2HUpxV2NxQuzp2i5ygZA4JgsLq6Wlfl9dZn+KUyk9S2vFCC+Daan54uKbhBlBV6X/J9AjW3Gxj7m5VUGqp0yj9ftAx1xMjT0LiuLXTffZpxI8ruieIECR/T1vfZ4eHmzD98XiyYCck8An++F2833kl5jd5SiIOuEaWl5qlQRER8GLZoAyFcCtmiNjU90qUvEHoCJg2Tl2N7+VVv7SF/YbNFYfIqBNKXZ2NisqnqgLRq3cXmL5hwkaIalpe/l5bd501bKiEVzAlIzyezsl5KSam3RWHayLRqSMs/4+KeCAv/71P14chYZoj8Un9U2lTyNCQAAAABJRU5ErkJggg=="/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row131" Height="19.25">
+          <TableCell Name="Cell551"/>
+          <TableCell Name="Cell552" Text="Podaci o zgradi" Font="Arial, 10pt, style=Bold" ColSpan="3"/>
+          <TableCell Name="Cell740"/>
+          <TableCell Name="Cell660"/>
+          <TableCell Name="Cell553" ColSpan="4"/>
+          <TableCell Name="Cell700"/>
+          <TableCell Name="Cell554"/>
+          <TableCell Name="Cell555"/>
+        </TableRow>
+        <TableRow Name="Row146" Height="19.25">
+          <TableCell Name="Cell630"/>
+          <TableCell Name="Cell721" Border.Lines="Left, Top, Bottom" Text="A&lt;sub&gt;K&lt;/sub&gt; [m&lt;sup&gt;2&lt;/sup&gt;] " Brackets="{,}" VertAlign="Center" WordWrap="false" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell741"/>
+          <TableCell Name="Cell677" Border.Lines="Right, Top, Bottom" Text="{EnergetskiCertifikat.Ak}" Brackets="{,}" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell757" Border.Lines="Left, Top, Bottom" Text="f&lt;sub&gt;0&lt;/sub&gt;[m&lt;sup&gt;-1&lt;/sup&gt;]" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell701" Border.Lines="Top, Bottom" ColSpan="2"/>
+          <TableCell Name="Cell638" Border.Lines="Left, Top, Bottom" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell679" Border.Lines="Right, Top, Bottom" Text="[EnergetskiCertifikat.f0]" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row145" Height="19.25">
+          <TableCell Name="Cell625"/>
+          <TableCell Name="Cell756" Border.Lines="Left, Top, Bottom" Text="V&lt;sub&gt;e&lt;/sub&gt;[m&lt;sup&gt;3&lt;/sup&gt;] " Brackets="{,}" VertAlign="Center" WordWrap="false" Wysiwyg="true" HtmlTags="true"/>
+          <TableCell Name="Cell742"/>
+          <TableCell Name="Cell662" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold">
+            <TextObject Name="Text26" Left="3.78" Top="1.89" Width="60.48" Height="15.12" Text="{EnergetskiCertifikat.Ve}" Brackets="{,}" Font="Arial, 10pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell627" Border.Lines="Left" Text="H'&lt;sub&gt;tr,adj&lt;/sub&gt;[W/(m&lt;sup&gt;2&lt;/sup&gt;K)]" Brackets="{,}" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell717" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell716"/>
+          <TableCell Name="Cell681" Border.Lines="Right, Top, Bottom" Text="[EnergetskiCertifikat.WmK]" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row83" Height="17.36">
+          <TableCell Name="Cell299" HtmlTags="true"/>
+          <TableCell Name="Cell300" Border.Lines="All" Text="Podaci o osobi koja je izdala energetski certifikat" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true" ColSpan="7"/>
+          <TableCell Name="Cell743"/>
+          <TableCell Name="Cell663"/>
+          <TableCell Name="Cell301" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell703"/>
+          <TableCell Name="Cell302" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell303" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row85" Height="21.14">
+          <TableCell Name="Cell309"/>
+          <TableCell Name="Cell310" Border.Lines="Left, Top, Bottom" Text="Ovlaštena fizička osoba" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell744"/>
+          <TableCell Name="Cell664"/>
+          <TableCell Name="Cell311" Border.Lines="Right, Top, Bottom" VertAlign="Center" ColSpan="4"/>
+          <TableCell Name="Cell704"/>
+          <TableCell Name="Cell312" Border.Lines="All" VertAlign="Center"/>
+          <TableCell Name="Cell313" Border.Lines="All" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row84" Height="21.14">
+          <TableCell Name="Cell304" HtmlTags="true"/>
+          <TableCell Name="Cell305" Border.Lines="Left, Top, Bottom" Text="Ovlaštena pravna osoba" VertAlign="Center" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell745"/>
+          <TableCell Name="Cell665"/>
+          <TableCell Name="Cell306" Border.Lines="Right, Top, Bottom" VertAlign="Center" HtmlTags="true" ColSpan="4"/>
+          <TableCell Name="Cell705"/>
+          <TableCell Name="Cell307" Border.Lines="All" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell308" Border.Lines="All" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row86" Height="21.14">
+          <TableCell Name="Cell314"/>
+          <TableCell Name="Cell315" Border.Lines="Left, Top, Bottom" Text="Imenovana osoba" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell746"/>
+          <TableCell Name="Cell666"/>
+          <TableCell Name="Cell316" Border.Lines="Right, Top, Bottom" VertAlign="Center" ColSpan="4"/>
+          <TableCell Name="Cell706"/>
+          <TableCell Name="Cell317" Border.Lines="All" VertAlign="Center"/>
+          <TableCell Name="Cell318" Border.Lines="All" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row87" Height="21.14">
+          <TableCell Name="Cell319"/>
+          <TableCell Name="Cell320" Border.Lines="Left, Top, Bottom" Text="Registarski broj ovlaštene osobe" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell747"/>
+          <TableCell Name="Cell667"/>
+          <TableCell Name="Cell321" Border.Lines="Right, Top, Bottom" VertAlign="Center" ColSpan="4"/>
+          <TableCell Name="Cell707"/>
+          <TableCell Name="Cell322" Border.Lines="All" VertAlign="Center"/>
+          <TableCell Name="Cell323" Border.Lines="All" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row88" Height="21.14">
+          <TableCell Name="Cell324"/>
+          <TableCell Name="Cell325" Border.Lines="Left, Top, Bottom" Text="Oznaka energetskog certifikata" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell748"/>
+          <TableCell Name="Cell668"/>
+          <TableCell Name="Cell326" Border.Lines="Right, Top, Bottom" Text="[EnergetskiCertifikat.Oznaka certifikata]" VertAlign="Center" Font="Arial, 10pt, style=Bold" ColSpan="4"/>
+          <TableCell Name="Cell708"/>
+          <TableCell Name="Cell327" Border.Lines="All" VertAlign="Center"/>
+          <TableCell Name="Cell328" Border.Lines="All" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row89" Height="21.14">
+          <TableCell Name="Cell329"/>
+          <TableCell Name="Cell330" Border.Lines="Left, Top, Bottom" Text="Datum izdavanja/rok važenja" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell749"/>
+          <TableCell Name="Cell669"/>
+          <TableCell Name="Cell331" Border.Lines="Right, Top, Bottom" VertAlign="Center" ColSpan="4"/>
+          <TableCell Name="Cell709"/>
+          <TableCell Name="Cell332" Border.Lines="All" VertAlign="Center"/>
+          <TableCell Name="Cell333" Border.Lines="All" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row90" Height="32.48">
+          <TableCell Name="Cell334"/>
+          <TableCell Name="Cell335" Border.Lines="Left, Top, Bottom" Text="Potpis ovlaštene fizičke ili imenovane osobe" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell750"/>
+          <TableCell Name="Cell670"/>
+          <TableCell Name="Cell336" Border.Lines="Right, Top, Bottom" VertAlign="Center" ColSpan="4"/>
+          <TableCell Name="Cell710"/>
+          <TableCell Name="Cell337" Border.Lines="All" VertAlign="Center"/>
+          <TableCell Name="Cell338" Border.Lines="All" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row91" Height="17.36">
+          <TableCell Name="Cell339"/>
+          <TableCell Name="Cell340" Border.Lines="All" Text="Podaci o osobama koje su sudjelovale u izradi certifikata" VertAlign="Center" Font="Arial, 12pt, style=Bold" ColSpan="7"/>
+          <TableCell Name="Cell751"/>
+          <TableCell Name="Cell671"/>
+          <TableCell Name="Cell341" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+          <TableCell Name="Cell711"/>
+          <TableCell Name="Cell342" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+          <TableCell Name="Cell343" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row92" Height="32.48">
+          <TableCell Name="Cell344"/>
+          <TableCell Name="Cell635" Border.Lines="Right" Text="Dio zgrade" VertAlign="Center" ColSpan="2"/>
+          <TableCell Name="Cell752"/>
+          <TableCell Name="Cell672" Border.Lines="Right" Text="Ovlaštena osoba" HorzAlign="Center" VertAlign="Center" ColSpan="3"/>
+          <TableCell Name="Cell676"/>
+          <TableCell Name="Cell712"/>
+          <TableCell Name="Cell347" Border.Lines="Right, Top, Bottom" Text="Registarski broj" HorzAlign="Center" VertAlign="Center"/>
+          <TableCell Name="Cell348" Border.Lines="Right, Top, Bottom" Text="Potpis" HorzAlign="Center" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row93" Height="24.92">
+          <TableCell Name="Cell349"/>
+          <TableCell Name="Cell350" Border.Lines="All" Text="Građevinski" Brackets="{,}" VertAlign="Center" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell753"/>
+          <TableCell Name="Cell673" Border.Lines="Right, Top" ColSpan="3"/>
+          <TableCell Name="Cell351" Border.Lines="Right, Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell713"/>
+          <TableCell Name="Cell352" Border.Lines="Right, Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell353" Border.Lines="Right, Top, Bottom" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row94" Height="24.92">
+          <TableCell Name="Cell354"/>
+          <TableCell Name="Cell355" Border.Lines="All" Text="Strojarski" Brackets="{,}" VertAlign="Center" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell754"/>
+          <TableCell Name="Cell674" Border.Lines="Right, Top" ColSpan="3"/>
+          <TableCell Name="Cell678"/>
+          <TableCell Name="Cell714"/>
+          <TableCell Name="Cell357" Border.Lines="Right, Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell358" Border.Lines="Right, Top, Bottom" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row95" Height="24.92">
+          <TableCell Name="Cell359"/>
+          <TableCell Name="Cell360" Border.Lines="All" Text="Elektrotehnički" Brackets="{,}" VertAlign="Center" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell755"/>
+          <TableCell Name="Cell675" Border.Lines="Right, Top" ColSpan="3"/>
+          <TableCell Name="Cell680"/>
+          <TableCell Name="Cell715"/>
+          <TableCell Name="Cell362" Border.Lines="Right, Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell363" Border.Lines="Right, Top, Bottom" VertAlign="Center"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="1009.85" Width="699.3" Height="15.12">
+      <TextObject Name="Text1" Left="13.9" Width="298.62" Height="13.23" Text="Proračun izveden računalnim programom KI Expert 2013." Font="Arial, 8.25pt" TextFill.Color="Gray"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Stranica2" RawPaperSize="9" LeftMargin="15" TopMargin="15">
+    <PageHeaderBand Name="PageHeader2" Width="699.3" Height="28.35"/>
+    <DataBand Name="Data2" Top="32.35" Width="699.3" Height="878.85">
+      <TableObject Name="Table5" Left="18.9" Top="9.45" Width="666.03" Height="122.85">
+        <TableColumn Name="Column15" Width="433.06"/>
+        <TableColumn Name="Column16" Width="102.31"/>
+        <TableColumn Name="Column17" Width="130.66"/>
+        <TableRow Name="Row96" Height="28.35">
+          <TableCell Name="Cell364" Border.Lines="All" Fill.Color="ControlLight" Text="Klimatski podaci" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell365" Border.Lines="All" Fill.Color="ControlLight"/>
+          <TableCell Name="Cell366" Border.Lines="All" Fill.Color="ControlLight" RowSpan="6">
+            <PictureObject Name="Picture6" Left="15.12" Top="11.34" Width="98.28" Height="94.5" Image="iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAIAAADbHrqYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADS0lEQVR4Xu3Zz0vTcRzHcenHgn4e+gPsEpIXo0vSJTtVUEv6cQiCCio1KyxQAw+SF8NSQ9F1CLsKQd/MBE0j52aZYSJR2oJafpW5Zk3BtV9u9gm/YXxOn9fHoWivJ6+Lh73dHl89Lc3LkP541fVePmqssRtrNSZe6B5pM/EqXacX80s/ez9ah5AKO7L0fql41THDZnnVui+Jn/V2qmWra6R1DK/CeVw6pb7cJzaP94N1CCmvfZd0Sn0nWjalxGvbcnht0PXKlE6p72TLZnoBoxc2emGjFzZ6YaMXNnphoxc2emGjFzZ6YaMXNnphoxc2emGjF7bUeNmNdcaXB/2B1+huug5Kp6D1+J5LB1V2rn2HdAea5fXoXW1R594bXfs0dt6ZURUsdURr0BV7cvNfZEnXFHe2Z2ddqFI6qLIrQzmFXXukayq73pld3m23vEZHR62/V7yHYUd9vEpjDdFq149u6wpYQ+yudE1xjmjtoH/AugJmmia9gOiFRS8semHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIX1oKXab73+fr01hSpk96T4sRn7g0a0jXF1cfka4prjFanwGt6Om9uLi2R2KgxI36xMXbnfvQeuobY7U+J3dI1xTXFyxzRGumgysRDGpoYFJ9cI0FmeU1NXRBeeksktvj9T+efANTMTK50Sn3J5PrxcZ3vhxaTIKMXEL2w6IVFLyx6YdELi15Y9MKiFxa9sOiFRS8semHRC4teWPTCohdWarySybTg1+rAcBu68NR+6RS0pfcSWV6BQGModCgUOqyx+GRG5O2ZcO81dDFPTmQ6W7qmvCNjYx7xwJeyBa/FfJ8W6iuLugs0FnZfnRzW+UdergQZvYDohUUvLHph0QuLXlj0wqIXFr2w6IVFLyx6YdELi15Y9MKiF9aC1/irnu9Gs95+OYskCMVF3IUr1StYWjCbbotnbtdYrOJAyFky038L3ptyv+eleBMrJUH216s4P5Fu05sg83c8m38CqztBRi8gemHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIXFr2w6IVFL6x/vEryZ9NtehNkE+2t4taqT5BZXr7HzT8rinVXYg70f/s/sryYal7vb8kkY5YkxY5VAAAAAElFTkSuQmCC"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row97">
+          <TableCell Name="Cell369" Border.Lines="All" Fill.Color="ControlLight" Text="Klimatski podaci (kontinentalna ili primorska hrvatska)" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell370" Border.Lines="All" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Referentna zona]" VertAlign="Center"/>
+          <TableCell Name="Cell371" Border.Lines="All" Fill.Color="ControlLight"/>
+        </TableRow>
+        <TableRow Name="Row98">
+          <TableCell Name="Cell374" Border.Lines="All" Fill.Color="ControlLight" Text="Broj stupanj dana grijanja SD [Kd/a]" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell375" Border.Lines="All" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Stupanj dana grijanja]" VertAlign="Center"/>
+          <TableCell Name="Cell376" Border.Lines="All" Fill.Color="ControlLight"/>
+        </TableRow>
+        <TableRow Name="Row99">
+          <TableCell Name="Cell379" Border.Lines="All" Fill.Color="ControlLight" Text="Broj dana sezone grijanja Z [d]" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell380" Border.Lines="All" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Broj dana sezone grijanja]" VertAlign="Center"/>
+          <TableCell Name="Cell381" Border.Lines="All" Fill.Color="ControlLight"/>
+        </TableRow>
+        <TableRow Name="Row100">
+          <TableCell Name="Cell384" Border.Lines="All" Fill.Color="ControlLight" Text="Srednja vanjska temperatura u sezoni grijanja Θ&lt;sub&gt;e&lt;/sub&gt;[°C]" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell385" Border.Lines="All" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Srednja vanjska temperatura u sezoni grijanja]" VertAlign="Center"/>
+          <TableCell Name="Cell386" Border.Lines="All" Fill.Color="ControlLight"/>
+        </TableRow>
+        <TableRow Name="Row101">
+          <TableCell Name="Cell387" Border.Lines="All" Fill.Color="ControlLight" Text="Unutarnja projektna temperatura u sezoni grijanja Θ&lt;sub&gt;i&lt;/sub&gt;[°C]" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell388" Border.Lines="All" Fill.Color="ControlLight" Text="[EnergetskiCertifikat.Unutarnja projektna temperatura u sezoni grijanja]" VertAlign="Center"/>
+          <TableCell Name="Cell389" Border.Lines="All" Fill.Color="ControlLight"/>
+        </TableRow>
+      </TableObject>
+      <TableObject Name="Table6" Left="18.9" Top="151.2" Width="666.02" Height="160.65" Border.Lines="All">
+        <TableColumn Name="Column18" Width="471.98"/>
+        <TableColumn Name="Column19" Width="194.04"/>
+        <TableRow Name="Row102" Height="28.35">
+          <TableCell Name="Cell390" Border.Lines="All" Text="Podaci o termotehničkim sustavima zgrade" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell391" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row103">
+          <TableCell Name="Cell395" Border.Lines="All" Text="Način grijanja zgrade (lokalno, etažno, centralno, daljinski izvor)" Brackets="{,}" VertAlign="Center"/>
+          <TableCell Name="Cell396" Border.Lines="All" Text="[EnergetskiCertifikat.Način grijanja zgrade]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row104">
+          <TableCell Name="Cell400" Border.Lines="All" Text="Izvori energije koji se koriste za grijanje i pripremu potrošne tople vode" Brackets="{,}" VertAlign="Center"/>
+          <TableCell Name="Cell401" Border.Lines="All" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row105">
+          <TableCell Name="Cell405" Border.Lines="All" Text="Način hlađenja (lokalno, etažno, centralno, daljinski izvor)" Brackets="{,}" VertAlign="Center"/>
+          <TableCell Name="Cell406" Border.Lines="All" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row106">
+          <TableCell Name="Cell410" Border.Lines="All" Text="Izvori energije koji se koriste za hlađenje" Brackets="{,}" VertAlign="Center"/>
+          <TableCell Name="Cell411" Border.Lines="All" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row107">
+          <TableCell Name="Cell415" Border.Lines="All" Text="Vrsta ventilacije (prirodna, prisilna bez ili s povratom topline)" Brackets="{,}" VertAlign="Center"/>
+          <TableCell Name="Cell416" Border.Lines="All" Text="[EnergetskiCertifikat.Vrsta ventilacije]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row108">
+          <TableCell Name="Cell420" Border.Lines="All" Text="Vrsta i način korištenja sustava s obnovljivim izvorima energije" Brackets="{,}" VertAlign="Center"/>
+          <TableCell Name="Cell421" Border.Lines="All" Text="[EnergetskiCertifikat.Vrste obnovljive energije]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row109">
+          <TableCell Name="Cell425" Border.Lines="All" Text="Udio obnovljivih izvora energije u potrebnoj toplinskoj energiji za grijanje [%]" Brackets="{,}" VertAlign="Center"/>
+          <TableCell Name="Cell426" Border.Lines="All" Text="[EnergetskiCertifikat.Udio obnovljive energije]" VertAlign="Center"/>
+        </TableRow>
+      </TableObject>
+      <TableObject Name="Table7" Left="18.9" Top="330.75" Width="666.01" Height="238.14" Border.Lines="All">
+        <TableColumn Name="Column20" Width="80.89"/>
+        <TableColumn Name="Column21" Width="97.52"/>
+        <TableColumn Name="Column22" Width="97.52"/>
+        <TableColumn Name="Column23" Width="97.52"/>
+        <TableColumn Name="Column24" Width="97.52"/>
+        <TableColumn Name="Column25" Width="97.52"/>
+        <TableColumn Name="Column26" Width="97.52"/>
+        <TableRow Name="Row110" Height="28.35">
+          <TableCell Name="Cell427" Border.Lines="All" Text="Energetske potrebe" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="7"/>
+          <TableCell Name="Cell428" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+          <TableCell Name="Cell429" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+          <TableCell Name="Cell430" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+          <TableCell Name="Cell431" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+          <TableCell Name="Cell452" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+          <TableCell Name="Cell453" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row111" Height="20.79">
+          <TableCell Name="Cell432" Border.Lines="All" VertAlign="Center"/>
+          <TableCell Name="Cell433" Border.Lines="All" Text="Za referentne klimatske podatke" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 9pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell434" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell435" Border.Lines="All" Text="Za stvarne klimatske podatke" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 9pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell436" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TableCell Name="Cell454" Border.Lines="All" Text="Zahtjev" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell455" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row112">
+          <TableCell Name="Cell437" Border.Lines="All" VertAlign="Center" HtmlTags="true" RowSpan="2"/>
+          <TableCell Name="Cell438" Border.Lines="Right" Text="Ukupno" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell439" Border.Lines="Right" Text="Specifično" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell440" Border.Lines="Right" Text="Ukupno" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell441" Border.Lines="Right" Text="Specifično" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell456" Border.Lines="Right" Text="Dopušteno" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell457" Border.Lines="Right" Text="Ispunjeno" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row113">
+          <TableCell Name="Cell442" Border.Lines="All" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell443" Border.Lines="Right" Text="[kWh/a]" Brackets="{,}" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell444" Border.Lines="Right" Text="[kWh/(m&lt;sup&gt;2&lt;/sup&gt;a)]" Brackets="{,}" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell445" Border.Lines="Right" Text="[kWh/a]" Brackets="{,}" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell446" Border.Lines="Right" Text="[kWh/(m&lt;sup&gt;2&lt;/sup&gt;a)]" Brackets="{,}" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell458" Border.Lines="Right" Text="[kWh/(m&lt;sup&gt;2&lt;/sup&gt;a)]" Brackets="{,}" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell459" Border.Lines="Right" Text="DA / NE" Brackets="{,}" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row114">
+          <TableCell Name="Cell447" Border.Lines="All" Text="Q&lt;sub&gt;H,nd&lt;/sub&gt;" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell448" Border.Lines="All" Text="[EnergetskiCertifikat.Q''H,nd ukupno referentno]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell449" Border.Lines="All" Text="[EnergetskiCertifikat.Q''H,nd specifično referentno]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell450" Border.Lines="All" Text="[EnergetskiCertifikat.Q''H,nd ukupno]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell451" Border.Lines="All" Text="[EnergetskiCertifikat.Q''H,nd specifično]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell460" Border.Lines="All" Text="[EnergetskiCertifikat.Q''H,nd dopušteno]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell461" Border.Lines="All" Text="[EnergetskiCertifikat.Q''H,nd ispunjeno]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row115">
+          <TableCell Name="Cell462" Border.Lines="All" Text="Q&lt;sub&gt;W&lt;/sub&gt;" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell463" Border.Lines="All" Fill.Color="192, 192, 255" Text="[EnergetskiCertifikat.QW ukupno referentno]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell464" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell465" Border.Lines="All" Fill.Color="192, 192, 255" Text="[EnergetskiCertifikat.QW ukupno]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell466" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell467" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell468" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row116">
+          <TableCell Name="Cell469" Border.Lines="All" Text="Q&lt;sub&gt;H,ls&lt;/sub&gt;" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell470" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell471" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell472" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell473" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell474" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell475" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row117">
+          <TableCell Name="Cell476" Border.Lines="All" Text="Q&lt;sub&gt;W,ls&lt;/sub&gt;" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell477" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell478" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell479" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell480" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell481" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell482" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row118">
+          <TableCell Name="Cell483" Border.Lines="All" Text="Q&lt;sub&gt;H&lt;/sub&gt;" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell484" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell485" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell486" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell487" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell488" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell489" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row119">
+          <TableCell Name="Cell490" Border.Lines="All" Text="E&lt;sub&gt;del&lt;/sub&gt;" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell491" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell492" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell493" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell494" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell495" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell496" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row120">
+          <TableCell Name="Cell497" Border.Lines="All" Text="E&lt;sub&gt;prim&lt;/sub&gt;" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell498" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell499" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell500" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell501" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell502" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell503" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row121">
+          <TableCell Name="Cell504" Border.Lines="All" Text="CO&lt;sub&gt;2&lt;/sub&gt;[kg/a]" Brackets="{,}" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell505" Border.Lines="All" Fill.Color="192, 192, 255" Text="[EnergetskiCertifikat.CO2 ukupno referentno]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell506" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell507" Border.Lines="All" Fill.Color="192, 192, 255" Text="[EnergetskiCertifikat.CO2 ukupno]" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell508" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell509" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell510" Border.Lines="All" Fill.Color="192, 192, 255" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="txtObjasnjenje" Left="18.9" Top="576.45" Width="94.5" Height="18.9" Text="Objašnjenje:" HorzAlign="Center" VertAlign="Center"/>
+      <ShapeObject Name="Shape3" Left="211.68" Top="576.45" Width="18.9" Height="18.9"/>
+      <ShapeObject Name="Shape4" Left="402.57" Top="576.45" Width="18.9" Height="18.9" Fill.Color="192, 192, 255"/>
+      <TextObject Name="txtObvezno1" Left="230.58" Top="576.45" Width="113.4" Height="18.9" Text="obvezna ispuna" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="txtOpcionalno1" Left="425.25" Top="576.45" Width="141.75" Height="18.9" Text="ispunjava se opcijski" HorzAlign="Center" VertAlign="Center"/>
+      <TableObject Name="Table8" Left="18.9" Top="614.25" Width="666.02" Height="213.57">
+        <TableColumn Name="Column27" Width="373.46"/>
+        <TableColumn Name="Column28" Width="97.52"/>
+        <TableColumn Name="Column29" Width="97.52"/>
+        <TableColumn Name="Column30" Width="97.52"/>
+        <TableRow Name="Row122">
+          <TableCell Name="Cell511" Border.Lines="All" Text="Građevni dio zgrade" VertAlign="Center" Font="Arial, 14pt, style=Bold" RowSpan="2"/>
+          <TableCell Name="Cell512" Border.Lines="Left, Right, Top" Text="U" Padding="2, 0, 2, 0" Brackets="{,}" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell513" Border.Lines="Left, Right, Top" Text="U&lt;sub&gt;max&lt;/sub&gt;" Padding="2, 0, 2, 0" Brackets="{,}" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+          <TableCell Name="Cell514" Border.Lines="Left, Right, Top" Text="Ispunjeno" Padding="2, 0, 2, 0" Brackets="{,}" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row123" Height="17.01">
+          <TableCell Name="Cell516" Border.Lines="All" VertAlign="Center" Font="Arial, 14pt"/>
+          <TableCell Name="Cell517" Border.Lines="Left, Right, Bottom" Text="[W/(m&lt;sup&gt;2&lt;/sup&gt;K)]" Padding="2, 0, 2, 0" Brackets="{,}" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell518" Border.Lines="Left, Right, Bottom" Text="[W/(m&lt;sup&gt;2&lt;/sup&gt;K)]" Padding="2, 0, 2, 0" Brackets="{,}" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+          <TableCell Name="Cell519" Border.Lines="Left, Right, Bottom" Text="DA / NE" Padding="2, 0, 2, 0" Brackets="{,}" HorzAlign="Center" VertAlign="Center" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row124">
+          <TableCell Name="Cell521" Border.Lines="All" Text="Vanjski zidovi, zidovi prema garaži, provjetravanom tavanu" VertAlign="Center"/>
+          <TableCell Name="Cell522" Border.Lines="All" Text="[EnergetskiCertifikat.Zid U]" VertAlign="Center"/>
+          <TableCell Name="Cell523" Border.Lines="All" Text="[EnergetskiCertifikat.Zid Umax]" VertAlign="Center"/>
+          <TableCell Name="Cell524" Border.Lines="All" Text="[EnergetskiCertifikat.Zid ispunjeno]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row125" Height="34.02">
+          <TableCell Name="Cell526" Border.Lines="All" Text="Ravni i kosi krovovi iznad grijanog prostora, stropovi prema provjetravanom tavanu" VertAlign="Center"/>
+          <TableCell Name="Cell527" Border.Lines="All" Text="[EnergetskiCertifikat.Krov U]" VertAlign="Center"/>
+          <TableCell Name="Cell528" Border.Lines="All" Text="[EnergetskiCertifikat.Krov Umax]" VertAlign="Center"/>
+          <TableCell Name="Cell529" Border.Lines="All" Text="[EnergetskiCertifikat.Krov ispunjeno]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row126">
+          <TableCell Name="Cell531" Border.Lines="All" Text="Zidovi prema tlu, podovi prema tlu" VertAlign="Center"/>
+          <TableCell Name="Cell532" Border.Lines="All" Text="[EnergetskiCertifikat.Tlo U]" VertAlign="Center"/>
+          <TableCell Name="Cell533" Border.Lines="All" Text="[EnergetskiCertifikat.Tlo Umax]" VertAlign="Center"/>
+          <TableCell Name="Cell534" Border.Lines="All" Text="[EnergetskiCertifikat.Tlo ispunjeno]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row127">
+          <TableCell Name="Cell535" Border.Lines="All" Text="Stropovi iznad vanjskog zraka, stropovi iznad garaže" VertAlign="Center"/>
+          <TableCell Name="Cell536" Border.Lines="All" Text="[EnergetskiCertifikat.Strop U]" VertAlign="Center"/>
+          <TableCell Name="Cell537" Border.Lines="All" Text="[EnergetskiCertifikat.Strop Umax]" VertAlign="Center"/>
+          <TableCell Name="Cell538" Border.Lines="All" Text="[EnergetskiCertifikat.Strop ispunjeno]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row128" Height="34.02">
+          <TableCell Name="Cell539" Border.Lines="All" Text="Zidovi i stropovi prema negrijanim prostorijama i negrijanom stubištu temperature više od 0°C" VertAlign="Center"/>
+          <TableCell Name="Cell540" Border.Lines="All" Text="[EnergetskiCertifikat.Negrijani U]" VertAlign="Center"/>
+          <TableCell Name="Cell541" Border.Lines="All" Text="[EnergetskiCertifikat.Negrijani Umax]" VertAlign="Center"/>
+          <TableCell Name="Cell542" Border.Lines="All" Text="[EnergetskiCertifikat.Negrijani ispunjeno]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row129" Height="34.02">
+          <TableCell Name="Cell543" Border.Lines="All" Text="Prozori, balkonska vrata, krovni prozori, prozirni elementi pročelja" VertAlign="Center"/>
+          <TableCell Name="Cell544" Border.Lines="All" Text="[EnergetskiCertifikat.Prozori U]" VertAlign="Center"/>
+          <TableCell Name="Cell545" Border.Lines="All" Text="[EnergetskiCertifikat.Prozori Umax]" VertAlign="Center"/>
+          <TableCell Name="Cell546" Border.Lines="All" Text="[EnergetskiCertifikat.Prozori ispunjeno]" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row130">
+          <TableCell Name="Cell547" Border.Lines="All" Text="Vanjska vrata s neprozirnim vratnim krilom"/>
+          <TableCell Name="Cell548" Border.Lines="All" Text="[EnergetskiCertifikat.Vrata U]"/>
+          <TableCell Name="Cell549" Border.Lines="All" Text="[EnergetskiCertifikat.Vrata Umax]"/>
+          <TableCell Name="Cell550" Border.Lines="All" Text="[EnergetskiCertifikat.Vrata ispunjeno]"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Text3" Left="30.24" Top="831.6" Width="589.68" Height="18.9" Text="Upisuju se U vrijednosti za pretežite građevne dijelove zgrade (najvećih ukupnih ploština). "/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter2" Top="915.2" Width="699.3" Height="18.9">
+      <TextObject Name="Text10" Left="13.99" Width="359.1" Height="18.9" Text="Proračun izveden računalnim programom KI Expert 2013." Font="Arial, 8.25pt" TextFill.Color="Gray"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Stranica3" RawPaperSize="9" LeftMargin="15" TopMargin="15" StartPageEvent="Stranica3_StartPage">
+    <PageHeaderBand Name="PageHeader3" Width="699.3" Height="18.9"/>
+    <DataBand Name="Data3" Top="22.9" Width="699.3" Height="977.13">
+      <TableObject Name="Table3" Left="18.9" Top="9.45" Width="670.19" Height="935.55" GrowToBottom="true">
+        <TableColumn Name="Column7" Width="169.72"/>
+        <TableColumn Name="Column8" Width="381.02"/>
+        <TableColumn Name="Column9" Width="119.45"/>
+        <TableRow Name="Row42" Height="28.35">
+          <TableCell Name="Cell140" Border.Lines="All" Fill.Color="ControlLight" Text="Prijedlog mjera / preporuke" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell141" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell142" Border.Lines="All" Fill.Color="ControlLight" RowSpan="3">
+            <PictureObject Name="Picture7" Left="15.12" Top="13.23" Width="98.28" Height="98.28" Image="iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAIAAADbHrqYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADS0lEQVR4Xu3Zz0vTcRzHcenHgn4e+gPsEpIXo0vSJTtVUEv6cQiCCio1KyxQAw+SF8NSQ9F1CLsKQd/MBE0j52aZYSJR2oJafpW5Zk3BtV9u9gm/YXxOn9fHoWivJ6+Lh73dHl89Lc3LkP541fVePmqssRtrNSZe6B5pM/EqXacX80s/ez9ah5AKO7L0fql41THDZnnVui+Jn/V2qmWra6R1DK/CeVw6pb7cJzaP94N1CCmvfZd0Sn0nWjalxGvbcnht0PXKlE6p72TLZnoBoxc2emGjFzZ6YaMXNnphoxc2emGjFzZ6YaMXNnphoxc2emGjF7bUeNmNdcaXB/2B1+huug5Kp6D1+J5LB1V2rn2HdAea5fXoXW1R594bXfs0dt6ZURUsdURr0BV7cvNfZEnXFHe2Z2ddqFI6qLIrQzmFXXukayq73pld3m23vEZHR62/V7yHYUd9vEpjDdFq149u6wpYQ+yudE1xjmjtoH/AugJmmia9gOiFRS8semHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIX1oKXab73+fr01hSpk96T4sRn7g0a0jXF1cfka4prjFanwGt6Om9uLi2R2KgxI36xMXbnfvQeuobY7U+J3dI1xTXFyxzRGumgysRDGpoYFJ9cI0FmeU1NXRBeeksktvj9T+efANTMTK50Sn3J5PrxcZ3vhxaTIKMXEL2w6IVFLyx6YdELi15Y9MKiFxa9sOiFRS8semHRC4teWPTCohdWarySybTg1+rAcBu68NR+6RS0pfcSWV6BQGModCgUOqyx+GRG5O2ZcO81dDFPTmQ6W7qmvCNjYx7xwJeyBa/FfJ8W6iuLugs0FnZfnRzW+UdergQZvYDohUUvLHph0QuLXlj0wqIXFr2w6IVFLyx6YdELi15Y9MKiF9aC1/irnu9Gs95+OYskCMVF3IUr1StYWjCbbotnbtdYrOJAyFky038L3ptyv+eleBMrJUH216s4P5Fu05sg83c8m38CqztBRi8gemHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIXFr2w6IVFL6x/vEryZ9NtehNkE+2t4taqT5BZXr7HzT8rinVXYg70f/s/sryYal7vb8kkY5YkxY5VAAAAAElFTkSuQmCC"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row43" Height="41.58">
+          <TableCell Name="Cell143" Border.Lines="Left, Top" Fill.Color="ControlLight" Text=" -    " ColSpan="2">
+            <TextObject Name="Text6" Left="22.68" Top="3.78" Width="476.28" Height="18.9" Text="Prijedlog ekonomski opravdanih mjera za poboljšanje energetskih svojstava zgrade"/>
+            <TextObject Name="Text8" Left="22.68" Top="18.9" Width="495.18" Height="18.9" Text="temeljem Izvješća o energetskom pregledu zgrade"/>
+          </TableCell>
+          <TableCell Name="Cell144" Border.Lines="Right, Top" Fill.Color="ControlLight"/>
+          <TableCell Name="Cell145" Border.Lines="All" Fill.Color="Gainsboro"/>
+        </TableRow>
+        <TableRow Name="Row44" Height="52.92">
+          <TableCell Name="Cell146" Border.Lines="Left, Bottom" Fill.Color="ControlLight" Text=" - " Wysiwyg="true" ColSpan="2">
+            <TextObject Name="Text14" Left="22.68" Width="464.94" Height="18.9" Text="Za nove zgrade i zgrade nakon veće rekonstrukcije daju se preporuke za "/>
+            <TextObject Name="Text15" Left="22.68" Top="15.12" Width="502.74" Height="18.9" Text="korištenje zgrade vezano na ispunjenje temeljnog zahtjeva gospodarenja "/>
+            <TextObject Name="Text16" Left="22.68" Top="30.24" Width="483.84" Height="18.9" Text="energijom i očuvanja topline i ispunjenje energetskih svojstava zgrade"/>
+          </TableCell>
+          <TableCell Name="Cell147" Border.Lines="Right, Bottom" Fill.Color="ControlLight"/>
+          <TableCell Name="Cell148" Border.Lines="All" Fill.Color="ControlLight" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row147" Height="49.14">
+          <TableCell Name="Cell718" Border.Lines="All" ColSpan="2">
+            <TextObject Name="Text19" Left="196.56" Top="11.34" Width="147.42" Height="26.46" Text="Mjera / preporuka" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell719" Border.Lines="Right, Top, Bottom"/>
+          <TableCell Name="Cell720" Border.Lines="Right, Top, Bottom" Text="Jednostavni period povratka ulaganja" HorzAlign="Center" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row45" Height="35.91">
+          <TableCell Name="Cell149" Border.Lines="All" BeforePrintEvent="Cell149_BeforePrint" VertAlign="Center" Wysiwyg="true" ColSpan="2"/>
+          <TableCell Name="Cell150" Border.Lines="Right, Top, Bottom" VertAlign="Center" Font="Arial, 9pt"/>
+          <TableCell Name="Cell151" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row46" Height="39.69">
+          <TableCell Name="Cell152" Border.Lines="All" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell153" Border.Lines="Right, Top, Bottom" VertAlign="Center" Font="Arial, 9pt"/>
+          <TableCell Name="Cell154" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row47" Height="39.69">
+          <TableCell Name="Cell155" Border.Lines="All" VertAlign="Center" Wysiwyg="true" ColSpan="2"/>
+          <TableCell Name="Cell156" Border.Lines="Right, Top, Bottom" VertAlign="Center" Font="Arial, 9pt"/>
+          <TableCell Name="Cell157" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row48" Height="39.69">
+          <TableCell Name="Cell158" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell159" Border.Lines="Right, Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell160" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row49" Height="39.69">
+          <TableCell Name="Cell161" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell162" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell163" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row50" Height="39.69">
+          <TableCell Name="Cell164" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell165" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell166" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row51" Height="39.69">
+          <TableCell Name="Cell167" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell168" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell169" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row52" Height="39.69">
+          <TableCell Name="Cell170" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell171" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell172" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row53" Height="39.69">
+          <TableCell Name="Cell173" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell174" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell175" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row54" Height="39.69">
+          <TableCell Name="Cell176" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell177" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell178" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row55" Height="39.69">
+          <TableCell Name="Cell179" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell180" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell181" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row56" Height="39.69">
+          <TableCell Name="Cell182" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell183" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell184" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row57" Height="39.69">
+          <TableCell Name="Cell185" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell186" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell187" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row58" Height="39.69">
+          <TableCell Name="Cell188" Border.Lines="All" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell189" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell190" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row59" Height="39.69">
+          <TableCell Name="Cell191" Border.Lines="Left, Top, Bottom" Brackets="{,}" VertAlign="Center" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell192" Border.Lines="Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell193" Border.Lines="All" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row60" Height="47.25">
+          <TableCell Name="Cell194" Border.Lines="All" VertAlign="Center" Wysiwyg="true" ColSpan="3">
+            <TextObject Name="Text17" Left="11.34" Width="185.22" Height="26.46" Border.Lines="Top" Text="Detaljnije informacije" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+            <TextObject Name="Text18" Left="7.56" Top="22.68" Width="551.88" Height="18.9" Text="(uključujući one koje se odnose na troškovnu učinkovitost prijedloga mjera ili preporuka)" HorzAlign="Center" VertAlign="Center"/>
+          </TableCell>
+          <TableCell Name="Cell195" Border.Lines="Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell196" Border.Lines="All" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row61" Height="124.74">
+          <TableCell Name="Cell197" Border.Lines="All" VertAlign="Center" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell198" Border.Lines="Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell199" Border.Lines="All" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter3" Top="1004.03" Width="699.3" Height="18.9">
+      <TextObject Name="Text11" Left="13.99" Width="359.1" Height="13.23" Text="Proračun izveden računalnim programom KI Expert 2013." Font="Arial, 8.25pt" TextFill.Color="Gray"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Stranica3a" RawPaperSize="9" LeftMargin="15" TopMargin="15" StartPageEvent="Stranica3a_StartPage">
+    <PageHeaderBand Name="PageHeader3" Width="699.3" Height="18.9"/>
+    <DataBand Name="Data3" Top="22.9" Width="699.3" Height="977.13">
+      <TableObject Name="Table3" Left="18.9" Top="9.45" Width="670.19" Height="945" GrowToBottom="true">
+        <TableColumn Name="Column7" Width="169.72"/>
+        <TableColumn Name="Column8" Width="381.02"/>
+        <TableColumn Name="Column9" Width="119.45"/>
+        <TableRow Name="Row42" Height="28.35">
+          <TableCell Name="Cell140" Border.Lines="All" Fill.Color="ControlLight" Text="Prijedlog mjera / preporuke" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell141" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell142" Border.Lines="All" Fill.Color="ControlLight" RowSpan="3">
+            <PictureObject Name="Picture7" Left="15.12" Top="13.23" Width="98.28" Height="98.28" Image="iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAIAAADbHrqYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADS0lEQVR4Xu3Zz0vTcRzHcenHgn4e+gPsEpIXo0vSJTtVUEv6cQiCCio1KyxQAw+SF8NSQ9F1CLsKQd/MBE0j52aZYSJR2oJafpW5Zk3BtV9u9gm/YXxOn9fHoWivJ6+Lh73dHl89Lc3LkP541fVePmqssRtrNSZe6B5pM/EqXacX80s/ez9ah5AKO7L0fql41THDZnnVui+Jn/V2qmWra6R1DK/CeVw6pb7cJzaP94N1CCmvfZd0Sn0nWjalxGvbcnht0PXKlE6p72TLZnoBoxc2emGjFzZ6YaMXNnphoxc2emGjFzZ6YaMXNnphoxc2emGjF7bUeNmNdcaXB/2B1+huug5Kp6D1+J5LB1V2rn2HdAea5fXoXW1R594bXfs0dt6ZURUsdURr0BV7cvNfZEnXFHe2Z2ddqFI6qLIrQzmFXXukayq73pld3m23vEZHR62/V7yHYUd9vEpjDdFq149u6wpYQ+yudE1xjmjtoH/AugJmmia9gOiFRS8semHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIX1oKXab73+fr01hSpk96T4sRn7g0a0jXF1cfka4prjFanwGt6Om9uLi2R2KgxI36xMXbnfvQeuobY7U+J3dI1xTXFyxzRGumgysRDGpoYFJ9cI0FmeU1NXRBeeksktvj9T+efANTMTK50Sn3J5PrxcZ3vhxaTIKMXEL2w6IVFLyx6YdELi15Y9MKiFxa9sOiFRS8semHRC4teWPTCohdWarySybTg1+rAcBu68NR+6RS0pfcSWV6BQGModCgUOqyx+GRG5O2ZcO81dDFPTmQ6W7qmvCNjYx7xwJeyBa/FfJ8W6iuLugs0FnZfnRzW+UdergQZvYDohUUvLHph0QuLXlj0wqIXFr2w6IVFLyx6YdELi15Y9MKiF9aC1/irnu9Gs95+OYskCMVF3IUr1StYWjCbbotnbtdYrOJAyFky038L3ptyv+eleBMrJUH216s4P5Fu05sg83c8m38CqztBRi8gemHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIXFr2w6IVFL6x/vEryZ9NtehNkE+2t4taqT5BZXr7HzT8rinVXYg70f/s/sryYal7vb8kkY5YkxY5VAAAAAElFTkSuQmCC"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row43" Height="41.58">
+          <TableCell Name="Cell143" Border.Lines="Left, Top" Fill.Color="ControlLight" Text=" -    " ColSpan="2">
+            <TextObject Name="Text6" Left="22.68" Top="3.78" Width="476.28" Height="18.9" Text="Prijedlog ekonomski opravdanih mjera za poboljšanje energetskih svojstava zgrade"/>
+            <TextObject Name="Text8" Left="22.68" Top="18.9" Width="495.18" Height="18.9" Text="temeljem Izvješća o energetskom pregledu zgrade"/>
+          </TableCell>
+          <TableCell Name="Cell144" Border.Lines="Right, Top" Fill.Color="ControlLight"/>
+          <TableCell Name="Cell145" Border.Lines="All" Fill.Color="Gainsboro"/>
+        </TableRow>
+        <TableRow Name="Row44" Height="52.92">
+          <TableCell Name="Cell146" Border.Lines="Left, Bottom" Fill.Color="ControlLight" Text=" - " Wysiwyg="true" ColSpan="2">
+            <TextObject Name="Text14" Left="22.68" Width="464.94" Height="18.9" Text="Za nove zgrade i zgrade nakon veće rekonstrukcije daju se preporuke za "/>
+            <TextObject Name="Text15" Left="22.68" Top="15.12" Width="502.74" Height="18.9" Text="korištenje zgrade vezano na ispunjenje temeljnog zahtjeva gospodarenja "/>
+            <TextObject Name="Text16" Left="22.68" Top="30.24" Width="483.84" Height="18.9" Text="energijom i očuvanja topline i ispunjenje energetskih svojstava zgrade"/>
+          </TableCell>
+          <TableCell Name="Cell147" Border.Lines="Right, Bottom" Fill.Color="ControlLight"/>
+          <TableCell Name="Cell148" Border.Lines="All" Fill.Color="ControlLight" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row147" Height="49.14">
+          <TableCell Name="Cell718" Border.Lines="All" ColSpan="2">
+            <TextObject Name="Text19" Left="196.56" Top="11.34" Width="147.42" Height="26.46" Text="Mjera / preporuka" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell719" Border.Lines="Right, Top, Bottom"/>
+          <TableCell Name="Cell720" Border.Lines="Right, Top, Bottom" Text="Jednostavni period povratka ulaganja" HorzAlign="Center" VertAlign="Center"/>
+        </TableRow>
+        <TableRow Name="Row45" Height="35.91">
+          <TableCell Name="Cell149" Border.Lines="All" BeforePrintEvent="Cell149_BeforePrint" Text="1. Edukacija korisnika zgrade – upoznavanje s ugrađenim energetskim sustavima i načinom korištenja zgrade u cilju smanjenja potrošnje energije i vode." VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" ColSpan="2"/>
+          <TableCell Name="Cell150" Border.Lines="Right, Top, Bottom" VertAlign="Center" Font="Arial, 9pt"/>
+          <TableCell Name="Cell151" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row46" Height="39.69">
+          <TableCell Name="Cell152" Border.Lines="All" Text="2. Postava toplinske, kontaktne fasade (ETICS sustava) s toplinskom izolacijom od kamene vune (kao Knauf Insulation FKD-S/N Thermal) debljine minimalno 14,00 cm; U = 0,23 (W/m&lt;sup&gt;2&lt;/sup&gt;K)" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell153" Border.Lines="Right, Top, Bottom" VertAlign="Center" Font="Arial, 9pt"/>
+          <TableCell Name="Cell154" Border.Lines="Right, Top, Bottom" Text="8,0 god." VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row47" Height="51.03">
+          <TableCell Name="Cell155" Border.Lines="All" Text="3. Dodatna toplinska zaštita stropa prema tavanu, ugradnjom minimalno 20,00 cm toplinske izolacije od mineralne vune (λ = 0,035 W/mK – kao Knauf Insulation Unifit 035) u sustavu slijepog poda;" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" ColSpan="2"/>
+          <TableCell Name="Cell156" Border.Lines="Right, Top, Bottom" VertAlign="Center" Font="Arial, 9pt"/>
+          <TableCell Name="Cell157" Border.Lines="Right, Top, Bottom" Text="3,5 god." VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row48" Height="43.47">
+          <TableCell Name="Cell158" Border.Lines="All" Text="4. Toplinska sanacija ravnog krova postavom sloja toplinske izolacije od ploča tvrde kamene vune, gustoće 150-160 kg/m&lt;sup&gt;3&lt;/sup&gt;(kao Knauf Insulation DDP), u dva ili više slojeva ukupne debljine minimalno 20,00 cm; " Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell159" Border.Lines="Right, Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell160" Border.Lines="Right, Top, Bottom" Text="12,0 god." VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row49" Height="47.25">
+          <TableCell Name="Cell161" Border.Lines="All" Text="5. Toplinska zaštita vanjskih zidova s unutarnje strane, te zidova prema negrijanom stubištu, izvedbom suhomontažnih zidova s oblogom od gipskartonskih ploča i toplinskom izolacijom od mineralne vune, λ ≤ 0,037 W/mK (kao Knauf Insulation TP115), debljine minimalno 10,00 cm." Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell162" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell163" Border.Lines="Right, Top, Bottom" Text="6,0 god." VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row50" Height="43.47">
+          <TableCell Name="Cell164" Border.Lines="All" Text="6. Toplinska zaštita podgleda stropova iznad vanjskih prostora postavom lamela od kamene vune (kao Knauf Insulation FKL), debljine minimalno 12,00 cm, λ ≤ 0,041 W/mK i završnom oblogom otpornom na vanjske uvjete." Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell165" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell166" Border.Lines="Right, Top, Bottom" Text="10,0 god" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row51" Height="81.27">
+          <TableCell Name="Cell167" Border.Lines="All" Text="7. Toplinska sanacija krovne kosine koja obuhvaća kompletnu zamjenu sekundarnog i završnog pokrova, uz mogućnost korištenja materijala koji se može ponovno iskoristiti. Između rogova postaviti mineralnu vunu debljine, ovisno o visini rogova (minimalno 14,00 cm – kao Knauf Insulation Unifit 035), te još dodatna postava ploča tvrde kamene vune gustoće 150 kg/m&lt;sup&gt;3&lt;/sup&gt;, debljine 10,00 cm postavljenih preko postojećih rogova (kao Knauf Insulation Termotop). Postava sekundarnog pokrova od paropropusne-vodonepropusne folije (kao Knauf Insulation LDS " Brackets="{,}" VertAlign="Center" Font="Arial, 8pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell168" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell169" Border.Lines="Right, Top, Bottom" Text="8,0 god." VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row52" Height="32.13">
+          <TableCell Name="Cell170" Border.Lines="All" Text="8. Toplinska, zvučna i protupožarna izolacija podgleda stropa negrijanog podruma toplinskom izolacijom od lamela kamene vune (kao Knauf Insulation FKL), debljine minimalno 10,00 cm. " Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell171" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell172" Border.Lines="Right, Top, Bottom" Text="9,8 god" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row53" Height="35.91">
+          <TableCell Name="Cell173" Border.Lines="All" Text="9. Kompletna zamjena otvora, energetski efikasnijom stolarijom s dvostrukim ili trostrukim ostakljenjem Uw ≤ 1,20 W/m&lt;sup&gt;2&lt;/sup&gt;" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell174" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell175" Border.Lines="Right, Top, Bottom" Text="1,5 god." VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row54" Height="24.57">
+          <TableCell Name="Cell176" Border.Lines="All" Text="10. Ugradnja štednih armatura na izljevna mjesta vode; " Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell177" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell178" Border.Lines="Right, Top, Bottom" Text="8,0 god." VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row55" Height="32.13">
+          <TableCell Name="Cell179" Border.Lines="All" Text="11. Promjena sustava grijanja prelaskom s lokalnog na centralno grijanje s kondenzacijskim kotlovima i novim grijaćim tijelima;" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell180" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell181" Border.Lines="Right, Top, Bottom" Text="2,0 god." VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row56" Height="28.35">
+          <TableCell Name="Cell182" Border.Lines="All" Text="12. Zamjena rasvjete sa žarnom niti s fluokompaktnim izvorima svjetlosti;" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell183" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell184" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row57" Height="39.69">
+          <TableCell Name="Cell185" Border.Lines="All" Text="13. Kontrolirano provjetravanje unutarnjih prostorija, posebno u zimskim mjesecima kada treba izbjegavati neželjene ventilacijske gubitke." Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell186" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell187" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row58" Height="39.69">
+          <TableCell Name="Cell188" Border.Lines="All" Text="14. Zimsko razdoblje – rolete treba koristiti noću kako bi umanjili gubitke topline iz zgrade. Rolete mogu umanjiti gubitke topline i do 10%." Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell189" Border.Lines="Right, Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell190" Border.Lines="Right, Top, Bottom" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row59" Height="43.47">
+          <TableCell Name="Cell191" Border.Lines="Left, Top, Bottom" Text="15. Izvedba sustava rekuperacije topline čime se uz niže toplinske (ventilacijske) gubitke mogu značajno podići uvjeti glede kakvoće zraka, uvjeta minimalnog broja izmjena zraka te ugodnosti korištenja unutarnjih prostora." Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" Wysiwyg="true" HtmlTags="true" ColSpan="2"/>
+          <TableCell Name="Cell192" Border.Lines="Top, Bottom" Brackets="{,}" VertAlign="Center" Font="Arial, 9pt" HtmlTags="true"/>
+          <TableCell Name="Cell193" Border.Lines="All" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row60" Height="43.47">
+          <TableCell Name="Cell194" Border.Lines="All" VertAlign="Center" Wysiwyg="true" ColSpan="3">
+            <TextObject Name="Text17" Left="11.34" Width="185.22" Height="26.46" Border.Lines="Top" Text="Detaljnije informacije" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+            <TextObject Name="Text18" Left="7.56" Top="22.68" Width="551.88" Height="18.9" Text="(uključujući one koje se odnose na troškovnu učinkovitost prijedloga mjera ili preporuka)" HorzAlign="Center" VertAlign="Center"/>
+          </TableCell>
+          <TableCell Name="Cell195" Border.Lines="Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell196" Border.Lines="All" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row61" Height="111.51">
+          <TableCell Name="Cell197" Border.Lines="All" Text="Primjenom svih građevinskih mjera istovremeno (točke ?. – ?.) ostvaruju se uštede više od ___ kWh, uz smanjenje emisije CO2 za više od ___ t i jednostavnim periodom povrata investicije (JPP) od ___ godine. Nakon izvršene rekonstrukcije vanjske ovojnice, očekivani energetski razred može biti „_“.&#13;&#10;Sastavni dio energetskog certifikata čini Izvješće o provedenom energetskom pregledu u kojem se nalaze sve relevantne informacije o metodologiji procjene i mjerama za poboljšanje energetske učinkovitosti predmetne građevine." VertAlign="Center" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell198" Border.Lines="Top, Bottom" VertAlign="Center"/>
+          <TableCell Name="Cell199" Border.Lines="All" VertAlign="Center" Wysiwyg="true"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter3" Top="1004.03" Width="699.3" Height="18.9">
+      <TextObject Name="Text11" Left="13.99" Width="359.1" Height="13.23" Text="Proračun izveden računalnim programom KI Expert 2013." Font="Arial, 8.25pt" TextFill.Color="Gray"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Stranica4" RawPaperSize="9" LeftMargin="15" TopMargin="15">
+    <PageHeaderBand Name="PageHeader4" Width="699.3" Height="28.35"/>
+    <DataBand Name="Data4" Top="32.35" Width="699.3" Height="933.66">
+      <TableObject Name="Table2" Left="18.9" Top="9.45" Width="666.41" Height="886.41" GrowToBottom="true">
+        <TableColumn Name="Column4" Width="471.74"/>
+        <TableColumn Name="Column5" Width="63.88"/>
+        <TableColumn Name="Column6" Width="130.79"/>
+        <TableRow Name="Row23" Height="28.35">
+          <TableCell Name="Cell83" Border.Lines="All" Fill.Color="ControlLight" Text="Dodatak" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell84" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell85" Border.Lines="All" Fill.Color="ControlLight" RowSpan="2">
+            <PictureObject Name="Picture2" Left="15.12" Top="13.23" Width="98.28" Height="98.28" Image="iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAIAAADbHrqYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADS0lEQVR4Xu3Zz0vTcRzHcenHgn4e+gPsEpIXo0vSJTtVUEv6cQiCCio1KyxQAw+SF8NSQ9F1CLsKQd/MBE0j52aZYSJR2oJafpW5Zk3BtV9u9gm/YXxOn9fHoWivJ6+Lh73dHl89Lc3LkP541fVePmqssRtrNSZe6B5pM/EqXacX80s/ez9ah5AKO7L0fql41THDZnnVui+Jn/V2qmWra6R1DK/CeVw6pb7cJzaP94N1CCmvfZd0Sn0nWjalxGvbcnht0PXKlE6p72TLZnoBoxc2emGjFzZ6YaMXNnphoxc2emGjFzZ6YaMXNnphoxc2emGjF7bUeNmNdcaXB/2B1+huug5Kp6D1+J5LB1V2rn2HdAea5fXoXW1R594bXfs0dt6ZURUsdURr0BV7cvNfZEnXFHe2Z2ddqFI6qLIrQzmFXXukayq73pld3m23vEZHR62/V7yHYUd9vEpjDdFq149u6wpYQ+yudE1xjmjtoH/AugJmmia9gOiFRS8semHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIX1oKXab73+fr01hSpk96T4sRn7g0a0jXF1cfka4prjFanwGt6Om9uLi2R2KgxI36xMXbnfvQeuobY7U+J3dI1xTXFyxzRGumgysRDGpoYFJ9cI0FmeU1NXRBeeksktvj9T+efANTMTK50Sn3J5PrxcZ3vhxaTIKMXEL2w6IVFLyx6YdELi15Y9MKiFxa9sOiFRS8semHRC4teWPTCohdWarySybTg1+rAcBu68NR+6RS0pfcSWV6BQGModCgUOqyx+GRG5O2ZcO81dDFPTmQ6W7qmvCNjYx7xwJeyBa/FfJ8W6iuLugs0FnZfnRzW+UdergQZvYDohUUvLHph0QuLXlj0wqIXFr2w6IVFLyx6YdELi15Y9MKiF9aC1/irnu9Gs95+OYskCMVF3IUr1StYWjCbbotnbtdYrOJAyFky038L3ptyv+eleBMrJUH216s4P5Fu05sg83c8m38CqztBRi8gemHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIXFr2w6IVFL6x/vEryZ9NtehNkE+2t4taqT5BZXr7HzT8rinVXYg70f/s/sryYal7vb8kkY5YkxY5VAAAAAElFTkSuQmCC"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row24" Height="94.5">
+          <TableCell Name="Cell86" Border.Lines="All" Fill.Color="ControlLight" Text="Objašnjenje tehničkih pojmova" VertAlign="Center" ColSpan="2"/>
+          <TableCell Name="Cell87" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell88" Border.Lines="All" Fill.Color="Gainsboro"/>
+        </TableRow>
+        <TableRow Name="Row25" Height="32.13">
+          <TableCell Name="Cell89" Border.Lines="All" Text="Ploština korisne površine zgrade, A&lt;sub&gt;K&lt;/sub&gt; [m&lt;sup&gt;2&lt;/sup&gt;], jest ukupna ploština neto podne površine grijanog dijela zgrade." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell90" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell91" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row26" Height="32.13">
+          <TableCell Name="Cell92" Border.Lines="All" Text="Obujam grijanog dijela zgrade, V&lt;sub&gt;e&lt;/sub&gt; [m&lt;sup&gt;3&lt;/sup&gt;], jest bruto obujam, obujam grijanog dijela zgrade kojemu je oplošje A." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell93" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell94" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row27" Height="32.13">
+          <TableCell Name="Cell95" Border.Lines="All" Text="Faktor oblika zgrade, f &lt;sub&gt;0&lt;/sub&gt;=A/V&lt;sub&gt;e&lt;/sub&gt; [m&lt;sup&gt;-1&lt;/sup&gt;], jest količnik oplošja A i obujma grijanog dijela zgrade V&lt;sub&gt;e&lt;/sub&gt;." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell96" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell97" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row28" Height="51.03">
+          <TableCell Name="Cell98" Border.Lines="All" Text="Koeficijent transmisijskog toplinskog gubitka, H&lt;sub&gt;tr,adj&lt;/sub&gt; [W/K], jest količnik između toplinskog  toka koji se transmisijom prenosi iz grijane zgrade prema vanjskom prostoru i razlike između unutarnje projektne temperature u sezoni grijanja i vanjske temperature." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell99" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell100" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row29" Height="41.58">
+          <TableCell Name="Cell101" Border.Lines="All" Text="Srednja vanjska temperatura, Θ&lt;sub&gt;e&lt;/sub&gt;[°C], jest osrednja vrijednost temperature vanjskog zraka u promatranom vremenskom periodu prema meteorološkoj postaji najbližoj lokaciji zgrade." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell102" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell103" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row30" Height="41.58">
+          <TableCell Name="Cell104" Border.Lines="All" Text="Unutarnja projektna temperatura u sezoni grijanja, Θ&lt;sub&gt;i&lt;/sub&gt;[°C], jest projektom predviđena temperatura unutarnjeg zraka svih prostora grijanog dijela zgrade." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell105" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell106" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row31" Height="51.03">
+          <TableCell Name="Cell107" Border.Lines="All" Text="Godišnja potrebna toplinska energija za grijanje za stvarne klimatske podatke, Q&lt;sub&gt;H,nd&lt;/sub&gt;[kWh/a], jest računski određena količina topline koju sustavom grijanja treba dovesti tijekom jedne godine za održavanje unutarnje projektne temperature u zgradi tijekom razdoblja grijanja zgrade." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell108" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell109" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row32" Height="51.03">
+          <TableCell Name="Cell110" Border.Lines="All" Text="Godišnja potrebna toplinska energija za grijanje za referentne klimatske podatke, Q&lt;sub&gt;H,nd,ref&lt;/sub&gt; [kWh/a], jest računski određena količina topline koju sustavom grijanja treba tijekom jedne godine dovesti u zgradu za održavanje unutarnje projektne temperature u zgradi tijekom razdoblja grijanja zgrade za referentne klimatske podatke." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell111" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell112" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row33" Height="51.03">
+          <TableCell Name="Cell113" Border.Lines="All" Text="Specifična godišnja potrebna toplinska energija za grijanje za referentne klimatske podatke, Q'&lt;sub&gt;H,nd,ref&lt;/sub&gt;[kWh/(m&lt;sup&gt;2&lt;/sup&gt;a)], jest godišnja potrebna toplinska energija za grijanje za referentne klimatske podatke izražena po jedinici ploštine korisne površine zgrade." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell114" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell115" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row34" Height="69.93">
+          <TableCell Name="Cell116" Border.Lines="All" Text="Dopuštena vrijednost specifične godišnje potrebne toplinske energije za grijanje, Q'&lt;sub&gt;H,nd,dop&lt;/sub&gt;[kWh/(m&lt;sup&gt;2&lt;/sup&gt;a)], jest dopuštena specifična godišnja potreba toplinska energija za grijanje koja se izračunava uz uvjete propisane za nove stambene zgrade prema posoebnom propisu kojim se propisuju tehnički zahtjevi glede racionalne uporabe energije i toplinske zaštite novih i postojećih zgrada." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell117" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell118" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row35" Height="51.03">
+          <TableCell Name="Cell119" Border.Lines="All" Text="Godišnja potrebna toplinska energija za zagrijavanje potrošne tople vode, Q&lt;sub&gt;W&lt;/sub&gt;[kWh/a], jest računski određena količina topline koju sustavom pripreme potrošne tople vode treba dovesti tijekom jedne godine za zagrijavanje vode." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell120" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell121" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row36" Height="41.58">
+          <TableCell Name="Cell122" Border.Lines="All" Text="Godišnji toplinski gubici sustava grijanja, Q&lt;sub&gt;H,ls&lt;/sub&gt;[kWh/a], jesu energetski gubici sustava grijanja tijekom jedne godine koji se ne mogu iskoristiti za održavanje unutarnje temperature u zgradi." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell123" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell124" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row37" Height="41.58">
+          <TableCell Name="Cell125" Border.Lines="All" Text="Godišnji toplinski gubici sustava za zagrijavanje potrošne tople vode, Q&lt;sub&gt;W,ls&lt;/sub&gt;[kWh/a], jesu energetski gubici sustava pripreme potrošne tople vode tijekom jedne godine koji se ne mogu iskoristiti za zagrijavanje vode." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell126" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell127" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row38" Height="41.58">
+          <TableCell Name="Cell128" Border.Lines="All" Text="Godišnja potrebna toplinska energija, Q&lt;sub&gt;H&lt;/sub&gt;[kWh/a], jest zbroj godišnje potrebne topline i godišnjih toplinskih gubitaka sustava za grijanje i zagrijavanje potrošne tople vode u zgradi." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell129" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell130" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row39" Height="51.03">
+          <TableCell Name="Cell131" Border.Lines="All" Text="Godišnja isporučena energija, E&lt;sub&gt;del&lt;/sub&gt;[kWh/a], jest energija dovedena tehničkim sustavima zgrade tijekom jedne godine za pokrivanje energetskih potreba za grijanje, hlađenje, ventilaciju, potrošnu toplu vodu, rasvjetu i pogon pomoćnih sustava." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell132" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell133" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row40" Height="41.58">
+          <TableCell Name="Cell134" Border.Lines="All" Text="Godišnja primarna energija, E&lt;sub&gt;prim&lt;/sub&gt;[kWh/a], jest računski određena količina energije za potrebe zgrade tijekom jedne godine koja nije podvrgnuta ni jednom postupku pretvorbe." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell135" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell136" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+        <TableRow Name="Row41" Height="41.58">
+          <TableCell Name="Cell137" Border.Lines="All" Text="Godišnja emisija ugljičnog dioksida, CO&lt;sub&gt;2&lt;/sub&gt;[kg/a], jest masa emitiranog ugljičnog dioksida u vanjski okoliš tijekom jedne godine koja je posljedica energetskih potreba zgrade." Brackets="{,}" Wysiwyg="true" HtmlTags="true" ColSpan="3"/>
+          <TableCell Name="Cell138" Brackets="{,}" HtmlTags="true"/>
+          <TableCell Name="Cell139" Border.Lines="All" Brackets="{,}" Wysiwyg="true" HtmlTags="true"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter4" Top="970.01" Width="699.3" Height="18.9">
+      <TextObject Name="Text12" Left="13.99" Width="359.1" Height="18.9" Text="Proračun izveden računalnim programom KI Expert 2013." Font="Arial, 8.25pt" TextFill.Color="Gray"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Stranica5" RawPaperSize="9" LeftMargin="15" TopMargin="15">
+    <PageHeaderBand Name="PageHeader5" Width="699.3" Height="28.35"/>
+    <DataBand Name="Data5" Top="32.35" Width="699.3" Height="945">
+      <TableObject Name="Table1" Left="18.9" Top="9.45" Width="666.41" Height="916.65" GrowToBottom="true">
+        <TableColumn Name="Column1" Width="471.74"/>
+        <TableColumn Name="Column3" Width="63.88"/>
+        <TableColumn Name="Column2" Width="130.79"/>
+        <TableRow Name="Row1" Height="28.35">
+          <TableCell Name="Cell1" Border.Lines="All" Fill.Color="ControlLight" Text="Dodatak" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell61" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell39" Border.Lines="All" Fill.Color="ControlLight" RowSpan="2">
+            <PictureObject Name="Picture1" Left="15.12" Top="13.23" Width="98.28" Height="98.28" Image="iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAIAAADbHrqYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADS0lEQVR4Xu3Zz0vTcRzHcenHgn4e+gPsEpIXo0vSJTtVUEv6cQiCCio1KyxQAw+SF8NSQ9F1CLsKQd/MBE0j52aZYSJR2oJafpW5Zk3BtV9u9gm/YXxOn9fHoWivJ6+Lh73dHl89Lc3LkP541fVePmqssRtrNSZe6B5pM/EqXacX80s/ez9ah5AKO7L0fql41THDZnnVui+Jn/V2qmWra6R1DK/CeVw6pb7cJzaP94N1CCmvfZd0Sn0nWjalxGvbcnht0PXKlE6p72TLZnoBoxc2emGjFzZ6YaMXNnphoxc2emGjFzZ6YaMXNnphoxc2emGjF7bUeNmNdcaXB/2B1+huug5Kp6D1+J5LB1V2rn2HdAea5fXoXW1R594bXfs0dt6ZURUsdURr0BV7cvNfZEnXFHe2Z2ddqFI6qLIrQzmFXXukayq73pld3m23vEZHR62/V7yHYUd9vEpjDdFq149u6wpYQ+yudE1xjmjtoH/AugJmmia9gOiFRS8semHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIX1oKXab73+fr01hSpk96T4sRn7g0a0jXF1cfka4prjFanwGt6Om9uLi2R2KgxI36xMXbnfvQeuobY7U+J3dI1xTXFyxzRGumgysRDGpoYFJ9cI0FmeU1NXRBeeksktvj9T+efANTMTK50Sn3J5PrxcZ3vhxaTIKMXEL2w6IVFLyx6YdELi15Y9MKiFxa9sOiFRS8semHRC4teWPTCohdWarySybTg1+rAcBu68NR+6RS0pfcSWV6BQGModCgUOqyx+GRG5O2ZcO81dDFPTmQ6W7qmvCNjYx7xwJeyBa/FfJ8W6iuLugs0FnZfnRzW+UdergQZvYDohUUvLHph0QuLXlj0wqIXFr2w6IVFLyx6YdELi15Y9MKiF9aC1/irnu9Gs95+OYskCMVF3IUr1StYWjCbbotnbtdYrOJAyFky038L3ptyv+eleBMrJUH216s4P5Fu05sg83c8m38CqztBRi8gemHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIXFr2w6IVFL6x/vEryZ9NtehNkE+2t4taqT5BZXr7HzT8rinVXYg70f/s/sryYal7vb8kkY5YkxY5VAAAAAElFTkSuQmCC"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row2" Height="94.5">
+          <TableCell Name="Cell6" Border.Lines="All" Fill.Color="ControlLight" Text="Detaljan popis propisa, normi i proračunskih postupaka za određivanje podataka navedenih u energetskom certifikatu" VertAlign="Center" ColSpan="2"/>
+          <TableCell Name="Cell62" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell40" Border.Lines="All" Fill.Color="Gainsboro"/>
+        </TableRow>
+        <TableRow Name="Row3" Height="39.69">
+          <TableCell Name="Cell11" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell63"/>
+          <TableCell Name="Cell41" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row4" Height="39.69">
+          <TableCell Name="Cell16" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell64"/>
+          <TableCell Name="Cell42" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row5" Height="39.69">
+          <TableCell Name="Cell21" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell65"/>
+          <TableCell Name="Cell43" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row6" Height="39.69">
+          <TableCell Name="Cell22" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell66"/>
+          <TableCell Name="Cell44" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row7" Height="39.69">
+          <TableCell Name="Cell23" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell67"/>
+          <TableCell Name="Cell45" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row8" Height="39.69">
+          <TableCell Name="Cell24" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell68"/>
+          <TableCell Name="Cell46" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row9" Height="39.69">
+          <TableCell Name="Cell25" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell69"/>
+          <TableCell Name="Cell47" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row10" Height="39.69">
+          <TableCell Name="Cell26" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell70"/>
+          <TableCell Name="Cell48" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row11" Height="39.69">
+          <TableCell Name="Cell27" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell71"/>
+          <TableCell Name="Cell49" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row12" Height="39.69">
+          <TableCell Name="Cell28" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell72"/>
+          <TableCell Name="Cell50" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row13" Height="39.69">
+          <TableCell Name="Cell29" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell73"/>
+          <TableCell Name="Cell51" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row14" Height="39.69">
+          <TableCell Name="Cell30" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell74"/>
+          <TableCell Name="Cell52" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row15" Height="39.69">
+          <TableCell Name="Cell31" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell75"/>
+          <TableCell Name="Cell53" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row16" Height="39.69">
+          <TableCell Name="Cell32" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell76"/>
+          <TableCell Name="Cell54" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row17" Height="39.69">
+          <TableCell Name="Cell33" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell77"/>
+          <TableCell Name="Cell55" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row18" Height="39.69">
+          <TableCell Name="Cell34" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell78"/>
+          <TableCell Name="Cell56" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row19" Height="39.69">
+          <TableCell Name="Cell35" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell79"/>
+          <TableCell Name="Cell57" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row20" Height="39.69">
+          <TableCell Name="Cell36" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell80"/>
+          <TableCell Name="Cell58" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row21" Height="39.69">
+          <TableCell Name="Cell37" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell81"/>
+          <TableCell Name="Cell59" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row22" Height="39.69">
+          <TableCell Name="Cell38" Border.Lines="All" Wysiwyg="true" ColSpan="3"/>
+          <TableCell Name="Cell82"/>
+          <TableCell Name="Cell60" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter5" Top="981.35" Width="699.3" Height="18.9">
+      <TextObject Name="Text13" Left="13.99" Width="359.1" Height="18.9" Text="Proračun izveden računalnim programom KI Expert 2013." Font="Arial, 8.25pt" TextFill.Color="Gray"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Stranica5a">
+    <PageHeaderBand Name="PageHeader6" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data6" Top="32.35" Width="718.2" Height="950.67">
+      <TableObject Name="Table9" Left="18.9" Top="11.34" Width="666.41" Height="912.87" GrowToBottom="true">
+        <TableColumn Name="Column34" Width="471.74"/>
+        <TableColumn Name="Column35" Width="63.88"/>
+        <TableColumn Name="Column36" Width="130.79"/>
+        <TableRow Name="Row148" Height="28.35">
+          <TableCell Name="Cell756" Border.Lines="All" Fill.Color="ControlLight" Text="Dodatak" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell757" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell758" Border.Lines="All" Fill.Color="ControlLight" RowSpan="2">
+            <PictureObject Name="Picture8" Left="15.12" Top="13.23" Width="98.28" Height="98.28" Image="iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAIAAADbHrqYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADS0lEQVR4Xu3Zz0vTcRzHcenHgn4e+gPsEpIXo0vSJTtVUEv6cQiCCio1KyxQAw+SF8NSQ9F1CLsKQd/MBE0j52aZYSJR2oJafpW5Zk3BtV9u9gm/YXxOn9fHoWivJ6+Lh73dHl89Lc3LkP541fVePmqssRtrNSZe6B5pM/EqXacX80s/ez9ah5AKO7L0fql41THDZnnVui+Jn/V2qmWra6R1DK/CeVw6pb7cJzaP94N1CCmvfZd0Sn0nWjalxGvbcnht0PXKlE6p72TLZnoBoxc2emGjFzZ6YaMXNnphoxc2emGjFzZ6YaMXNnphoxc2emGjF7bUeNmNdcaXB/2B1+huug5Kp6D1+J5LB1V2rn2HdAea5fXoXW1R594bXfs0dt6ZURUsdURr0BV7cvNfZEnXFHe2Z2ddqFI6qLIrQzmFXXukayq73pld3m23vEZHR62/V7yHYUd9vEpjDdFq149u6wpYQ+yudE1xjmjtoH/AugJmmia9gOiFRS8semHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIX1oKXab73+fr01hSpk96T4sRn7g0a0jXF1cfka4prjFanwGt6Om9uLi2R2KgxI36xMXbnfvQeuobY7U+J3dI1xTXFyxzRGumgysRDGpoYFJ9cI0FmeU1NXRBeeksktvj9T+efANTMTK50Sn3J5PrxcZ3vhxaTIKMXEL2w6IVFLyx6YdELi15Y9MKiFxa9sOiFRS8semHRC4teWPTCohdWarySybTg1+rAcBu68NR+6RS0pfcSWV6BQGModCgUOqyx+GRG5O2ZcO81dDFPTmQ6W7qmvCNjYx7xwJeyBa/FfJ8W6iuLugs0FnZfnRzW+UdergQZvYDohUUvLHph0QuLXlj0wqIXFr2w6IVFLyx6YdELi15Y9MKiF9aC1/irnu9Gs95+OYskCMVF3IUr1StYWjCbbotnbtdYrOJAyFky038L3ptyv+eleBMrJUH216s4P5Fu05sg83c8m38CqztBRi8gemHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIXFr2w6IVFL6x/vEryZ9NtehNkE+2t4taqT5BZXr7HzT8rinVXYg70f/s/sryYal7vb8kkY5YkxY5VAAAAAElFTkSuQmCC"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row149" Height="90.72">
+          <TableCell Name="Cell759" Border.Lines="All" Fill.Color="ControlLight" Text="Detaljan popis propisa, normi i proračunskih postupaka za određivanje podataka navedenih u energetskom certifikatu" VertAlign="Center" ColSpan="2"/>
+          <TableCell Name="Cell760" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell761" Border.Lines="All" Fill.Color="Gainsboro"/>
+        </TableRow>
+        <TableRow Name="Row150" Height="39.69">
+          <TableCell Name="Cell762" Border.Lines="All" Text="&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 410:2011&lt;/u&gt;&lt;/b&gt;&#13;&#10;Staklo u graditeljstvu -- Određivanje svjetlosnih i sunčanih značajka ostakljenja (EN 410:2011)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 673:2011&lt;/u&gt;&lt;/b&gt;&#13;&#10;Staklo u graditeljstvu -- Određivanje koeficijenta prolaska topline (U vrijednost) -- Proračunska metoda &#13;&#10;(EN 673:2011)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 6946:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Građevni dijelovi i građevni dijelovi zgrade -- Toplinski otpor i koeficijent prolaska topline -- Metoda proračuna (ISO 6946:2007; EN ISO 6946:2007)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 9836:2011&lt;/u&gt;&lt;/b&gt;&#13;&#10;Standardi za svojstva zgrada -- Definiranje i proračun površina i prostora (ISO 9836:2011)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 10077-1:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Toplinska svojstva prozora, vrata i zaslona -- Proračun koeficijenta prolaska topline -- 1. dio: Općenito (ISO 10077-1:2006; EN ISO 10077-1:2006)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 10077-1:2008/Ispr.1:2010&lt;/u&gt;&lt;/b&gt;&#13;&#10;Toplinska svojstva prozora, vrata i zaslona -- Proračun koeficijenta prolaska topline -- 1. dio: Općenito (ISO 10077-1:2006/Cor 1:2009; EN ISO 10077-1:2006/AC:2009)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 10211:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Toplinski mostovi u zgradarstvu -- Toplinski tokovi i površinske temperature -- Detaljni proračuni (ISO 10211:2007; EN ISO 10211:2007)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 10456:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Građevni materijali i proizvodi -- Svojstva s obzirom na toplinu i vlagu -- Tablične projektne vrijednosti i postupci određivanja nazivnih i projektnih toplinskih vrijednosti (ISO 10456:2007; EN ISO 10456:2007)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 12464-1:2012&lt;/u&gt;&lt;/b&gt;&#13;&#10;Svjetlo i rasvjeta -- Rasvjeta radnih mjesta -- 1. dio: Unutrašnji radni prostori (EN 12464-1:2011)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 12524:2002&lt;/u&gt;&lt;/b&gt;&#13;&#10;Građevni materijali i proizvodi -- Svojstva s obzirom na toplinu i vlagu -- Tablice projektnih vrijednosti (EN 12524:2000)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 12831:2004&lt;/u&gt;&lt;/b&gt;&#13;&#10;Sustavi grijanja u građevinama -- Postupak proračuna normiranoga toplinskog opterećenja (EN 12831:2003)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 13370:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Toplinske značajke zgrada -- Prijenos topline preko tla -- Metode proračuna (ISO 13370:2007; EN ISO 13370:2007)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 13779:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Ventilacija u nestambenim zgradama -- Zahtjevi za sustave ventilacije i klimatizacije (EN 13779:2007)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 13789:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Toplinske značajke zgrada -- Koeficijenti prijelaza topline transmisijom i ventilacijom -- Metoda proračuna (ISO 13789:2007; EN ISO 13789:2007)&#13;&#10;&#13;&#10;" Wysiwyg="true" HtmlTags="true" ColSpan="3" RowSpan="20"/>
+          <TableCell Name="Cell763"/>
+          <TableCell Name="Cell764" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row151" Height="39.69">
+          <TableCell Name="Cell765" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell766"/>
+          <TableCell Name="Cell767" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row152" Height="39.69">
+          <TableCell Name="Cell768" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell769"/>
+          <TableCell Name="Cell770" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row153" Height="39.69">
+          <TableCell Name="Cell771" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell772"/>
+          <TableCell Name="Cell773" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row154" Height="39.69">
+          <TableCell Name="Cell774" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell775"/>
+          <TableCell Name="Cell776" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row155" Height="39.69">
+          <TableCell Name="Cell777" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell778"/>
+          <TableCell Name="Cell779" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row156" Height="39.69">
+          <TableCell Name="Cell780" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell781"/>
+          <TableCell Name="Cell782" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row157" Height="39.69">
+          <TableCell Name="Cell783" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell784"/>
+          <TableCell Name="Cell785" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row158" Height="39.69">
+          <TableCell Name="Cell786" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell787"/>
+          <TableCell Name="Cell788" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row159" Height="39.69">
+          <TableCell Name="Cell789" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell790"/>
+          <TableCell Name="Cell791" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row160" Height="39.69">
+          <TableCell Name="Cell792" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell793"/>
+          <TableCell Name="Cell794" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row161" Height="39.69">
+          <TableCell Name="Cell795" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell796"/>
+          <TableCell Name="Cell797" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row162" Height="39.69">
+          <TableCell Name="Cell798" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell799"/>
+          <TableCell Name="Cell800" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row163" Height="39.69">
+          <TableCell Name="Cell801" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell802"/>
+          <TableCell Name="Cell803" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row164" Height="39.69">
+          <TableCell Name="Cell804" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell805"/>
+          <TableCell Name="Cell806" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row165" Height="39.69">
+          <TableCell Name="Cell807" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell808"/>
+          <TableCell Name="Cell809" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row166" Height="39.69">
+          <TableCell Name="Cell810" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell811"/>
+          <TableCell Name="Cell812" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row167" Height="39.69">
+          <TableCell Name="Cell813" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell814"/>
+          <TableCell Name="Cell815" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row168" Height="39.69">
+          <TableCell Name="Cell816" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell817"/>
+          <TableCell Name="Cell818" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row169" Height="39.69">
+          <TableCell Name="Cell819" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell820"/>
+          <TableCell Name="Cell821" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter6" Top="987.02" Width="718.2" Height="21.9">
+      <TextObject Name="Text27" Left="13.9" Top="3" Width="359.1" Height="18.9" Text="Proračun izveden računalnim programom KI Expert 2013." Font="Arial, 8.25pt" TextFill.Color="Gray"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Stranica5b">
+    <PageHeaderBand Name="PageHeader8" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data8" Top="32.35" Width="718.2" Height="931.77">
+      <TableObject Name="Table11" Left="18.9" Top="9.45" Width="666.41" Height="912.87" GrowToBottom="true">
+        <TableColumn Name="Column40" Width="471.74"/>
+        <TableColumn Name="Column41" Width="63.88"/>
+        <TableColumn Name="Column42" Width="130.79"/>
+        <TableRow Name="Row192" Height="28.35">
+          <TableCell Name="Cell888" Border.Lines="All" Fill.Color="ControlLight" Text="Dodatak" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell889" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell890" Border.Lines="All" Fill.Color="ControlLight" RowSpan="2">
+            <PictureObject Name="Picture10" Left="15.12" Top="13.23" Width="98.28" Height="98.28" Image="iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAIAAADbHrqYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADS0lEQVR4Xu3Zz0vTcRzHcenHgn4e+gPsEpIXo0vSJTtVUEv6cQiCCio1KyxQAw+SF8NSQ9F1CLsKQd/MBE0j52aZYSJR2oJafpW5Zk3BtV9u9gm/YXxOn9fHoWivJ6+Lh73dHl89Lc3LkP541fVePmqssRtrNSZe6B5pM/EqXacX80s/ez9ah5AKO7L0fql41THDZnnVui+Jn/V2qmWra6R1DK/CeVw6pb7cJzaP94N1CCmvfZd0Sn0nWjalxGvbcnht0PXKlE6p72TLZnoBoxc2emGjFzZ6YaMXNnphoxc2emGjFzZ6YaMXNnphoxc2emGjF7bUeNmNdcaXB/2B1+huug5Kp6D1+J5LB1V2rn2HdAea5fXoXW1R594bXfs0dt6ZURUsdURr0BV7cvNfZEnXFHe2Z2ddqFI6qLIrQzmFXXukayq73pld3m23vEZHR62/V7yHYUd9vEpjDdFq149u6wpYQ+yudE1xjmjtoH/AugJmmia9gOiFRS8semHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIX1oKXab73+fr01hSpk96T4sRn7g0a0jXF1cfka4prjFanwGt6Om9uLi2R2KgxI36xMXbnfvQeuobY7U+J3dI1xTXFyxzRGumgysRDGpoYFJ9cI0FmeU1NXRBeeksktvj9T+efANTMTK50Sn3J5PrxcZ3vhxaTIKMXEL2w6IVFLyx6YdELi15Y9MKiFxa9sOiFRS8semHRC4teWPTCohdWarySybTg1+rAcBu68NR+6RS0pfcSWV6BQGModCgUOqyx+GRG5O2ZcO81dDFPTmQ6W7qmvCNjYx7xwJeyBa/FfJ8W6iuLugs0FnZfnRzW+UdergQZvYDohUUvLHph0QuLXlj0wqIXFr2w6IVFLyx6YdELi15Y9MKiF9aC1/irnu9Gs95+OYskCMVF3IUr1StYWjCbbotnbtdYrOJAyFky038L3ptyv+eleBMrJUH216s4P5Fu05sg83c8m38CqztBRi8gemHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIXFr2w6IVFL6x/vEryZ9NtehNkE+2t4taqT5BZXr7HzT8rinVXYg70f/s/sryYal7vb8kkY5YkxY5VAAAAAElFTkSuQmCC"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row193" Height="90.72">
+          <TableCell Name="Cell891" Border.Lines="All" Fill.Color="ControlLight" Text="Detaljan popis propisa, normi i proračunskih postupaka za određivanje podataka navedenih u energetskom certifikatu" VertAlign="Center" ColSpan="2"/>
+          <TableCell Name="Cell892" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell893" Border.Lines="All" Fill.Color="Gainsboro"/>
+        </TableRow>
+        <TableRow Name="Row194" Height="39.69">
+          <TableCell Name="Cell894" Border.Lines="All" Text="&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 13788:2002&lt;/u&gt;&lt;/b&gt;&#13;&#10;Značajke građevnih dijelova i građevnih dijelova zgrada s obzirom na toplinu i vlagu -- Temperatura unutarnje površine kojom se izbjegava kritična vlažnost površine i unutarnja kondenzacija -- Metode proračuna (ISO 13788:2001; EN ISO 13788:2001)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 13790:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Energetska svojstva zgrada -- Proračun potrebne energije za grijanje i hlađenje prostora (EN ISO 13790:2008)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 14683:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Toplinski mostovi u zgradarstvu -- Linearni koeficijent prolaska topline -- Pojednostavljena metoda i utvrđene vrijednosti (ISO 14683:2007; EN ISO 14683:2007)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 15193:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Energijska svojstva zgrade -- Energijski zahtjevi za rasvjetu (EN 15193:2007)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 15193:2008/Ispr.1:2011&lt;/u&gt;&lt;/b&gt;&#13;&#10;Energijska svojstva zgrade -- Energijski zahtjevi za rasvjetu (EN 15193:2007/AC:2010)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 15232:2012&lt;/u&gt;&lt;/b&gt;&#13;&#10;Energijske značajke zgrada -- Utjecaj automatizacije zgrada, nadzor i upravljanje zgradama (EN 15232:2012)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 15251:2008&lt;/u&gt;&lt;/b&gt;&#13;&#10;Ulazni mikroklimatski parametri za projektiranje i ocjenjivanje energijskih značajka zgrada koji se odnose na kvalitetu zraka, toplinsku lagodnost, osvjetljenje i akustiku (EN 15251:2007)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 674:2012&lt;/u&gt;&lt;/b&gt;&#13;&#10;Staklo u graditeljstvu -- Određivanje koeficijenta prolaska topline (U-vrijednost) -- Metoda sa zaštićenom vrućom pločom (EN 674:2011)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 1026:2001&lt;/u&gt;&lt;/b&gt;&#13;&#10;Prozori i vrata -- Propusnost zraka -- Metoda ispitivanja (EN 1026:2000)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 12207:2001&lt;/u&gt;&lt;/b&gt;&#13;&#10;Prozori i vrata -- Propusnost zraka -- Razredba (EN 12207:1999)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 12412-2:2004&lt;/u&gt;&lt;/b&gt;&#13;&#10;Toplinske značajke prozora, vrata i zaslona -- Određivanje koeficijenta prolaska topline metodom vruće komore -- 2. dio: Okviri (EN 12412-2:2003)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN ISO 12567-1:2011&lt;/u&gt;&lt;/b&gt;&#13;&#10;Toplinske značajke prozora i vrata -- Određivanje prolaza topline metodom vruće komore -- 1. dio: Prozori i vrata u cjelini (ISO 12567-1:2010+Cor 1:2010; EN ISO 12567-1:2010+AC:2010)&#13;&#10;&#13;&#10;&lt;b&gt;&lt;u&gt;HRN EN 13829:2002&lt;/u&gt;&lt;/b&gt;&#13;&#10;Toplinske značajke zgrada -- Određivanje propusnosti zraka kod zgrada -- Metoda razlike tlakova (ISO 9972:1996, preinačena; EN 13829:2000)&#13;&#10;" Wysiwyg="true" HtmlTags="true" ColSpan="3" RowSpan="20"/>
+          <TableCell Name="Cell895"/>
+          <TableCell Name="Cell896" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row195" Height="39.69">
+          <TableCell Name="Cell897" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell898"/>
+          <TableCell Name="Cell899" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row196" Height="39.69">
+          <TableCell Name="Cell900" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell901"/>
+          <TableCell Name="Cell902" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row197" Height="39.69">
+          <TableCell Name="Cell903" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell904"/>
+          <TableCell Name="Cell905" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row198" Height="39.69">
+          <TableCell Name="Cell906" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell907"/>
+          <TableCell Name="Cell908" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row199" Height="39.69">
+          <TableCell Name="Cell909" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell910"/>
+          <TableCell Name="Cell911" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row200" Height="39.69">
+          <TableCell Name="Cell912" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell913"/>
+          <TableCell Name="Cell914" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row201" Height="39.69">
+          <TableCell Name="Cell915" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell916"/>
+          <TableCell Name="Cell917" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row202" Height="39.69">
+          <TableCell Name="Cell918" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell919"/>
+          <TableCell Name="Cell920" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row203" Height="39.69">
+          <TableCell Name="Cell921" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell922"/>
+          <TableCell Name="Cell923" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row204" Height="39.69">
+          <TableCell Name="Cell924" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell925"/>
+          <TableCell Name="Cell926" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row205" Height="39.69">
+          <TableCell Name="Cell927" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell928"/>
+          <TableCell Name="Cell929" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row206" Height="39.69">
+          <TableCell Name="Cell930" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell931"/>
+          <TableCell Name="Cell932" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row207" Height="39.69">
+          <TableCell Name="Cell933" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell934"/>
+          <TableCell Name="Cell935" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row208" Height="39.69">
+          <TableCell Name="Cell936" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell937"/>
+          <TableCell Name="Cell938" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row209" Height="39.69">
+          <TableCell Name="Cell939" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell940"/>
+          <TableCell Name="Cell941" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row210" Height="39.69">
+          <TableCell Name="Cell942" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell943"/>
+          <TableCell Name="Cell944" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row211" Height="39.69">
+          <TableCell Name="Cell945" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell946"/>
+          <TableCell Name="Cell947" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row212" Height="39.69">
+          <TableCell Name="Cell948" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell949"/>
+          <TableCell Name="Cell950" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row213" Height="39.69">
+          <TableCell Name="Cell951" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell952"/>
+          <TableCell Name="Cell953" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter8" Top="968.12" Width="718.2" Height="28.35">
+      <TextObject Name="Text29" Left="9.45" Top="9.45" Width="359.1" Height="18.9" Text="Proračun izveden računalnim programom KI Expert 2013." Font="Arial, 8.25pt" TextFill.Color="Gray"/>
+    </PageFooterBand>
+  </ReportPage>
+  <ReportPage Name="Stranica5c">
+    <PageHeaderBand Name="PageHeader7" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data7" Top="32.35" Width="718.2" Height="927.99">
+      <TableObject Name="Table10" Left="18.9" Top="11.34" Width="666.41" Height="912.87" GrowToBottom="true">
+        <TableColumn Name="Column37" Width="471.74"/>
+        <TableColumn Name="Column38" Width="63.88"/>
+        <TableColumn Name="Column39" Width="130.79"/>
+        <TableRow Name="Row170" Height="28.35">
+          <TableCell Name="Cell822" Border.Lines="All" Fill.Color="ControlLight" Text="Dodatak" VertAlign="Center" Font="Arial, 14pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell823" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell824" Border.Lines="All" Fill.Color="ControlLight" RowSpan="2">
+            <PictureObject Name="Picture9" Left="15.12" Top="13.23" Width="98.28" Height="98.28" Image="iVBORw0KGgoAAAANSUhEUgAAAGUAAABlCAIAAADbHrqYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADS0lEQVR4Xu3Zz0vTcRzHcenHgn4e+gPsEpIXo0vSJTtVUEv6cQiCCio1KyxQAw+SF8NSQ9F1CLsKQd/MBE0j52aZYSJR2oJafpW5Zk3BtV9u9gm/YXxOn9fHoWivJ6+Lh73dHl89Lc3LkP541fVePmqssRtrNSZe6B5pM/EqXacX80s/ez9ah5AKO7L0fql41THDZnnVui+Jn/V2qmWra6R1DK/CeVw6pb7cJzaP94N1CCmvfZd0Sn0nWjalxGvbcnht0PXKlE6p72TLZnoBoxc2emGjFzZ6YaMXNnphoxc2emGjFzZ6YaMXNnphoxc2emGjF7bUeNmNdcaXB/2B1+huug5Kp6D1+J5LB1V2rn2HdAea5fXoXW1R594bXfs0dt6ZURUsdURr0BV7cvNfZEnXFHe2Z2ddqFI6qLIrQzmFXXukayq73pld3m23vEZHR62/V7yHYUd9vEpjDdFq149u6wpYQ+yudE1xjmjtoH/AugJmmia9gOiFRS8semHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIX1oKXab73+fr01hSpk96T4sRn7g0a0jXF1cfka4prjFanwGt6Om9uLi2R2KgxI36xMXbnfvQeuobY7U+J3dI1xTXFyxzRGumgysRDGpoYFJ9cI0FmeU1NXRBeeksktvj9T+efANTMTK50Sn3J5PrxcZ3vhxaTIKMXEL2w6IVFLyx6YdELi15Y9MKiFxa9sOiFRS8semHRC4teWPTCohdWarySybTg1+rAcBu68NR+6RS0pfcSWV6BQGModCgUOqyx+GRG5O2ZcO81dDFPTmQ6W7qmvCNjYx7xwJeyBa/FfJ8W6iuLugs0FnZfnRzW+UdergQZvYDohUUvLHph0QuLXlj0wqIXFr2w6IVFLyx6YdELi15Y9MKiF9aC1/irnu9Gs95+OYskCMVF3IUr1StYWjCbbotnbtdYrOJAyFky038L3ptyv+eleBMrJUH216s4P5Fu05sg83c8m38CqztBRi8gemHRC4teWPTCohcWvbDohUUvLHph0QuLXlj0wqIXFr2w6IVFL6x/vEryZ9NtehNkE+2t4taqT5BZXr7HzT8rinVXYg70f/s/sryYal7vb8kkY5YkxY5VAAAAAElFTkSuQmCC"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row171" Height="90.72">
+          <TableCell Name="Cell825" Border.Lines="All" Fill.Color="ControlLight" Text="Detaljan popis propisa, normi i proračunskih postupaka za određivanje podataka navedenih u energetskom certifikatu" VertAlign="Center" ColSpan="2"/>
+          <TableCell Name="Cell826" Fill.Color="Gainsboro"/>
+          <TableCell Name="Cell827" Border.Lines="All" Fill.Color="Gainsboro"/>
+        </TableRow>
+        <TableRow Name="Row172" Height="39.69">
+          <TableCell Name="Cell828" Border.Lines="All" Text="&#13;&#10;&lt;b&gt;Tehnički propis o racionalnoj uporabi energije i toplinskoj zaštiti u zgradama&lt;/b&gt;&#13;&#10;(„Narodne novine&quot; broj 128/15)&#13;&#10;&#13;&#10;&lt;b&gt;Zakon o gradnji&lt;/b&gt;&#13;&#10;(„Narodne novine&quot; broj 153/13)&#13;&#10;&#13;&#10;&lt;b&gt;Zakon o građevnim proizvodima&lt;/b&gt;&#13;&#10;(„Narodne novine&quot; broj 76/13, 30/14)&#13;&#10;&#13;&#10;&lt;b&gt;Zakon o energetskoj učinkovitosti&lt;/b&gt;&#13;&#10;(„Narodne novine&quot; broj 127/14)&#13;&#10;&#13;&#10;&lt;b&gt;Tehnički propis za prozore i vrata&lt;/b&gt;&#13;&#10;(„Narodne novine&quot; broj 69/06)&#13;&#10;&#13;&#10;&lt;b&gt;Pravilnik o energetskim pregledima građevina i energetskom certificiranju zgrada&lt;/b&gt;&#13;&#10;(&quot;Narodne novine&quot; broj 81/12, 29/13, 78/13) &#13;&#10;Propis je prestao važiti, ali se primjenjuju odredbe u dijelu koji se odnosi na provođenje energetskih pregleda građevina i javne rasvjete do donošenja posebnog propisa kojim će se urediti to područje.&#13;&#10;&#13;&#10;&lt;b&gt;Pravilnik o energetskom pregledu zgrade i energetskom certificiranju&lt;/b&gt;&#13;&#10;(&quot;Narodne novine&quot; broj 48/14, 150/14, 133/15)&#13;&#10;&#13;&#10;&lt;b&gt;Pravilnik o sustavnom gospodarenju energijom u javnom sektoru&lt;/b&gt;&#13;&#10;(&quot;Narodne novine&quot; broj 18/15, 06/16)&#13;&#10;&#13;&#10;&lt;b&gt;Pravilnik o kontroli energetskog certifikata zgrade i izvješća o redovitom pregledu sustava grijanja i sustava hlađenja ili klimatizacije u zgradi&lt;/b&gt;&#13;&#10;(&quot;Narodne novine&quot; broj 73/15)&#13;&#10;&#13;&#10;&lt;b&gt;Pravilnik o osobama ovlaštenim za energetsko certificiranje, energetski pregled zgrade i redoviti pregled sustava grijanja i sustava hlađenja ili klimatizacije u zgradi&lt;/b&gt;&#13;&#10;(&quot;Narodne novine&quot; broj 73/15, 133/15)&#13;&#10;&#13;&#10;&lt;b&gt;Pravilnik o otpornosti na požar i drugim zahtjevima koje građevine moraju zadovoljiti u slučaju požara&lt;/b&gt; &#13;&#10;(&quot;Narodne novine&quot; broj 29/13; 87/15)&#13;&#10;&#13;&#10;&lt;b&gt;Meteorološki podaci – primjenjuju se od 1. siječnja 2016&lt;/b&gt;&#13;&#10;&#13;&#10;&lt;b&gt;Metodologija provođenja energetskog pregleda građevina (lipanj 2014)&lt;/b&gt;&#13;&#10;&#13;&#10;&lt;b&gt;Algoritam za izračun energetskih svojstava zgrade&lt;/b&gt;" Wysiwyg="true" HtmlTags="true" ColSpan="3" RowSpan="20"/>
+          <TableCell Name="Cell829"/>
+          <TableCell Name="Cell830" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row173" Height="39.69">
+          <TableCell Name="Cell831" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell832"/>
+          <TableCell Name="Cell833" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row174" Height="39.69">
+          <TableCell Name="Cell834" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell835"/>
+          <TableCell Name="Cell836" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row175" Height="39.69">
+          <TableCell Name="Cell837" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell838"/>
+          <TableCell Name="Cell839" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row176" Height="39.69">
+          <TableCell Name="Cell840" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell841"/>
+          <TableCell Name="Cell842" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row177" Height="39.69">
+          <TableCell Name="Cell843" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell844"/>
+          <TableCell Name="Cell845" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row178" Height="39.69">
+          <TableCell Name="Cell846" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell847"/>
+          <TableCell Name="Cell848" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row179" Height="39.69">
+          <TableCell Name="Cell849" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell850"/>
+          <TableCell Name="Cell851" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row180" Height="39.69">
+          <TableCell Name="Cell852" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell853"/>
+          <TableCell Name="Cell854" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row181" Height="39.69">
+          <TableCell Name="Cell855" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell856"/>
+          <TableCell Name="Cell857" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row182" Height="39.69">
+          <TableCell Name="Cell858" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell859"/>
+          <TableCell Name="Cell860" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row183" Height="39.69">
+          <TableCell Name="Cell861" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell862"/>
+          <TableCell Name="Cell863" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row184" Height="39.69">
+          <TableCell Name="Cell864" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell865"/>
+          <TableCell Name="Cell866" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row185" Height="39.69">
+          <TableCell Name="Cell867" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell868"/>
+          <TableCell Name="Cell869" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row186" Height="39.69">
+          <TableCell Name="Cell870" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell871"/>
+          <TableCell Name="Cell872" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row187" Height="39.69">
+          <TableCell Name="Cell873" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell874"/>
+          <TableCell Name="Cell875" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row188" Height="39.69">
+          <TableCell Name="Cell876" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell877"/>
+          <TableCell Name="Cell878" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row189" Height="39.69">
+          <TableCell Name="Cell879" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell880"/>
+          <TableCell Name="Cell881" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row190" Height="39.69">
+          <TableCell Name="Cell882" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell883"/>
+          <TableCell Name="Cell884" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+        <TableRow Name="Row191" Height="39.69">
+          <TableCell Name="Cell885" Border.Lines="All" Wysiwyg="true"/>
+          <TableCell Name="Cell886"/>
+          <TableCell Name="Cell887" Border.Lines="All" Wysiwyg="true"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter7" Top="964.34" Width="718.2" Height="21.9">
+      <TextObject Name="Text28" Left="14.9" Top="3" Width="359.1" Height="18.9" Text="Proračun izveden računalnim programom KI Expert 2013." Font="Arial, 8.25pt" TextFill.Color="Gray"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

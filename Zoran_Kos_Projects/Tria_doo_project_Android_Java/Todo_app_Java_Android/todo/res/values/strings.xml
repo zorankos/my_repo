@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Todo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	<string name="novi_zapis">+</string>
+	<string name="zapis">Unos zapisa</string>
+	<string name="dodaj">Dodaj zapis</string>
+	<string name="odustani">Odustani</string>
+	<string name="odaberiGrupu">Odaberite grupu: </string>
+	<string name="opaska">Opis obavijesti: </string>
+	<string name="unos">Unesite tekst: </string>
+	<string name="unosG">Dodaj</string>
+	<string name="unosNG">Naziv grupe: </string>
+	<string name="unosNoveGrupe">Ime grupe</string>
+	<string name="izmijeniGrupu">Promjeni</string>
+	<string name="obrisiGrupu">Obriši</string>
+	<string name="filtarGrupe">Traži zapis</string>
+	
+</resources>
